@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Kausar\Paul\Published</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AdelaideInstantQuote.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Admin/AdminMaster.Master">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/Default.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/Lookup.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/LookuplistType.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageAccessArangementsType.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageClients.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageClientsBranchManager.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageClientsBranchManagerEdit.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageClientsEdit.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageCompliance.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageComplianceEdit.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageJobOrderDetails.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageJobOrderList.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManagePropertyType.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManagePurpose.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageReviewers.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageReviewersEdit.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageServiceType.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageTransactionType.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageUrgency.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageValuationCompany.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageValuationCompanyEdit.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageValuationManager.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageValuationManagerEdit.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageValuationType.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageValuers.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/ManageValuersEdit.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Admin/MyProfile.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>08/31/2016 10:15:41</publishTime>
+    </File>
+    <File Include="bin/AMSProject.dll">
+      <publishTime>08/31/2016 10:15:41</publishTime>
+    </File>
+    <File Include="bin/AMSProjectNew.dll">
+      <publishTime>10/06/2019 15:40:04</publishTime>
+    </File>
+    <File Include="bin/AMSProjectNew.dll.config">
+      <publishTime>09/29/2019 16:56:09</publishTime>
+    </File>
+    <File Include="bin/AMSProjectNew.pdb">
+      <publishTime>10/06/2019 15:40:04</publishTime>
+    </File>
+    <File Include="bin/BusinessLayer.dll">
+      <publishTime>09/29/2019 17:04:08</publishTime>
+    </File>
+    <File Include="bin/BusinessLayer.pdb">
+      <publishTime>09/29/2019 17:04:08</publishTime>
+    </File>
+    <File Include="bin/CKEditor.NET.dll">
+      <publishTime>08/31/2016 10:15:41</publishTime>
+    </File>
+    <File Include="bin/CuteWebUI.AjaxUploader.dll">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="bin/epdfcreator.dll">
+      <publishTime>03/15/2019 15:08:13</publishTime>
+    </File>
+    <File Include="bin/epengine.dll">
+      <publishTime>03/15/2019 15:08:13</publishTime>
+    </File>
+    <File Include="bin/ephtmltopdf.dll">
+      <publishTime>03/15/2019 15:08:13</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="bin/Interop.ASPJPEGLib.dll">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="bin/pdftoimage.net40.x86.dll">
+      <publishTime>03/15/2019 15:08:13</publishTime>
+    </File>
+    <File Include="BranchManager/BranchManager.Master">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ckeditor/adapters/jquery.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/CHANGES.html">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/ckeditor.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/ckeditor_basic.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/config.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/contents.css">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/images/spacer.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/INSTALL.html">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/lang/af.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ar.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/bg.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/bn.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/bs.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ca.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/cs.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/cy.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/da.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/de.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/el.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/en-au.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/en-ca.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/en-gb.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/en.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/eo.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/es.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/et.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/eu.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/fa.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/fi.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/fo.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/fr-ca.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/fr.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/gl.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/gu.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/he.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/hi.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/hr.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/hu.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/is.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/it.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ja.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ka.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/km.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ko.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/lt.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/lv.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/mn.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ms.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/nb.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/nl.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/no.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/pl.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/pt-br.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/pt.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ro.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/ru.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/sk.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/sl.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/sr-latn.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/sr.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/sv.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/th.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/tr.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/uk.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/vi.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/zh-cn.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/zh.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/_languages.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/lang/_translationstatus.txt">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/LICENSE.html">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/lang/en.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/a11yhelp/lang/he.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/about/dialogs/about.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/about/dialogs/logo_ckeditor.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/adobeair/plugin.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/ajax/plugin.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/autogrow/plugin.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/bbcode/plugin.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/clipboard/dialogs/paste.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/colordialog/dialogs/colordialog.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/devtools/lang/en.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/devtools/plugin.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/dialog/dialogDefinition.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/div/dialogs/div.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/docprops/dialogs/docprops.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/docprops/plugin.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/find/dialogs/find.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/flash/dialogs/flash.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/flash/images/placeholder.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/forms/dialogs/button.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/forms/dialogs/checkbox.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/forms/dialogs/form.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/forms/dialogs/hiddenfield.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/forms/dialogs/radio.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/forms/dialogs/select.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/forms/dialogs/textarea.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/forms/dialogs/textfield.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/forms/images/hiddenfield.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/iframe/dialogs/iframe.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/iframe/images/placeholder.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/iframedialog/plugin.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/image/dialogs/image.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/link/dialogs/anchor.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/link/dialogs/link.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/link/images/anchor.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/liststyle/dialogs/liststyle.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/pagebreak/images/pagebreak.gif">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/pastefromword/filter/default.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/pastetext/dialogs/pastetext.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/placeholder/dialogs/placeholder.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/placeholder/lang/en.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/placeholder/lang/he.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/placeholder/placeholder.gif">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/placeholder/plugin.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/scayt/dialogs/options.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/scayt/dialogs/toolbar.css">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/showblocks/images/block_address.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/showblocks/images/block_blockquote.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/showblocks/images/block_div.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/showblocks/images/block_h1.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/showblocks/images/block_h2.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/showblocks/images/block_h3.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/showblocks/images/block_h4.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/showblocks/images/block_h5.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/showblocks/images/block_h6.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/showblocks/images/block_p.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/showblocks/images/block_pre.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/dialogs/smiley.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/angel_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/angry_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/broken_heart.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/confused_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/cry_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/devil_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/embaressed_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/envelope.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/heart.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/kiss.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/lightbulb.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/omg_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/regular_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/sad_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/shades_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/teeth_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/thumbs_down.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/thumbs_up.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/tounge_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/smiley/images/wink_smile.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/dialogs/specialchar.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/specialchar/lang/en.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/styles/styles/default.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/stylesheetparser/plugin.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/table/dialogs/table.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/tableresize/plugin.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/tabletools/dialogs/tableCell.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/templates/dialogs/templates.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/templates/templates/default.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/templates/templates/images/template1.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/templates/templates/images/template2.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/templates/templates/images/template3.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/uicolor/dialogs/uicolor.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/uicolor/lang/en.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/uicolor/lang/he.js">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/uicolor/plugin.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/uicolor/uicolor.gif">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/uicolor/yui/assets/hue_bg.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/uicolor/yui/assets/hue_thumb.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/uicolor/yui/assets/picker_mask.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/uicolor/yui/assets/picker_thumb.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/uicolor/yui/assets/yui.css">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/uicolor/yui/yui.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/wsc/dialogs/ciframe.html">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/wsc/dialogs/tmpFrameset.html">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/wsc/dialogs/wsc.css">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/wsc/dialogs/wsc.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/plugins/xml/plugin.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/dialog.css">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/editor.css">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/icons.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/icons_rtl.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/images/dialog_sides.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/images/dialog_sides.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/images/dialog_sides_rtl.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/images/mini.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/images/noimage.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/images/sprites.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/images/sprites_ie6.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/images/toolbar_start.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/skin.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/kama/templates.css">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/office2003/dialog.css">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/office2003/editor.css">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/office2003/icons.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/office2003/icons_rtl.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/office2003/images/dialog_sides.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/office2003/images/dialog_sides.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/office2003/images/dialog_sides_rtl.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/office2003/images/mini.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/office2003/images/noimage.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/office2003/images/sprites.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/office2003/images/sprites_ie6.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/office2003/skin.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/office2003/templates.css">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/dialog.css">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/editor.css">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/icons.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/icons_rtl.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/images/dialog_sides.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/images/dialog_sides.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/images/dialog_sides_rtl.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/images/mini.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/images/noimage.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/images/sprites.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/images/sprites_ie6.png">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/images/toolbar_start.gif">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/skin.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/skins/v2/templates.css">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="ckeditor/themes/default/theme.js">
+      <publishTime>08/31/2016 10:15:34</publishTime>
+    </File>
+    <File Include="Clients/Buildings.aspx">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/ClientsMaster.Master">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/css/bootstrap.css">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/css/responsive.css">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/css/style.css">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/Default.aspx">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/font-awesome/css/font-awesome.css">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Clients/font-awesome/css/font-awesome.min.css">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Clients/img/logo.png">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/JobOrderCreate.aspx">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/JobOrderDetails.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Clients/JobOrderEditRequest.aspx">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/JobOrderList.aspx">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/js/bootstrap.js">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/js/bootstrap.min.js">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/js/jquery.min.js">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/js/modernizr.custom.86080.js">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/js/npm.js">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/MyProfile.aspx">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/Reports-Buildings.aspx">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/Reports-Comments.aspx">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/Reports-Finish.aspx">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Clients/Reports-Rooms.aspx">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="CompanyLogo/02202013081155Logo.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/02202013081155Logo1.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/06042015053701Adelaide Logo.jpg">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/06042015053833Adelaide Logo.jpg">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/06042015054426Melbourne Logo.jpg">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/06042015054442MarketVal.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/06082015033902MarketVal.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/06082015035422Melbourne Logo.jpg">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/06082015035435Melbourne Logo.jpg">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/08082016105147no-logo.jpg">
+      <publishTime>03/15/2019 15:07:41</publishTime>
+    </File>
+    <File Include="CompanyLogo/0810201511454606042015052849MarketVal.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/0810201511462406042015052939Melbourne Logo.jpg">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/0810201511464006042015053011Adelaide Logo.jpg">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/10022013032227Big Idea Mastermind - THINK BIGGER. - 2013-09-18_12.36.52.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/12202012100229BackgroundBlue1.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/122020121009091.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/122020121009441.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/122020121014291.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/122020121016211.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/122020121031581.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/12202012104234Customer Account Profile_1355982458809.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/12242015022759Adelaide.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/12242015022807Adelaide.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/12242015022828Adelaide.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/12312015093003Cover_Logo.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="CompanyLogo/sidebar.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Compliance/ComplianceMaster.Master">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="Contact-Us.aspx">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="CreatePdf.asmx">
+      <publishTime>08/31/2016 10:15:41</publishTime>
+    </File>
+    <File Include="CSS/Default.css">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Default.Master">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="EmailTemplates/AccountReport.htm">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/AccountReport1.htm">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/ConfirmationofValuationReport.htm">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/ConfirmationofValuersAppointment.htm">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/ConfirmationofValuersAppointmentOld.htm">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/ConfirmationofValuersInspected.htm">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/ContactUs.htm">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/ForgetPassword.html">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/HeaderAndFooterHtml.htm">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/HeaderAndFooterHtml1.htm">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/PaymentNotificationToClient.htm">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/PDFReportToClient.htm">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/ReportEditByClient.html">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/ReportEditByClientToAdmin.html">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="EmailTemplates/Test.htm">
+      <publishTime>08/31/2016 10:15:43</publishTime>
+    </File>
+    <File Include="FileUploading.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ForgotPassword.aspx">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="GeneratePDF.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="GenerateReport.aspx">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="htmlreport.html">
+      <publishTime>08/31/2016 10:15:33</publishTime>
+    </File>
+    <File Include="ImageResize.aspx">
+      <publishTime>08/31/2016 10:15:36</publishTime>
+    </File>
+    <File Include="Images/BookMyShow_-_Book_Movie_Tickets,_buy_movie_tickets,_theatre_tickets,_Plays_Ticket,_Live_Concert_Tickets_Booking_online_-_2015-08-09_13.20.38.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/btn_delete.gif">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/btn_edit.gif">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/Calendar_scheduleHS.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/contact-new.gif">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/contact-tiny.gif">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/EditIcon.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/Email Header.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/GenerateReport.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/GenerateReport1.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/globe-tiny.gif">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/gray-star.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/Header.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/header_bg.gif">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/Logo.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/Logo1.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/pdf_icon.gif">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/red-star.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Images/Signature.png">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>08/31/2016 10:15:38</publishTime>
+    </File>
+    <File Include="Logout.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="MelbourneInstantQuote.aspx">
+      <publishTime>08/31/2016 10:15:36</publishTime>
+    </File>
+    <File Include="MessageDisplay.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="Paging.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="pay.txt">
+      <publishTime>08/31/2016 10:15:39</publishTime>
+    </File>
+    <File Include="Reviewers/Default.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Reviewers/JobOrderDetails.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Reviewers/JobOrderEditRequest.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Reviewers/JobOrderList.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Reviewers/MyProfile.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Reviewers/ReviewersMaster.Master">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="UserControls/JobHistory.ascx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationCompany/Default.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ValuationCompany/JobOrderCreate.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ValuationCompany/JobOrderDetails.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ValuationCompany/JobOrderEdit.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ValuationCompany/JobOrderList.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ValuationCompany/ManageReviewers.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ValuationCompany/ManageReviewersEdit.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ValuationCompany/ManageValuers.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ValuationCompany/ManageValuersEdit.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ValuationCompany/MyProfile.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ValuationCompany/ValuationCompanyMaster.Master">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ValuationCompanyRegistration.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="ValuationManager/Default.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/DownloadClients.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/DownloadReports.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/EmailAppointment.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/EmailFinalReport.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/EmailInspected.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/EmailSent.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/GenerateReport.aspx">
+      <publishTime>03/15/2019 15:08:04</publishTime>
+    </File>
+    <File Include="ValuationManager/GenerateReportOption.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/JobOrderCreate.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/JobOrderDetails.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/JobOrderEdit.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/JobOrderGenerateReport.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/JobOrderList.aspx">
+      <publishTime>07/12/2019 00:09:29</publishTime>
+    </File>
+    <File Include="ValuationManager/jquery-1.8.2.js">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/jquery.MultiFile.js">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/MyProfile.aspx">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuationManager/ValuationManagerMaster.Master">
+      <publishTime>08/31/2016 10:15:40</publishTime>
+    </File>
+    <File Include="ValuerLogo/10022013032419credit-img.png">
+      <publishTime>08/31/2016 10:15:39</publishTime>
+    </File>
+    <File Include="ValuerLogo/10022013032531logo.png">
+      <publishTime>08/31/2016 10:15:39</publishTime>
+    </File>
+    <File Include="ValuerLogo/SignatureImage.jpg">
+      <publishTime>09/29/2019 17:11:13</publishTime>
+    </File>
+    <File Include="ValuerLogo/SignatureImage.png">
+      <publishTime>08/31/2016 10:15:39</publishTime>
+    </File>
+    <File Include="Valuers/core.js">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Valuers/Default.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Valuers/GenerateReport.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Valuers/GenerateReport1.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Valuers/GenerateReportOption.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Valuers/JobOrderDetails.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Valuers/JobOrderEditRequest.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Valuers/JobOrderGenerateReport.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Valuers/JobOrderList.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Valuers/MyProfile.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Valuers/Test.aspx">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Valuers/ValuersMaster.Master">
+      <publishTime>08/31/2016 10:15:42</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/29/2019 17:09:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

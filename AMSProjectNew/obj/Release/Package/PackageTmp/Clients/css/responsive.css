@@ -1,0 +1,43 @@
+/* lg */ 
+@media (min-width: 1200px) {
+
+}
+
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {
+ 
+ 
+ }
+
+
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+ 
+
+}
+
+/* xs */
+@media (max-width: 767px) {
+
+}
+/* extra */
+@media (max-width: 640px) {
+.checkbox-inline{width:100%;}
+.form1{padding:0px;}
+.s-btn{width:40%;}
+
+}
+
+/* XS Portrait */
+@media (max-width: 480px) {
+
+
+}
+@media (max-width: 360px) {
+
+
+}
+@media (max-width: 320px) {
+
+
+}

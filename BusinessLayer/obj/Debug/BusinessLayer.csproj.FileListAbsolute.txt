@@ -1,0 +1,9 @@
+D:\Kausar\Paul\AMSProperty\BusinessLayer\bin\Debug\ephtmltopdf.dll
+D:\Kausar\Paul\AMSProperty\BusinessLayer\bin\Debug\epengine.dll
+D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\Kausar\Paul\AMSProperty\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\Kausar\Paul\AMSProperty\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete

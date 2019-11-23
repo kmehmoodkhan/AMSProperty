@@ -1,0 +1,8 @@
+D:\Kausar\Paul\AMSProperty\BusinessLayer\bin\Release\BusinessLayer.dll
+D:\Kausar\Paul\AMSProperty\BusinessLayer\bin\Release\BusinessLayer.pdb
+D:\Kausar\Paul\AMSProperty\BusinessLayer\bin\Release\ephtmltopdf.dll
+D:\Kausar\Paul\AMSProperty\BusinessLayer\bin\Release\epengine.dll
+D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Release\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Release\BusinessLayer.csproj.CopyComplete
+D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Release\BusinessLayer.dll
+D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Release\BusinessLayer.pdb

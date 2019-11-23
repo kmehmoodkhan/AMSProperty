@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="AMSProjectNew.Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Valuation Central</title>
+    <link href="CSS/Default.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background-color:#28578F; margin:0px;">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div align="center">
+        <table cellpadding="0" cellspacing="0" width="100%">            
+            <tr>
+                <td width="250px" style="padding-left:25px; background-color:White;">
+                    <a href="Login.aspx"><img src="Images/Logo.png" width="120px" /></a>
+                </td>
+                <td align="right" valign="top" style=" background-color:White;">                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" valign="top" style="padding:10px 20px 20px 20px;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+D:\Projects\Paul - AMS\ValuationCentral\AMSProject\WebServiceTest\bin\WebServiceTest.dll
+D:\Projects\Paul - AMS\ValuationCentral\AMSProject\WebServiceTest\bin\WebServiceTest.pdb
+D:\Projects\Paul - AMS\ValuationCentral\AMSProject\WebServiceTest\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Paul - AMS\ValuationCentral\AMSProject\WebServiceTest\obj\Debug\WebServiceTest.dll
+D:\Projects\Paul - AMS\ValuationCentral\AMSProject\WebServiceTest\obj\Debug\WebServiceTest.pdb
+D:\Projects\VC - Paul\ValuationCentral\AMSProject\WebServiceTest\bin\WebServiceTest.dll
+D:\Projects\VC - Paul\ValuationCentral\AMSProject\WebServiceTest\bin\WebServiceTest.pdb
+D:\Projects\VC - Paul\ValuationCentral\AMSProject\WebServiceTest\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\VC - Paul\ValuationCentral\AMSProject\WebServiceTest\obj\Debug\WebServiceTest.dll
+D:\Projects\VC - Paul\ValuationCentral\AMSProject\WebServiceTest\obj\Debug\WebServiceTest.pdb
+E:\Projects\VC - Paul\ValuationCentral\AMSProject\WebServiceTest\bin\WebServiceTest.dll
+E:\Projects\VC - Paul\ValuationCentral\AMSProject\WebServiceTest\bin\WebServiceTest.pdb
+E:\Projects\VC - Paul\ValuationCentral\AMSProject\WebServiceTest\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\VC - Paul\ValuationCentral\AMSProject\WebServiceTest\obj\Debug\WebServiceTest.dll
+E:\Projects\VC - Paul\ValuationCentral\AMSProject\WebServiceTest\obj\Debug\WebServiceTest.pdb
+D:\SVN\AMSProject\trunk\WebServiceTest\bin\WebServiceTest.dll
+D:\SVN\AMSProject\trunk\WebServiceTest\bin\WebServiceTest.pdb
+D:\SVN\AMSProject\trunk\WebServiceTest\obj\Debug\WebServiceTest.dll
+D:\SVN\AMSProject\trunk\WebServiceTest\obj\Debug\WebServiceTest.pdb
+D:\Kausar\Paul\AMSProperty\WebServiceTest\bin\WebServiceTest.dll.config
+D:\Kausar\Paul\AMSProperty\WebServiceTest\bin\WebServiceTest.dll
+D:\Kausar\Paul\AMSProperty\WebServiceTest\bin\WebServiceTest.pdb
+D:\Kausar\Paul\AMSProperty\WebServiceTest\obj\Debug\WebServiceTest.csprojAssemblyReference.cache
+D:\Kausar\Paul\AMSProperty\WebServiceTest\obj\Debug\WebServiceTest.csproj.CoreCompileInputs.cache
+D:\Kausar\Paul\AMSProperty\WebServiceTest\obj\Debug\WebServiceTest.dll
+D:\Kausar\Paul\AMSProperty\WebServiceTest\obj\Debug\WebServiceTest.pdb

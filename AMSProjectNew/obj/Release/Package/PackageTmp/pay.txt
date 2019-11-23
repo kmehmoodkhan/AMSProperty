@@ -1,0 +1,48 @@
+﻿1. Multiple Image Upload in Internal and External (8 hours)
+2. Change interface right side in job details (2 hours)
+3. Display new columns in Job list (1 hour)
+4. Delete functionality in admin (3 hours)
+5. Update on generate report to display address in all tabs (3 hours)
+6. John VC configure ($200 fixed)
+7. Darwin site updates (5 hours)
+8. Update sent out 3 emails (16 hours)
+9. display email history (8 hours)
+10. Provide 1 image limit to upload on Primary(2 hours)
+11. Setup plan dropdown with 2 blank in databsae(2 hours)
+12. Create configuration for application and configure on server(8 hours)
+
+23 Dec 2015
+=> Added 2 new fields in to table and updated 3 stored proc (2 hours)
+=> Update business logic with new method to add/edit header and footer image for first page pdf report (1.5 hours)
+=> Added section in admin side to manage header and footer images (3.5 hours)
+=> Changed logic in generate report to get header/footer images from database (4 hours)
+=> Publish, upload and test(1 hour)
+=> Try cover page with new logo and left banner and did some test with Paul(3 hour)
+=> Updated all email templates footer and header with blue color(3 hours)
+=> Publish, upload and test(3 hour)
+
+31 Dec 2015
+=> Configure cover page with new image and contents and upload, publish and test it(4 hour)
+=> Publish, upload and test(2 hour)
+
+13 Jan, 2016
+=> Setup cover page in pdf as old one. (5 hours)
+=> Updated all email templates footer and header with blue color(3 hours)
+=> Publish, upload and test(2 hour)
+
+
+Other Tasks
+My Profile in Admin (6 hours)
+
+Tabs to save data from all tabs
+1. Summary (4.5 hours)
+2. Lands (9.5 hours)
+3. Building & Improvements (8 hours)
+4. Room & Fixtures (7.5 hours)
+5. Area (3.5 hours)
+6. Comments (3 Hours)
+
+
+-----------------
+Provide support 
+Download db and configure in local

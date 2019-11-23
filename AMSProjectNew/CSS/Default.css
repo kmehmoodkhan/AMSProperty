@@ -1,0 +1,97 @@
+﻿body
+{ font-family:Verdana ;font-size: 8pt;}
+.TextBox{Border:solid 1px #074A87; height:18px; width:200px; padding:0px 5px 0px 5px;}
+.DDL{Border:solid 1px #074A87; height:22px; padding:2px 2px 2px 2px; font-size:12px;}
+.Button{Border:solid 1px #074A87; background-color:#FFCA01;color:#074A87; font-size:11px; height:21px; font-weight:bold; padding:2px 20px 3px 20px;}
+.Button1{Border:solid 1px #FFFFFF; background-color:#FFCA01;color:#FFFFFF; font-size:11px; height:21px; font-weight:bold; padding:0px 20px 3px 20px;}
+.LinkButton{color:Blue; text-decoration:none;}
+.LinkButton:hover{color:Blue; text-decoration:Underline;}
+.WhiteLinkButton{color:White; text-decoration:none;}
+.WhiteLinkButton:hover{color:White; text-decoration:Underline;}
+.Error{color:Red;}
+.Error1{color:Red;}
+.MultiFile-title{font-size:12px;}
+.ErrorBold{color:Red;font-size:13px;font-weight:bold;}
+.GridAlt1{ padding-left:5px;border-bottom:SOLID 1px #28578F; background-color:#ECF2FE;}
+.GridRow1{ padding-left:5px;border-bottom:SOLID 1px #28578F; vertical-align:top;}
+.GridAlt{ padding-left:5px; background-color:#ECF2FE; vertical-align:top;}
+.GridRow{ padding-left:5px; vertical-align:top;}
+.Grid{color:#28578F;border:SOLID 1px #28578F; background-color:White; }
+.GridHeader{background-color:#28578F; padding-left:5px; text-align:left;   font-weight:bold;height:25px; color:White; }
+.GridPager{background-color:#EFF0F1; font-size:10px; font-weight:bold; height:22px;}
+.LeftTitle{color:White; font-weight:bold; font-size:18px; padding-bottom:3px;}
+.LeftTitle2{color:#28578F; font-weight:bold; font-size:15px; padding-bottom:5px;}
+.LeftTitle3{color:White; font-weight:bold; font-size:13px; padding:4px 2px 4px 2px;}
+.LeftTitle4{color:#28578F; font-weight:bold; font-size:13px; padding-bottom:5px;}
+.LeftTitle5{font-weight:bold; font-size:18px; padding-bottom:5px; color:#074A87;}
+.LeftTitleJobNo{font-weight:bold; font-size:18px; padding-bottom:5px; color:Red;}
+.PopupHeader{padding-left: 5px;background-color: #28578F; height: 23px; color:White; font-size:12px; font-weight:bold;}
+.modalBackground {
+    background-color:Black;       
+    filter:alpha(opacity=80);
+    opacity:0.8;
+}
+.BlueText1{color:#3232F0; font-weight:bold; font-size:17px; padding-left:3px;}
+.BlueText2{color:#3232F0; font-weight:normal; font-size:12px; padding-left:3px;}
+.BlackText2{font-weight:normal; font-size:12px; padding-left:3px; color:Black;}
+.BlueBoldText1{color:#3232F0; font-weight:bold;}
+.BlackBoldText1{font-weight:bold;}
+
+
+.TD1{background-color:#28578F; border-top:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-left:1px solid #FFFFFF; text-align:right; height:30px; padding:2px 3px 2px 3px;color:#FFFFFF;}
+.TD1_1{background-color:#28578F; border-top:1px solid #FFFFFF; border-right:1px solid #FFFFFF; text-align:left; height:30px; padding:2px 3px 2px 2px;color:#FFFFFF;}
+.TD1_2{background-color:#28578F; border-top:1px solid #FFFFFF; border-right:1px solid #FFFFFF; text-align:right; height:30px; padding:2px 3px 2px 2px;color:#FFFFFF;}
+.TD2{background-color:#28578F; border-top:1px solid #FFFFFF; border-right:1px solid #FFFFFF; padding:2px 2px 2px 2px; text-align:left;color:#FFFFFF;}
+.TD3{background-color:#28578F; border-top:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-left:1px solid #FFFFFF; text-align:left; height:30px; padding:0px 0px 0px 3px;color:#FFFFFF;}
+.TD4{background-color:#28578F; border-top:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-left:1px solid #FFFFFF; height:30px; padding:0px 0px 0px 3px;color:#FFFFFF;}
+.TD5{background-color:#28578F; border-top:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-left:1px solid #FFFFFF; border-bottom:2px solid #FFFFFF;height:30px; padding:0px 0px 0px 3px;color:#FFFFFF; font-weight:bold; font-size:13px; text-align:left;}
+.TD6{background-color:#28578F; border-top:1px solid #FFFFFF; border-right:1px solid #FFFFFF; border-left:1px solid #FFFFFF;  border-bottom:1px solid #FFFFFF;height:30px; padding:0px 0px 0px 0px; text-align:right;color:#FFFFFF;}
+
+
+.TDLeft{border:solid 1px #F1F1F1; background-color:#FAFAFA; padding:3px 3px 3px 3px; text-align:right; font-weight:bold;}
+.TDLeftBoldTextLeftSide{border:solid 1px #F1F1F1; background-color:#FAFAFA; padding:3px 3px 3px 3px; text-align:left; font-weight:bold;}
+.TDLeftNormalText{border:solid 1px #F1F1F1; background-color:#FAFAFA; padding:3px 3px 3px 3px; text-align:right;}
+.TDRight{border-top:solid 1px #F1F1F1;border-bottom:solid 1px #F1F1F1;border-right:solid 1px #F1F1F1; background-color:#FFFFFF; padding:3px 3px 3px 3px; text-align:left;}
+.TDTopBottom{border-bottom:solid 1px #F1F1F1;border-top:solid 1px #F1F1F1; background-color:#FFFFFF; padding:3px 3px 3px 3px; text-align:center; width:20px;}
+
+.TDLeftTextLeft{border:solid 1px #F1F1F1; background-color:#FAFAFA; text-align:left; vertical-align:top; padding:5px 5px 5px 5px;}
+.TDLeftTextRight{border:solid 1px #F1F1F1; background-color:#FAFAFA; text-align:Right; vertical-align:top; padding:5px 5px 5px 5px;}
+.TDRightTextLeft{border:solid 1px #F1F1F1;background-color:#FFFFFF; text-align:left; vertical-align:top; padding:5px 5px 5px 5px;}
+.TDRightTextRight{border:solid 1px #F1F1F1;background-color:#FFFFFF; text-align:Right; vertical-align:top; padding:5px 5px 5px 5px;}
+
+.TDNotSelected{color:White; background-color:#8CB12C; height:25px;border-top:1px solid #436a95;border-right:1px solid #436a95;border-left:0px solid #436a95; -webkit-border-radius:4px; -moz-border-radius:4px; }
+.TDNotSelected:hover{color:#8CB12C; background-color:White; height:25px;border-top:1px solid #436a95;border-right:1px solid #436a95;border-left:0px solid #436a95; -webkit-border-radius:4px; -moz-border-radius:4px; }
+.TDNotSelected:hover a{color:#8CB12C; text-decoration:none; font-size:11px; font-weight:bold;}
+.TDNotSelected a{color:white; text-decoration:none; font-size:11px; font-weight:bold;}
+.TDSelected{ background-color:White; height:25px;border-top:1px solid #436a95;border-right:1px solid #436a95;border-left:1px solid White; -webkit-border-radius:4px; -moz-border-radius:4px;}
+.TDSelected a{color:#8CB12C; text-decoration:none; font-size:11px; font-weight:bold;}
+
+.TDNotSelectedRed{color:White; background-color:Red; height:25px;border-top:1px solid #436a95;border-right:1px solid #436a95;border-left:1px solid #436a95; -webkit-border-radius:4px; -moz-border-radius:4px; }
+.TDNotSelectedRed:hover{color:#8CB12C; background-color:White; height:25px;border-top:1px solid #436a95;border-right:1px solid #436a95;border-left:1px solid #436a95; -webkit-border-radius:4px; -moz-border-radius:4px; }
+.TDNotSelectedRed:hover a{color:#8CB12C; text-decoration:none; font-size:11px; font-weight:bold;}
+.TDNotSelectedRed a{color:white; text-decoration:none; font-size:11px; font-weight:bold;}
+.TDSelectedRed{ font-weight:bold; color:White; text-decoration:none; background-color:Red; height:25px;border-top:1px solid #436a95;border-right:1px solid #436a95;border-left:1px solid #436a95; -webkit-border-radius:4px; -moz-border-radius:4px;}
+.TDSelectedRed a{ font-weight:bold; color:White; text-decoration:none; background-color:Red; height:25px; -webkit-border-radius:4px; -moz-border-radius:4px;}
+
+
+.TDBox{border:solid 1px #F1F1F1; background-color:#FAFAFA; padding:3px 3px 3px 3px; text-align:Left;}
+.JobGridTable{background-color: #ECF2FF; border-top: solid 1px #9C9D9F;border-bottom: solid 2px #9C9D9F; height:25px; text-align:left;}
+.JobGridAlt{background-color:#ECF2FE;}
+.JobGridAlt:hover{background-color: #E5E5E5;}
+.JobGridDateRow{background-color:#FFFFFF;}
+.JobGridDateRow:hover{background-color: #E5E5E5;}
+
+
+.JobListGridHeader{font-family:Verdana ;background-color: #ECF2FF; border-top: solid 1px #9C9D9F;border-bottom: solid 2px #9C9D9F; height:25px; text-align:left;}
+.JobId{ font-size:15px; text-decoration:none; vertical-align:top;}
+.JobAddress1{font-size:15px; font-weight:bold; padding-right:10px;}
+.JobAddress2{font-size:11px; padding-top:2px; text-transform:uppercase; color:#4E4E4E;}
+.JobClientName{ font-size:15px; color:Blue;  padding-right:10px;}
+.JobClientAddress{ font-size:11px; padding-top:2px; color:#4E4E4E; }
+.JobValuer1{ font-size:13px; padding-top:2px;  padding-right:10px;}
+.JobValuer2{ font-size:11px; padding-top:2px; color:Blue;  padding-right:10px;}
+
+.Button2{Border:solid 2px #074A87; background-color:#FFCA01;color:#074A87; font-size:25px;
+         border-radius:8px; font-weight:bold; padding:10px 20px 10px 20px;}
+         
+.Title101{ font-size:18px;}

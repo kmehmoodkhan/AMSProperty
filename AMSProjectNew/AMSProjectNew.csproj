@@ -1,0 +1,1328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E78CA87D-7906-47CF-9F4C-79CB3C462E4E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AMSProjectNew</RootNamespace>
+    <AssemblyName>AMSProjectNew</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\ManageAccessArangementsType.aspx" />
+    <Content Include="Admin\ManageClients.aspx" />
+    <Content Include="Admin\ManageClientsBranchManager.aspx" />
+    <Content Include="Admin\ManageClientsBranchManagerEdit.aspx" />
+    <Content Include="Admin\ManageClientsEdit.aspx" />
+    <Content Include="Admin\ManageCompliance.aspx" />
+    <Content Include="Admin\ManageComplianceEdit.aspx" />
+    <Content Include="Admin\ManageJobOrderDetails.aspx" />
+    <Content Include="Admin\ManageJobOrderList.aspx" />
+    <Content Include="Admin\ManagePropertyType.aspx" />
+    <Content Include="Admin\ManagePurpose.aspx" />
+    <Content Include="Admin\ManageReviewers.aspx" />
+    <Content Include="Admin\ManageReviewersEdit.aspx" />
+    <Content Include="Admin\ManageServiceType.aspx" />
+    <Content Include="Admin\ManageTransactionType.aspx" />
+    <Content Include="Admin\ManageUrgency.aspx" />
+    <Content Include="Admin\ManageValuationCompany.aspx" />
+    <Content Include="Admin\ManageValuationCompanyEdit.aspx" />
+    <Content Include="Admin\ManageValuationManager.aspx" />
+    <Content Include="Admin\ManageValuationManagerEdit.aspx" />
+    <Content Include="Admin\ManageValuationType.aspx" />
+    <Content Include="Admin\ManageValuers.aspx" />
+    <Content Include="Admin\ManageValuersEdit.aspx" />
+    <Content Include="Admin\MyProfile.aspx" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\AMSProject.dll" />
+    <Content Include="bin\AMSProjectNew.dll" />
+    <Content Include="bin\BusinessLayer.dll" />
+    <Content Include="bin\CKEditor.NET.dll" />
+    <Content Include="bin\epdfcreator.dll" />
+    <Content Include="bin\epengine.dll" />
+    <Content Include="bin\ephtmltopdf.dll" />
+    <Content Include="bin\Interop.ASPJPEGLib.dll" />
+    <Content Include="ckeditor\adapters\jquery.js" />
+    <Content Include="ckeditor\CHANGES.html" />
+    <Content Include="ckeditor\ckeditor.js" />
+    <Content Include="ckeditor\ckeditor_basic.js" />
+    <Content Include="ckeditor\config.js" />
+    <Content Include="ckeditor\contents.css" />
+    <Content Include="ckeditor\images\spacer.gif" />
+    <Content Include="ckeditor\INSTALL.html" />
+    <Content Include="ckeditor\lang\af.js" />
+    <Content Include="ckeditor\lang\ar.js" />
+    <Content Include="ckeditor\lang\bg.js" />
+    <Content Include="ckeditor\lang\bn.js" />
+    <Content Include="ckeditor\lang\bs.js" />
+    <Content Include="ckeditor\lang\ca.js" />
+    <Content Include="ckeditor\lang\cs.js" />
+    <Content Include="ckeditor\lang\cy.js" />
+    <Content Include="ckeditor\lang\da.js" />
+    <Content Include="ckeditor\lang\de.js" />
+    <Content Include="ckeditor\lang\el.js" />
+    <Content Include="ckeditor\lang\en-au.js" />
+    <Content Include="ckeditor\lang\en-ca.js" />
+    <Content Include="ckeditor\lang\en-gb.js" />
+    <Content Include="ckeditor\lang\en.js" />
+    <Content Include="ckeditor\lang\eo.js" />
+    <Content Include="ckeditor\lang\es.js" />
+    <Content Include="ckeditor\lang\et.js" />
+    <Content Include="ckeditor\lang\eu.js" />
+    <Content Include="ckeditor\lang\fa.js" />
+    <Content Include="ckeditor\lang\fi.js" />
+    <Content Include="ckeditor\lang\fo.js" />
+    <Content Include="ckeditor\lang\fr-ca.js" />
+    <Content Include="ckeditor\lang\fr.js" />
+    <Content Include="ckeditor\lang\gl.js" />
+    <Content Include="ckeditor\lang\gu.js" />
+    <Content Include="ckeditor\lang\he.js" />
+    <Content Include="ckeditor\lang\hi.js" />
+    <Content Include="ckeditor\lang\hr.js" />
+    <Content Include="ckeditor\lang\hu.js" />
+    <Content Include="ckeditor\lang\is.js" />
+    <Content Include="ckeditor\lang\it.js" />
+    <Content Include="ckeditor\lang\ja.js" />
+    <Content Include="ckeditor\lang\ka.js" />
+    <Content Include="ckeditor\lang\km.js" />
+    <Content Include="ckeditor\lang\ko.js" />
+    <Content Include="ckeditor\lang\lt.js" />
+    <Content Include="ckeditor\lang\lv.js" />
+    <Content Include="ckeditor\lang\mn.js" />
+    <Content Include="ckeditor\lang\ms.js" />
+    <Content Include="ckeditor\lang\nb.js" />
+    <Content Include="ckeditor\lang\nl.js" />
+    <Content Include="ckeditor\lang\no.js" />
+    <Content Include="ckeditor\lang\pl.js" />
+    <Content Include="ckeditor\lang\pt-br.js" />
+    <Content Include="ckeditor\lang\pt.js" />
+    <Content Include="ckeditor\lang\ro.js" />
+    <Content Include="ckeditor\lang\ru.js" />
+    <Content Include="ckeditor\lang\sk.js" />
+    <Content Include="ckeditor\lang\sl.js" />
+    <Content Include="ckeditor\lang\sr-latn.js" />
+    <Content Include="ckeditor\lang\sr.js" />
+    <Content Include="ckeditor\lang\sv.js" />
+    <Content Include="ckeditor\lang\th.js" />
+    <Content Include="ckeditor\lang\tr.js" />
+    <Content Include="ckeditor\lang\uk.js" />
+    <Content Include="ckeditor\lang\vi.js" />
+    <Content Include="ckeditor\lang\zh-cn.js" />
+    <Content Include="ckeditor\lang\zh.js" />
+    <Content Include="ckeditor\lang\_languages.js" />
+    <Content Include="ckeditor\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\LICENSE.html" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="ckeditor\plugins\xml\plugin.js" />
+    <Content Include="ckeditor\skins\kama\dialog.css" />
+    <Content Include="ckeditor\skins\kama\editor.css" />
+    <Content Include="ckeditor\skins\kama\icons.png" />
+    <Content Include="ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\kama\skin.js" />
+    <Content Include="ckeditor\skins\kama\templates.css" />
+    <Content Include="ckeditor\skins\office2003\dialog.css" />
+    <Content Include="ckeditor\skins\office2003\editor.css" />
+    <Content Include="ckeditor\skins\office2003\icons.png" />
+    <Content Include="ckeditor\skins\office2003\icons_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\office2003\images\mini.gif" />
+    <Content Include="ckeditor\skins\office2003\images\noimage.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites.png" />
+    <Content Include="ckeditor\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\office2003\skin.js" />
+    <Content Include="ckeditor\skins\office2003\templates.css" />
+    <Content Include="ckeditor\skins\v2\dialog.css" />
+    <Content Include="ckeditor\skins\v2\editor.css" />
+    <Content Include="ckeditor\skins\v2\icons.png" />
+    <Content Include="ckeditor\skins\v2\icons_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.gif" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides.png" />
+    <Content Include="ckeditor\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="ckeditor\skins\v2\images\mini.gif" />
+    <Content Include="ckeditor\skins\v2\images\noimage.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites.png" />
+    <Content Include="ckeditor\skins\v2\images\sprites_ie6.png" />
+    <Content Include="ckeditor\skins\v2\images\toolbar_start.gif" />
+    <Content Include="ckeditor\skins\v2\skin.js" />
+    <Content Include="ckeditor\skins\v2\templates.css" />
+    <Content Include="ckeditor\themes\default\theme.js" />
+    <Content Include="Clients\Default.aspx" />
+    <Content Include="Clients\JobOrderCreate.aspx" />
+    <Content Include="Clients\JobOrderDetails.aspx" />
+    <Content Include="Clients\JobOrderEditRequest.aspx" />
+    <Content Include="Clients\JobOrderList.aspx" />
+    <Content Include="Clients\MyProfile.aspx" />
+    <Content Include="CompanyLogo\06042015053701Adelaide Logo.jpg" />
+    <Content Include="CompanyLogo\06042015053833Adelaide Logo.jpg" />
+    <Content Include="CompanyLogo\06042015054426Melbourne Logo.jpg" />
+    <Content Include="CompanyLogo\06042015054442MarketVal.png" />
+    <Content Include="CompanyLogo\06082015033902MarketVal.png" />
+    <Content Include="CompanyLogo\06082015035422Melbourne Logo.jpg" />
+    <Content Include="CompanyLogo\06082015035435Melbourne Logo.jpg" />
+    <Content Include="CompanyLogo\08082016105147no-logo.jpg" />
+    <Content Include="CompanyLogo\0810201511454606042015052849MarketVal.png" />
+    <Content Include="CompanyLogo\0810201511462406042015052939Melbourne Logo.jpg" />
+    <Content Include="CompanyLogo\0810201511464006042015053011Adelaide Logo.jpg" />
+    <Content Include="CompanyLogo\12202012100229BackgroundBlue1.png" />
+    <Content Include="CompanyLogo\122020121009091.png" />
+    <Content Include="CompanyLogo\122020121009441.png" />
+    <Content Include="CompanyLogo\122020121014291.png" />
+    <Content Include="CompanyLogo\122020121016211.png" />
+    <Content Include="CompanyLogo\122020121031581.png" />
+    <Content Include="CompanyLogo\12202012104234Customer Account Profile_1355982458809.png" />
+    <Content Include="CompanyLogo\12242015022759Adelaide.png" />
+    <Content Include="CompanyLogo\12242015022807Adelaide.png" />
+    <Content Include="CompanyLogo\12242015022828Adelaide.png" />
+    <Content Include="CompanyLogo\12312015093003Cover_Logo.png" />
+    <Content Include="Contact-Us.aspx" />
+    <Content Include="CSS\Default.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="EmailTemplates\AccountReport.htm" />
+    <Content Include="EmailTemplates\ConfirmationofValuationReport.htm" />
+    <Content Include="EmailTemplates\ConfirmationofValuersAppointment.htm" />
+    <Content Include="EmailTemplates\ConfirmationofValuersInspected.htm" />
+    <Content Include="EmailTemplates\ContactUs.htm" />
+    <Content Include="EmailTemplates\ForgetPassword.html" />
+    <Content Include="EmailTemplates\HeaderAndFooterHtml.htm" />
+    <Content Include="EmailTemplates\PaymentNotificationToClient.htm" />
+    <Content Include="EmailTemplates\PDFReportToClient.htm" />
+    <Content Include="EmailTemplates\Test.htm" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="Images\BookMyShow_-_Book_Movie_Tickets,_buy_movie_tickets,_theatre_tickets,_Plays_Ticket,_Live_Concert_Tickets_Booking_online_-_2015-08-09_13.20.38.png" />
+    <Content Include="Images\btn_delete.gif" />
+    <Content Include="Images\btn_edit.gif" />
+    <Content Include="Images\Calendar_scheduleHS.png" />
+    <Content Include="Images\contact-new.gif" />
+    <Content Include="Images\contact-tiny.gif" />
+    <Content Include="Images\EditIcon.png" />
+    <Content Include="Images\Email Header.png" />
+    <Content Include="Images\globe-tiny.gif" />
+    <Content Include="Images\Header.png" />
+    <Content Include="Images\header_bg.gif" />
+    <Content Include="Images\Logo.png" />
+    <Content Include="Images\Logo1.png" />
+    <Content Include="Images\pdf_icon.gif" />
+    <Content Include="Images\Signature.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="MessageDisplay.aspx" />
+    <Content Include="Reviewers\Default.aspx" />
+    <Content Include="Reviewers\JobOrderDetails.aspx" />
+    <Content Include="Reviewers\JobOrderEditRequest.aspx" />
+    <Content Include="Reviewers\JobOrderList.aspx" />
+    <Content Include="Reviewers\MyProfile.aspx" />
+    <Content Include="UserControls\JobHistory.ascx" />
+    <Content Include="ValuationCompanyRegistration.aspx" />
+    <Content Include="ValuationCompany\Default.aspx" />
+    <Content Include="ValuationCompany\JobOrderCreate.aspx" />
+    <Content Include="ValuationCompany\JobOrderDetails.aspx" />
+    <Content Include="ValuationCompany\JobOrderEdit.aspx" />
+    <Content Include="ValuationCompany\JobOrderList.aspx" />
+    <Content Include="ValuationCompany\ManageReviewers.aspx" />
+    <Content Include="ValuationCompany\ManageReviewersEdit.aspx" />
+    <Content Include="ValuationCompany\ManageValuers.aspx" />
+    <Content Include="ValuationCompany\ManageValuersEdit.aspx" />
+    <Content Include="ValuationCompany\MyProfile.aspx" />
+    <Content Include="ValuationManager\Default.aspx" />
+    <Content Include="ValuationManager\JobOrderCreate.aspx" />
+    <Content Include="ValuationManager\JobOrderDetails.aspx" />
+    <Content Include="ValuationManager\JobOrderEdit.aspx" />
+    <Content Include="ValuationManager\JobOrderList.aspx" />
+    <Content Include="ValuationManager\MyProfile.aspx" />
+    <Content Include="ValuerLogo\10022013032419credit-img.png" />
+    <Content Include="ValuerLogo\10022013032531logo.png" />
+    <Content Include="ValuerLogo\SignatureImage.jpg" />
+    <Content Include="Valuers\core.js" />
+    <Content Include="Valuers\Default.aspx" />
+    <Content Include="Valuers\JobOrderDetails.aspx" />
+    <Content Include="Valuers\JobOrderEditRequest.aspx" />
+    <Content Include="Valuers\JobOrderGenerateReport.aspx" />
+    <Content Include="Valuers\JobOrderList.aspx" />
+    <Content Include="Valuers\MyProfile.aspx" />
+    <Content Include="Valuers\Test.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdelaideInstantQuote.aspx.cs">
+      <DependentUpon>AdelaideInstantQuote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdelaideInstantQuote.aspx.designer.cs">
+      <DependentUpon>AdelaideInstantQuote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Lookup.aspx.cs">
+      <DependentUpon>Lookup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Lookup.aspx.designer.cs">
+      <DependentUpon>Lookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LookuplistType.aspx.cs">
+      <DependentUpon>LookuplistType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\LookuplistType.aspx.designer.cs">
+      <DependentUpon>LookuplistType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageAccessArangementsType.aspx.cs">
+      <DependentUpon>ManageAccessArangementsType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageAccessArangementsType.aspx.designer.cs">
+      <DependentUpon>ManageAccessArangementsType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageClients.aspx.cs">
+      <DependentUpon>ManageClients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageClients.aspx.designer.cs">
+      <DependentUpon>ManageClients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageClientsBranchManager.aspx.cs">
+      <DependentUpon>ManageClientsBranchManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageClientsBranchManager.aspx.designer.cs">
+      <DependentUpon>ManageClientsBranchManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageClientsBranchManagerEdit.aspx.cs">
+      <DependentUpon>ManageClientsBranchManagerEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageClientsBranchManagerEdit.aspx.designer.cs">
+      <DependentUpon>ManageClientsBranchManagerEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageClientsEdit.aspx.cs">
+      <DependentUpon>ManageClientsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageClientsEdit.aspx.designer.cs">
+      <DependentUpon>ManageClientsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageCompliance.aspx.cs">
+      <DependentUpon>ManageCompliance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageCompliance.aspx.designer.cs">
+      <DependentUpon>ManageCompliance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageComplianceEdit.aspx.cs">
+      <DependentUpon>ManageComplianceEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageComplianceEdit.aspx.designer.cs">
+      <DependentUpon>ManageComplianceEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageJobOrderDetails.aspx.cs">
+      <DependentUpon>ManageJobOrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageJobOrderDetails.aspx.designer.cs">
+      <DependentUpon>ManageJobOrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageJobOrderList.aspx.cs">
+      <DependentUpon>ManageJobOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageJobOrderList.aspx.designer.cs">
+      <DependentUpon>ManageJobOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManagePropertyType.aspx.cs">
+      <DependentUpon>ManagePropertyType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManagePropertyType.aspx.designer.cs">
+      <DependentUpon>ManagePropertyType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManagePurpose.aspx.cs">
+      <DependentUpon>ManagePurpose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManagePurpose.aspx.designer.cs">
+      <DependentUpon>ManagePurpose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageReviewers.aspx.cs">
+      <DependentUpon>ManageReviewers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageReviewers.aspx.designer.cs">
+      <DependentUpon>ManageReviewers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageReviewersEdit.aspx.cs">
+      <DependentUpon>ManageReviewersEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageReviewersEdit.aspx.designer.cs">
+      <DependentUpon>ManageReviewersEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageServiceType.aspx.cs">
+      <DependentUpon>ManageServiceType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageServiceType.aspx.designer.cs">
+      <DependentUpon>ManageServiceType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageTransactionType.aspx.cs">
+      <DependentUpon>ManageTransactionType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageTransactionType.aspx.designer.cs">
+      <DependentUpon>ManageTransactionType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageUrgency.aspx.cs">
+      <DependentUpon>ManageUrgency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageUrgency.aspx.designer.cs">
+      <DependentUpon>ManageUrgency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageValuationCompany.aspx.cs">
+      <DependentUpon>ManageValuationCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageValuationCompany.aspx.designer.cs">
+      <DependentUpon>ManageValuationCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageValuationCompanyEdit.aspx.cs">
+      <DependentUpon>ManageValuationCompanyEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageValuationCompanyEdit.aspx.designer.cs">
+      <DependentUpon>ManageValuationCompanyEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageValuationManager.aspx.cs">
+      <DependentUpon>ManageValuationManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageValuationManager.aspx.designer.cs">
+      <DependentUpon>ManageValuationManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageValuationManagerEdit.aspx.cs">
+      <DependentUpon>ManageValuationManagerEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageValuationManagerEdit.aspx.designer.cs">
+      <DependentUpon>ManageValuationManagerEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageValuationType.aspx.cs">
+      <DependentUpon>ManageValuationType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageValuationType.aspx.designer.cs">
+      <DependentUpon>ManageValuationType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageValuers.aspx.cs">
+      <DependentUpon>ManageValuers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageValuers.aspx.designer.cs">
+      <DependentUpon>ManageValuers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageValuersEdit.aspx.cs">
+      <DependentUpon>ManageValuersEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageValuersEdit.aspx.designer.cs">
+      <DependentUpon>ManageValuersEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BranchManager\BranchManager.Master.cs">
+      <DependentUpon>BranchManager.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BranchManager\BranchManager.Master.designer.cs">
+      <DependentUpon>BranchManager.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\ClientsMaster.Master.cs">
+      <DependentUpon>ClientsMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients\ClientsMaster.Master.designer.cs">
+      <DependentUpon>ClientsMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\Buildings.aspx.cs">
+      <DependentUpon>Buildings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients\Buildings.aspx.designer.cs">
+      <DependentUpon>Buildings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\JobOrderCreate.aspx.cs">
+      <DependentUpon>JobOrderCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients\JobOrderCreate.aspx.designer.cs">
+      <DependentUpon>JobOrderCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\JobOrderDetails.aspx.cs">
+      <DependentUpon>JobOrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients\JobOrderDetails.aspx.designer.cs">
+      <DependentUpon>JobOrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\JobOrderEditRequest.aspx.cs">
+      <DependentUpon>JobOrderEditRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients\JobOrderEditRequest.aspx.designer.cs">
+      <DependentUpon>JobOrderEditRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\JobOrderList.aspx.cs">
+      <DependentUpon>JobOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients\JobOrderList.aspx.designer.cs">
+      <DependentUpon>JobOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\Reports-Buildings.aspx.cs">
+      <DependentUpon>Reports-Buildings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients\Reports-Buildings.aspx.designer.cs">
+      <DependentUpon>Reports-Buildings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\Reports-Comments.aspx.cs">
+      <DependentUpon>Reports-Comments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients\Reports-Comments.aspx.designer.cs">
+      <DependentUpon>Reports-Comments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\Reports-Finish.aspx.cs">
+      <DependentUpon>Reports-Finish.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients\Reports-Finish.aspx.designer.cs">
+      <DependentUpon>Reports-Finish.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Clients\Reports-Rooms.aspx.cs">
+      <DependentUpon>Reports-Rooms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clients\Reports-Rooms.aspx.designer.cs">
+      <DependentUpon>Reports-Rooms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compliance\ComplianceMaster.Master.cs">
+      <DependentUpon>ComplianceMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compliance\ComplianceMaster.Master.designer.cs">
+      <DependentUpon>ComplianceMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Contact-Us.aspx.cs">
+      <DependentUpon>Contact-Us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact-Us.aspx.designer.cs">
+      <DependentUpon>Contact-Us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePdf.asmx.cs">
+      <DependentUpon>CreatePdf.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FileUploading.aspx.cs">
+      <DependentUpon>FileUploading.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileUploading.aspx.designer.cs">
+      <DependentUpon>FileUploading.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratePDF.aspx.cs">
+      <DependentUpon>GeneratePDF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneratePDF.aspx.designer.cs">
+      <DependentUpon>GeneratePDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateReport.aspx.cs">
+      <DependentUpon>GenerateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenerateReport.aspx.designer.cs">
+      <DependentUpon>GenerateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageResize.aspx.cs">
+      <DependentUpon>ImageResize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageResize.aspx.designer.cs">
+      <DependentUpon>ImageResize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MelbourneInstantQuote.aspx.cs">
+      <DependentUpon>MelbourneInstantQuote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MelbourneInstantQuote.aspx.designer.cs">
+      <DependentUpon>MelbourneInstantQuote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MessageDisplay.aspx.cs">
+      <DependentUpon>MessageDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageDisplay.aspx.designer.cs">
+      <DependentUpon>MessageDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paging.aspx.cs">
+      <DependentUpon>Paging.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paging.aspx.designer.cs">
+      <DependentUpon>Paging.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reviewers\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reviewers\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reviewers\JobOrderDetails.aspx.cs">
+      <DependentUpon>JobOrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reviewers\JobOrderDetails.aspx.designer.cs">
+      <DependentUpon>JobOrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reviewers\JobOrderEditRequest.aspx.cs">
+      <DependentUpon>JobOrderEditRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reviewers\JobOrderEditRequest.aspx.designer.cs">
+      <DependentUpon>JobOrderEditRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reviewers\JobOrderList.aspx.cs">
+      <DependentUpon>JobOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reviewers\JobOrderList.aspx.designer.cs">
+      <DependentUpon>JobOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reviewers\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reviewers\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reviewers\ReviewersMaster.Master.cs">
+      <DependentUpon>ReviewersMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reviewers\ReviewersMaster.Master.designer.cs">
+      <DependentUpon>ReviewersMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\JobHistory.ascx.cs">
+      <DependentUpon>JobHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\JobHistory.ascx.designer.cs">
+      <DependentUpon>JobHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationCompanyRegistration.aspx.cs">
+      <DependentUpon>ValuationCompanyRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationCompanyRegistration.aspx.designer.cs">
+      <DependentUpon>ValuationCompanyRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationCompany\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationCompany\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationCompany\JobOrderCreate.aspx.cs">
+      <DependentUpon>JobOrderCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationCompany\JobOrderCreate.aspx.designer.cs">
+      <DependentUpon>JobOrderCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationCompany\JobOrderDetails.aspx.cs">
+      <DependentUpon>JobOrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationCompany\JobOrderDetails.aspx.designer.cs">
+      <DependentUpon>JobOrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationCompany\JobOrderEdit.aspx.cs">
+      <DependentUpon>JobOrderEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationCompany\JobOrderEdit.aspx.designer.cs">
+      <DependentUpon>JobOrderEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationCompany\JobOrderList.aspx.cs">
+      <DependentUpon>JobOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationCompany\JobOrderList.aspx.designer.cs">
+      <DependentUpon>JobOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationCompany\ManageReviewers.aspx.cs">
+      <DependentUpon>ManageReviewers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationCompany\ManageReviewers.aspx.designer.cs">
+      <DependentUpon>ManageReviewers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationCompany\ManageReviewersEdit.aspx.cs">
+      <DependentUpon>ManageReviewersEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationCompany\ManageReviewersEdit.aspx.designer.cs">
+      <DependentUpon>ManageReviewersEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationCompany\ManageValuers.aspx.cs">
+      <DependentUpon>ManageValuers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationCompany\ManageValuers.aspx.designer.cs">
+      <DependentUpon>ManageValuers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationCompany\ManageValuersEdit.aspx.cs">
+      <DependentUpon>ManageValuersEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationCompany\ManageValuersEdit.aspx.designer.cs">
+      <DependentUpon>ManageValuersEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationCompany\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationCompany\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationCompany\ValuationCompanyMaster.Master.cs">
+      <DependentUpon>ValuationCompanyMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationCompany\ValuationCompanyMaster.Master.designer.cs">
+      <DependentUpon>ValuationCompanyMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\DownloadClients.aspx.cs">
+      <DependentUpon>DownloadClients.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\DownloadClients.aspx.designer.cs">
+      <DependentUpon>DownloadClients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\DownloadReports.aspx.cs">
+      <DependentUpon>DownloadReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\DownloadReports.aspx.designer.cs">
+      <DependentUpon>DownloadReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\EmailAppointment.aspx.cs">
+      <DependentUpon>EmailAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\EmailAppointment.aspx.designer.cs">
+      <DependentUpon>EmailAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\EmailFinalReport.aspx.cs">
+      <DependentUpon>EmailFinalReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\EmailFinalReport.aspx.designer.cs">
+      <DependentUpon>EmailFinalReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\EmailInspected.aspx.cs">
+      <DependentUpon>EmailInspected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\EmailInspected.aspx.designer.cs">
+      <DependentUpon>EmailInspected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\EmailSent.aspx.cs">
+      <DependentUpon>EmailSent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\EmailSent.aspx.designer.cs">
+      <DependentUpon>EmailSent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\GenerateReport.aspx.cs">
+      <DependentUpon>GenerateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\GenerateReport.aspx.designer.cs">
+      <DependentUpon>GenerateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\GenerateReportOption.aspx.cs">
+      <DependentUpon>GenerateReportOption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\GenerateReportOption.aspx.designer.cs">
+      <DependentUpon>GenerateReportOption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\ImageHandler.cs" />
+    <Compile Include="ValuationManager\JobOrderCreate.aspx.cs">
+      <DependentUpon>JobOrderCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\JobOrderCreate.aspx.designer.cs">
+      <DependentUpon>JobOrderCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\JobOrderDetails.aspx.cs">
+      <DependentUpon>JobOrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\JobOrderDetails.aspx.designer.cs">
+      <DependentUpon>JobOrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\JobOrderEdit.aspx.cs">
+      <DependentUpon>JobOrderEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\JobOrderEdit.aspx.designer.cs">
+      <DependentUpon>JobOrderEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\JobOrderGenerateReport.aspx.cs">
+      <DependentUpon>JobOrderGenerateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\JobOrderGenerateReport.aspx.designer.cs">
+      <DependentUpon>JobOrderGenerateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\JobOrderList.aspx.cs">
+      <DependentUpon>JobOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\JobOrderList.aspx.designer.cs">
+      <DependentUpon>JobOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValuationManager\ValuationManagerMaster.Master.cs">
+      <DependentUpon>ValuationManagerMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValuationManager\ValuationManagerMaster.Master.designer.cs">
+      <DependentUpon>ValuationManagerMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Valuers\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Valuers\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Valuers\GenerateReport.aspx.cs">
+      <DependentUpon>GenerateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Valuers\GenerateReport.aspx.designer.cs">
+      <DependentUpon>GenerateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Valuers\GenerateReport1.aspx.cs">
+      <DependentUpon>GenerateReport1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Valuers\GenerateReport1.aspx.designer.cs">
+      <DependentUpon>GenerateReport1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Valuers\GenerateReportOption.aspx.cs">
+      <DependentUpon>GenerateReportOption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Valuers\GenerateReportOption.aspx.designer.cs">
+      <DependentUpon>GenerateReportOption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Valuers\JobOrderDetails.aspx.cs">
+      <DependentUpon>JobOrderDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Valuers\JobOrderDetails.aspx.designer.cs">
+      <DependentUpon>JobOrderDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Valuers\JobOrderEditRequest.aspx.cs">
+      <DependentUpon>JobOrderEditRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Valuers\JobOrderEditRequest.aspx.designer.cs">
+      <DependentUpon>JobOrderEditRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Valuers\JobOrderGenerateReport.aspx.cs">
+      <DependentUpon>JobOrderGenerateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Valuers\JobOrderGenerateReport.aspx.designer.cs">
+      <DependentUpon>JobOrderGenerateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Valuers\JobOrderList.aspx.cs">
+      <DependentUpon>JobOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Valuers\JobOrderList.aspx.designer.cs">
+      <DependentUpon>JobOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Valuers\MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Valuers\MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Valuers\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Valuers\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Valuers\ValuersMaster.Master.cs">
+      <DependentUpon>ValuersMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Valuers\ValuersMaster.Master.designer.cs">
+      <DependentUpon>ValuersMaster.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdelaideInstantQuote.aspx" />
+    <Content Include="Admin\AdminMaster.Master" />
+    <Content Include="Admin\Lookup.aspx" />
+    <Content Include="Admin\LookuplistType.aspx" />
+    <Content Include="bin\CuteWebUI.AjaxUploader.dll" />
+    <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="BranchManager\BranchManager.Master" />
+    <None Include="bin\ajaxuploader.lic" />
+    <None Include="CHANGE.xlsx" />
+    <None Include="ckeditor\.htaccess" />
+    <Content Include="Clients\ClientsMaster.Master" />
+    <Content Include="Clients\css\bootstrap.css" />
+    <Content Include="Clients\css\responsive.css" />
+    <Content Include="Clients\css\style.css" />
+    <Content Include="Clients\Buildings.aspx" />
+    <Content Include="Clients\font-awesome\css\font-awesome.css" />
+    <Content Include="Clients\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Clients\img\logo.png" />
+    <Content Include="Clients\js\bootstrap.js" />
+    <Content Include="Clients\js\bootstrap.min.js" />
+    <Content Include="Clients\js\jquery.min.js" />
+    <Content Include="Clients\js\modernizr.custom.86080.js" />
+    <Content Include="Clients\js\npm.js" />
+    <Content Include="Clients\Reports-Buildings.aspx" />
+    <Content Include="Clients\Reports-Comments.aspx" />
+    <Content Include="Clients\Reports-Finish.aspx" />
+    <Content Include="Clients\Reports-Rooms.aspx" />
+    <Content Include="CompanyLogo\02202013081155Logo.png" />
+    <Content Include="CompanyLogo\02202013081155Logo1.png" />
+    <Content Include="CompanyLogo\10022013032227Big Idea Mastermind - THINK BIGGER. - 2013-09-18_12.36.52.png" />
+    <Content Include="CompanyLogo\sidebar.png" />
+    <Content Include="Compliance\ComplianceMaster.Master" />
+    <None Include="Clients\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="Clients\font-awesome\fonts\fontawesome-webfont.svg" />
+    <None Include="Clients\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="Clients\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="Clients\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <None Include="Clients\font-awesome\fonts\FontAwesome.otf" />
+    <None Include="Clients\fonts\OpenSans-Light.ttf" />
+    <None Include="Clients\fonts\OpenSans-Semibold.ttf" />
+    <None Include="Clients\fonts\OpenSans.ttf" />
+    <Content Include="CreatePdf.asmx" />
+    <Content Include="Default.Master" />
+    <None Include="EmailTemplates\AccountReport.pdf" />
+    <None Include="EmailTemplates\AccountReport1.pdf" />
+    <None Include="PDF_File.pdf" />
+    <Content Include="EmailTemplates\AccountReport1.htm" />
+    <Content Include="EmailTemplates\ConfirmationofValuersAppointmentOld.htm" />
+    <Content Include="EmailTemplates\ReportEditByClientToAdmin.html" />
+    <Content Include="EmailTemplates\ReportEditByClient.html" />
+    <Content Include="EmailTemplates\HeaderAndFooterHtml1.htm" />
+    <Content Include="FileUploading.aspx" />
+    <Content Include="GeneratePDF.aspx" />
+    <Content Include="GenerateReport.aspx" />
+    <Content Include="htmlreport.html" />
+    <Content Include="ImageResize.aspx" />
+    <Content Include="Images\GenerateReport.png" />
+    <Content Include="Images\GenerateReport1.png" />
+    <Content Include="Images\gray-star.png" />
+    <Content Include="Images\red-star.png" />
+    <Content Include="pay.txt" />
+    <Content Include="ValuationManager\EmailAppointment.aspx" />
+    <Content Include="ValuationManager\EmailFinalReport.aspx" />
+    <Content Include="ValuationManager\EmailInspected.aspx" />
+    <Content Include="ValuationManager\EmailSent.aspx" />
+    <Content Include="ValuationManager\jquery-1.8.2.js" />
+    <Content Include="ValuationManager\jquery.MultiFile.js" />
+    <Content Include="MelbourneInstantQuote.aspx" />
+    <Content Include="Paging.aspx" />
+    <Content Include="Reviewers\ReviewersMaster.Master" />
+    <Content Include="ValuationCompany\ValuationCompanyMaster.Master" />
+    <Content Include="ValuationManager\DownloadClients.aspx" />
+    <Content Include="ValuationManager\DownloadReports.aspx" />
+    <Content Include="ValuationManager\GenerateReport.aspx" />
+    <Content Include="ValuationManager\GenerateReportOption.aspx" />
+    <Content Include="ValuationManager\JobOrderGenerateReport.aspx" />
+    <Content Include="ValuationManager\ValuationManagerMaster.Master" />
+    <Content Include="ValuerLogo\SignatureImage.png" />
+    <Content Include="Valuers\GenerateReport.aspx" />
+    <Content Include="Valuers\GenerateReport1.aspx" />
+    <Content Include="Valuers\GenerateReportOption.aspx" />
+    <Content Include="Valuers\ValuersMaster.Master" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile2.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="DB\" />
+    <Folder Include="Documents\Others\" />
+    <Folder Include="Documents\Overlays\" />
+    <Folder Include="Documents\PropertyReport\" />
+    <Folder Include="Documents\Title\" />
+    <Folder Include="Documents\ValuationInstruction\" />
+    <Folder Include="EmailHistoryFiles\" />
+    <Folder Include="FinalReportsTemp\" />
+    <Folder Include="FinalReports\Accounts\" />
+    <Folder Include="InsurancePolicy\" />
+    <Folder Include="Tab7Files\" />
+    <Folder Include="Tab8Files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.20229.2925, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AMSProject, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AMSProject.dll</HintPath>
+    </Reference>
+    <Reference Include="AMSProjectNew, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AMSProjectNew.dll</HintPath>
+    </Reference>
+    <Reference Include="CKEditor.NET, Version=3.6.2.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="CuteWebUI.AjaxUploader, Version=3.0.0.0, Culture=neutral, PublicKeyToken=bc00d4b0e43ec38d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CuteWebUI.AjaxUploader.dll</HintPath>
+    </Reference>
+    <Reference Include="epdfcreator, Version=10.2.0.14852, Culture=neutral, PublicKeyToken=e0ae9f6e27a97018, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\epdfcreator.dll</HintPath>
+    </Reference>
+    <Reference Include="ephtmltopdf, Version=10.2.0.14849, Culture=neutral, PublicKeyToken=e0ae9f6e27a97018, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ephtmltopdf.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ASPJPEGLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Interop.ASPJPEGLib.dll</HintPath>
+    </Reference>
+    <Reference Include="pdftoimage.net40.x86">
+      <HintPath>..\..\..\..\dlls\pdftoimage.net40.x86.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{DC5E79F6-C0B2-4DB4-AF5D-9124595AF505}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55310</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

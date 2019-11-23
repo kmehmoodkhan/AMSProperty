@@ -1,0 +1,7 @@
+D:\Projects\Paul - AMS\Source\AMSProjectNew\AMSProjectNew\bin\AMSProjectNew.dll
+D:\Projects\Paul - AMS\Source\AMSProjectNew\AMSProjectNew\bin\AMSProjectNew.pdb
+D:\Projects\Paul - AMS\Source\AMSProjectNew\AMSProjectNew\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Paul - AMS\Source\AMSProjectNew\AMSProjectNew\obj\Debug\AMSProjectNew.dll
+D:\Projects\Paul - AMS\Source\AMSProjectNew\AMSProjectNew\obj\Debug\AMSProjectNew.pdb
+D:\Projects\Paul - AMS\Source\AMSProjectNew\AMSProjectNew\bin\BusinessLayer.dll
+D:\Projects\Paul - AMS\Source\AMSProjectNew\AMSProjectNew\bin\BusinessLayer.pdb
