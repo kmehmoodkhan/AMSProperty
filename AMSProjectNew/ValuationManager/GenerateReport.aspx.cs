@@ -50,7 +50,62 @@ namespace AMSProjectNew.ValuationManager
                     SetSelectedTD();
                 }
                 FillTab1Summary();
+                FillDocumentDetails();
+            }
+        }
 
+        private int ParamJobId
+        {
+            get
+            {
+                int jobId = 0;
+
+                if (Request.QueryString["JobId"] != null)
+                {
+                    jobId = Convert.ToInt32(Request.QueryString["JobId"]);
+                }
+                return jobId;
+            }
+        }
+
+        
+
+    private void FillDocumentDetails()
+        {
+            using (var context = new marketvalDBEntities())
+            {
+                var sections = from p in context.AMS_ReportSections
+                               join q in context.AMS_Tab8_Attachments on p.AMS_ReportSectionsId equals q.SectionId
+                               where p.JobId == ParamJobId && q.JobId == ParamJobId
+                               select new { Id = q.Id, p.SectionName, ImageUrl = q.ImageName, p.CreatedOn };
+
+
+
+                this.GridViewSections.DataSource = sections.ToList();
+                this.GridViewSections.DataBind();
+
+                this.dropDownSection.DataSource = context.AMS_ReportSections.Where(t=>t.JobId== ParamJobId).ToList();
+                this.dropDownSection.DataBind();
+
+                this.GridViewSectionsList.DataSource = context.AMS_ReportSections.Where(t => t.JobId == ParamJobId).ToList();
+                this.GridViewSectionsList.DataBind();
+
+                this.dropDownSection.Items.Insert(0, "Select Section");
+            }
+        }
+
+        private void LoadDocumentsListing()
+        {
+            
+
+            using (var context = new marketvalDBEntities())
+            {
+                var sections = from p in context.AMS_ReportSections
+                               join q in context.AMS_Tab8_Attachments on p.AMS_ReportSectionsId equals q.SectionId
+                               where p.JobId == ParamJobId && q.JobId == ParamJobId
+                               select new { Id = q.Id, p.SectionName, ImageUrl = q.ImageName, p.CreatedOn };
+                this.GridViewSections.DataSource = sections.ToList();
+                this.GridViewSections.DataBind();
             }
         }
 
@@ -84,7 +139,7 @@ namespace AMSProjectNew.ValuationManager
                     {
                         this.ddlPurpose.SelectedIndex = this.ddlPurpose.Items.IndexOf(this.ddlPurpose.Items.FindByValue(purposeId));
                     }
-                    
+
                     //lblPhone.Text = Convert.ToString(ds.Tables[0].Rows[0]["PhoneNumber"]);
 
                     //lblEmailAddress.Text = Convert.ToString(ds.Tables[0].Rows[0]["EmailAddress"]);
@@ -1428,6 +1483,7 @@ namespace AMSProjectNew.ValuationManager
             tblTab8Zoning.Visible = false;
             tblTab8Overlay.Visible = false;
             tblTab8Others.Visible = false;
+            tblTab8AddDocuments.Visible = false;
 
             lbtnTab8Primary.Font.Bold = false;
             lbtnTab8External.Font.Bold = false;
@@ -1437,16 +1493,21 @@ namespace AMSProjectNew.ValuationManager
             lbtnTab8Zoning.Font.Bold = false;
             lbtnTab8Overlay.Font.Bold = false;
             lbtnTab8Others.Font.Bold = false;
+            lbtnTab8AddDocuments.Font.Bold = false;
         }
         #endregion
 
         #region Tab 8 Upload Photo
-        public DataSet Tab8GetImages(string ImageType)
+        public DataSet Tab8GetImages(string ImageType, Int64 jobId = 0)
         {
             ReportController objReportController = new ReportController();
             try
             {
-                return objReportController.Tab8_AttachmentsSelect(0, Convert.ToInt64(lblJobId.Text), ImageType);
+                if (jobId < 1)
+                {
+                    jobId = Convert.ToInt64(lblJobId.Text);
+                }
+                return objReportController.Tab8_AttachmentsSelect(0, jobId, ImageType);
             }
             catch (Exception Ex)
             {
@@ -2246,13 +2307,13 @@ namespace AMSProjectNew.ValuationManager
                                 objImage[ii].Save(outputPageImage);
                                 objReportController.Tab8_AttachmentsEdit(0, JobId, strFileName, "OverlayPhoto", Convert.ToInt64(Session["UserId"]), "ADD");
                                 lblTab8Error.Text = "FIle path ..... " + outputPageImage;
-                            } 
+                            }
                         }
                         catch (Exception ex)
                         {
                             lblTab8Error.Text = " Exception here : " + ex.Message;
                             return;
-                        }        
+                        }
                     }
                     else
                     {
@@ -2288,7 +2349,7 @@ namespace AMSProjectNew.ValuationManager
                 //    //SetFile(fuTab8Overlay, Server.MapPath("~/Tab8Files/" + fuTab8Overlay.FileName.ToString()), strFileName);
                 //    //strFileName = Path.GetFileName(strFileName);
                 //}
-                
+
                 //JobId = objReportController.Tab8_AttachmentsEdit(0, JobId, strFileName, "OverlayPhoto", Convert.ToInt64(Session["UserId"]), "ADD");
                 if (JobId > 0)
                 {
@@ -2421,14 +2482,14 @@ namespace AMSProjectNew.ValuationManager
                 objReportController = null;
             }
         }
-        public void FillTab8OthersPhoto()
+        public void FillTab8OthersPhoto(Int64 jobId = 0)
         {
             ReportController objReportController = new ReportController();
             DataSet ds = new DataSet();
             try
             {
                 gvTab8OthersPhoto.Visible = false;
-                ds = Tab8GetImages("OthersPhoto");
+                ds = Tab8GetImages("OthersPhoto", jobId);
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     gvTab8OthersPhoto.DataSource = ds.Tables[0].DefaultView;
@@ -2551,7 +2612,7 @@ namespace AMSProjectNew.ValuationManager
 
                 int valApproach = 0;
 
-                if(ddlValuationApproach.SelectedValue.Length > 0)
+                if (ddlValuationApproach.SelectedValue.Length > 0)
                 {
                     valApproach = Convert.ToInt32(ddlValuationApproach.SelectedValue);
                 }
@@ -2803,9 +2864,9 @@ namespace AMSProjectNew.ValuationManager
             }
             #endregion
         }
-        public void SaveTabsData(bool saveAll=false)
+        public void SaveTabsData(bool saveAll = false)
         {
-            if(saveAll || Convert.ToString(Session["TDReportSelected"]) == "Tab1Summary")
+            if (saveAll || Convert.ToString(Session["TDReportSelected"]) == "Tab1Summary")
             {
                 SaveSummaryTab();
             }
@@ -2815,8 +2876,8 @@ namespace AMSProjectNew.ValuationManager
                 SaveLandTab();
             }
 
-            
-           if (saveAll || Convert.ToString(Session["TDReportSelected"]) == "Tab3BuildingImprovements")
+
+            if (saveAll || Convert.ToString(Session["TDReportSelected"]) == "Tab3BuildingImprovements")
             {
                 SaveBuildingImprovements();
             }
@@ -2925,6 +2986,9 @@ namespace AMSProjectNew.ValuationManager
 
         private string GeneratePDF()
         {
+            string logFilePath = Server.MapPath("../FinalReports/") + "test.txt";
+            System.IO.File.WriteAllText(logFilePath, "PDF Beginning");
+
             //ExpertPdf.HtmlToPdf.PdfConverter pdfConverter = new ExpertPdf.HtmlToPdf.PdfConverter();
             //pdfConverter.LicenseKey = "OBMJGAAYCgENGAkIFggYCwkWCQoWAQEBAQ==";
             //set the license key
@@ -2941,11 +3005,16 @@ namespace AMSProjectNew.ValuationManager
             //AddHtmlFooter(document, font);
 
             FillPdfDetails(document, font);
+
+
+            System.IO.File.WriteAllText(logFilePath, "Details filled");
             //AddTab2Land(document, font);
 
             // send the generated PDF document to client browser
-            string pdfName = Convert.ToString(lblJobId.Text)+"_" + DateTime.Now.ToString("yyyyddMM_HHMMss")+ "_FinalReport.pdf";
+            string pdfName = Convert.ToString(lblJobId.Text) + "_" + DateTime.Now.ToString("yyyyddMM_HHMMss") + "_FinalReport.pdf";
             string strPath = Server.MapPath("../FinalReports/") + pdfName;
+
+
             if (File.Exists(strPath))
                 File.Delete(strPath);
 
@@ -3058,7 +3127,7 @@ namespace AMSProjectNew.ValuationManager
             // add header and footer before renderng the content
             AddHtmlHeader(document);
             AddHtmlFooter(document, font);
-            
+
 
             #region First Page Header + Footer
             //First page Header and Footer 
@@ -3068,6 +3137,8 @@ namespace AMSProjectNew.ValuationManager
             document.Pages[0].CustomFooterTemplate = document.AddTemplate(document.Pages[0].ClientRectangle.Width, 100);
             // create a HTML to PDF converter element to be added to the header template
 
+            string strHFImageUrl = System.Configuration.ConfigurationManager.AppSettings["ImageURL"].ToString() + "CompanyLogo/";
+
             string companyUrl = string.Empty;
             string companyName = string.Empty;
             string companyAddress = string.Empty;
@@ -3076,11 +3147,14 @@ namespace AMSProjectNew.ValuationManager
             string valuationApproachId = string.Empty;
             string propertyType = string.Empty;
             string valuationApproach = string.Empty;
+            string valuationCompanyHeaderImage = string.Empty;
+            string valuationCompanyAssignedLogo = string.Empty;
+            string valuationCompanyFooterImage = string.Empty;
 
             if (dsComanyInfo.Tables[0].Rows.Count > 0)
             {
                 var _companyUrl = dsComanyInfo.Tables[0].Rows[0]["ValuationCompanyAssignedURL"];
-                if(_companyUrl!=null && _companyUrl!= DBNull.Value)
+                if (_companyUrl != null && _companyUrl != DBNull.Value)
                 {
                     companyUrl = _companyUrl.ToString().Trim();
                 }
@@ -3113,7 +3187,39 @@ namespace AMSProjectNew.ValuationManager
                 }
             }
 
-            if( dsTab1.Tables.Count>0 && dsTab1.Tables[0].Rows.Count > 0)
+            if (dsComanyInfo.Tables[0].Rows.Count > 0)
+            {
+                var _valuationCompanyHeaderImage = dsComanyInfo.Tables[0].Rows[0]["valuationCompanyHeaderImage"];
+                if (_valuationCompanyHeaderImage != null && _valuationCompanyHeaderImage != DBNull.Value)
+                {
+                    valuationCompanyHeaderImage = _valuationCompanyHeaderImage.ToString().Trim();
+                }
+            }
+
+            if (dsComanyInfo.Tables[0].Rows.Count > 0)
+            {
+                var _valuationCompanyAssignedLogo = dsComanyInfo.Tables[0].Rows[0]["valuationCompanyAssignedLogo"];
+                if (_valuationCompanyAssignedLogo != null && _valuationCompanyAssignedLogo != DBNull.Value)
+                {
+                    valuationCompanyAssignedLogo = _valuationCompanyAssignedLogo.ToString().Trim();
+                }
+            }
+
+            if (dsComanyInfo.Tables[0].Rows.Count > 0)
+            {
+                var _valuationCompanyFooterImage = dsComanyInfo.Tables[0].Rows[0]["valuationCompanyFooterImage"];
+                if (_valuationCompanyFooterImage != null && _valuationCompanyFooterImage != DBNull.Value)
+                {
+                    valuationCompanyFooterImage = _valuationCompanyFooterImage.ToString().Trim();
+                }
+            }
+
+
+
+
+
+
+            if (dsTab1.Tables.Count > 0 && dsTab1.Tables[0].Rows.Count > 0)
             {
 
                 propertyAddress = dsTab1.Tables[0].Rows[0]["StreetNumber"] + " " +
@@ -3137,19 +3243,47 @@ namespace AMSProjectNew.ValuationManager
                 }
             }
 
-            
 
+            string padding = "165";
 
-            string strHeaderHtml = "<table width='1020px' cellpadding='0' cellspacing='0' border='0x' style='border-top:solid 4px Red;font-family:Verdana; font-size:17px;color:white;'>";
-            strHeaderHtml += "<tr><td align='center' style='background-color:#2A3492; height:90px; font-size:30px;'>" + companyUrl + "</td></tr>";
-            strHeaderHtml += "</table>";
+            /**********************************/
+            string strHeaderHtml = "";
+            if (valuationCompanyHeaderImage.Trim() != "")
+            {
+                strHeaderHtml += "<table width='1020px' cellpadding='0' cellspacing='0' border='0x'>";
+                strHeaderHtml += "<tr><td align='center' style='height:50px;'><img style='width:100%;' src='" + strHFImageUrl + valuationCompanyHeaderImage.Trim() + "' /></td></tr>";
+                strHeaderHtml += "</table>";
+            }
+            else
+            {
+                strHeaderHtml += "<table width='1020px' cellpadding='0' cellspacing='0' border='0x' style='border-top:solid 4px Red;font-family:Verdana; font-size:17px;color:white;'>";
+                strHeaderHtml += "<tr><td align='center' style='background-color:#4D4E50; height:90px; font-size:30px;'>" + companyUrl.Trim() + "</td></tr>";
+                strHeaderHtml += "</table>";
+            }
+
 
             string strFooterHtml = "<table width='1020px' cellpadding='0' cellspacing='0' border='0x' style='font-family:Verdana; font-size:17px;'>";
-            strFooterHtml += "<tr><td align='center' style='font-size:25px; color:darkblue;font-weight:bold;'>" + companyName + "</td></tr>";
-            strFooterHtml += "<tr><td align='center' style='font-size:18px;color:grey;font-weight:bold;'>" + companyAddress + "  Phone:- " + companyPhone + "</td></tr>";
-            strFooterHtml += "<tr><td align='center' style='height:15px;'></td></tr>";
-            strFooterHtml += "<tr><td align='center' style='background-color:#2A3492;color:white;height:80px; font-size:30px;border-top:solid 4px Red;'>" + lblCompanyUrl.Text.Trim() + "</td></tr>";
+            //strFooterHtml += "<tr><td align='center' style='font-size:25px; color:#4D4E50;font-weight:bold;'>" + lblCompanyName.Text.Trim() + "</td></tr>";
+            //strFooterHtml += "<tr><td align='center' style='font-size:18px;color:grey;font-weight:bold;'>" + lblCompanyAddress.Text.Trim() + "  Phone:- " + lblCompanyPhone.Text.Trim() + "</td></tr>";
+            strFooterHtml += "<tr><td align='center'><img src='" + strHFImageUrl + valuationCompanyAssignedLogo.Trim() + "' /></td></tr>";
+            if (lblCompanyFooterImage.Text.Trim() != "")
+                strFooterHtml += "<tr><td align='center'><img style='width:100%;' src='" + strHFImageUrl + valuationCompanyFooterImage.Trim() + "' /></td></tr>";
+            else
+                strFooterHtml += "<tr><td align='center' style='background-color:#4D4E50;color:white;height:80px; font-size:30px;border-top:solid 4px Red;'>" + companyUrl.Trim() + "</td></tr>";
+
             strFooterHtml += "</table>";
+            /***********************************/
+
+            //string strHeaderHtml1 = "<table width='1020px' cellpadding='0' cellspacing='0' border='0x' style='border-top:solid 4px Red;font-family:Verdana; font-size:17px;color:white;'>";
+            //strHeaderHtml += "<tr><td align='center' style='background-color:#2A3492; height:90px; font-size:30px;'>" + companyUrl + "</td></tr>";
+            //strHeaderHtml += "</table>";
+
+            //string strFooterHtml1 = "<table width='1020px' cellpadding='0' cellspacing='0' border='0x' style='font-family:Verdana; font-size:17px;'>";
+            //strFooterHtml += "<tr><td align='center' style='font-size:25px; color:darkblue;font-weight:bold;'>" + companyName + "</td></tr>";
+            //strFooterHtml += "<tr><td align='center' style='font-size:18px;color:grey;font-weight:bold;'>" + companyAddress + "  Phone:- " + companyPhone + "</td></tr>";
+            //strFooterHtml += "<tr><td align='center' style='height:15px;'></td></tr>";
+            //strFooterHtml += "<tr><td align='center' style='background-color:#2A3492;color:white;height:80px; font-size:30px;border-top:solid 4px Red;'>" + lblCompanyUrl.Text.Trim() + "</td></tr>";
+            //strFooterHtml += "</table>";
 
             //HtmlToPdfElement headerHtmlToPdf = new HtmlToPdfElement(-6, -9, strHeaderHtml, "");
             //HtmlToPdfElement footerHtmlToPdf = new HtmlToPdfElement(-6, 42, strFooterHtml, "");
@@ -3165,6 +3299,9 @@ namespace AMSProjectNew.ValuationManager
             #endregion
 
             #region First Page
+
+            string logFilePath = Server.MapPath("../FinalReports/") + "test.txt";
+            System.IO.File.WriteAllText(logFilePath, "1st step");
 
             string strPageContents = "<table width='1000px' cellpadding='0' cellspacing='5' border='0' style='font-family:Verdana; font-size:17px; font-weight:bold;'>";
 
@@ -3188,7 +3325,7 @@ namespace AMSProjectNew.ValuationManager
                 //if (imgWidth1 > 700) imgWidth1 = 700;
                 //if (imgHeight1 > 550) imgHeight1 = 550;
 
-                strPageContents += "<tr><td align='center'><div style='width:100%;height:100%;padding-left:75px;padding-right:75px'><img src='" + strImageUrl + "' /></div></td></tr>";
+                strPageContents += "<tr><td align='center'><div style='width:100%;height:100%;padding-left:" + padding + "px;padding-right:" + padding + "'><img src='" + strImageUrl + "' /></div></td></tr>";
             }
             strPageContents += "<tr><td align='center' style='height:40px;'></td></tr>";
             strPageContents += "<tr><td align='center'><b>Property:</b></td></tr>";
@@ -3234,6 +3371,8 @@ namespace AMSProjectNew.ValuationManager
             HtmlToPdfElement htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
 
             page.AddElement(htmlToPdfURL2);
+
+            System.IO.File.WriteAllText(logFilePath, "2nd step");
 
             #endregion
 
@@ -3583,7 +3722,7 @@ namespace AMSProjectNew.ValuationManager
             }
 
             // if (txtTab6Instructions.Text.Trim() != "")
-            if ( !string.IsNullOrEmpty(instructions))
+            if (!string.IsNullOrEmpty(instructions))
             {
                 //strPageContents += "<tr><td colspan='2' style='font-weight:bold;'>Instructions:</td></tr>";
                 strPageContents += "<tr style='text-align:justify;'><td colspan='2'>" + instructions.Trim().Replace("\r", "<br />") + "</td></tr>";
@@ -3598,7 +3737,7 @@ namespace AMSProjectNew.ValuationManager
             }
 
             //if (txtTab6LastSaleofProperty.Text.Trim() != "")
-            if( !string.IsNullOrEmpty(lastSaleofProperty))
+            if (!string.IsNullOrEmpty(lastSaleofProperty))
             {
                 //strPageContents += "<tr><td colspan='2' style='font-weight:bold;'>Last Sale Date of Property:</td></tr>";
                 strPageContents += "<tr style='text-align:justify;'><td colspan='2'>" + lastSaleofProperty.Trim().Replace("\r", "<br />") + "</td></tr>";
@@ -3637,6 +3776,8 @@ namespace AMSProjectNew.ValuationManager
             htmlToPdfURL2.OptimizePdfPageBreaks = true;
             page.AddElement(htmlToPdfURL2);
 
+            System.IO.File.WriteAllText(logFilePath, "3rd step");
+
             #endregion
 
             #region Sales Evidance
@@ -3662,9 +3803,9 @@ namespace AMSProjectNew.ValuationManager
                             string ImageUrl = System.Configuration.ConfigurationManager.AppSettings["ImageURL"].ToString() + "Tab7Files/" +
                                 Convert.ToString(dsTab7.Tables[0].Rows[i]["ImageName"]);
 
-                            System.Drawing.Image imgImage = System.Drawing.Image.FromFile(this.Server.MapPath("~/Tab7Files/" + Convert.ToString(dsTab7.Tables[0].Rows[i]["ImageName"])));
-                            Int32 imgWidth = imgImage.Width;
-                            Int32 imgHeight = imgImage.Height;
+                            //System.Drawing.Image imgImage = System.Drawing.Image.FromFile(this.Server.MapPath("~/Tab7Files/" + Convert.ToString(dsTab7.Tables[0].Rows[i]["ImageName"])));
+                            //Int32 imgWidth = imgImage.Width;
+                            //Int32 imgHeight = imgImage.Height;
 
                             //if (imgWidth > 800) imgWidth = 800;
                             //if (imgHeight > 800) imgHeight = 800;
@@ -3672,7 +3813,7 @@ namespace AMSProjectNew.ValuationManager
                             strPageContents += "<table width='100%' cellpadding='0' cellspacing='0' border='0' style='width:100%;font-family:Verdana; font-size:18px;'>";
                             //strPageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
                             //strPageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
-                            strPageContents += "<tr><td align='center'><div style='width:100%;height:100%;padding-left:75px;padding-right:75px'><img src='" + ImageUrl + "' /></div></td></tr>";
+                            strPageContents += "<tr><td align='center' style='padding-left:" + padding + "px;padding-right:" + padding + "px'><div align='center' style='width:100%;height:100%;'><img width='100%' src='" + ImageUrl + "' /></div></td></tr>";
                             strPageContents += "</table>";
 
 
@@ -3746,6 +3887,7 @@ namespace AMSProjectNew.ValuationManager
             htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
             page.AddElement(htmlToPdfURL2);
 
+            System.IO.File.WriteAllText(logFilePath, "4th step");
             #endregion
 
             #region TERMS AND CONDITIONS with Valuer details
@@ -3767,18 +3909,6 @@ namespace AMSProjectNew.ValuationManager
                 strPageContents += "<tr><td colspan='2' style='text-align:justify;'>" + Convert.ToString(ds.Tables[0].Rows[0]["ValuationCompanyAssignedTermsandCondition"]).Trim().Replace("\r", "<br />").Replace("{ValuerMembershipBody}", Convert.ToString(ds.Tables[0].Rows[0]["ValuersMembershipStatus"]).Trim() + " <u>" + Convert.ToString(ds.Tables[0].Rows[0]["ValuersMembershipBody"]).Trim()) + "</u></td></tr>";
                 strPageContents += "<tr><td colspan='2'>&nbsp;</td></tr>";
             }
-            //strPageContents += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            //strPageContents += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            //strPageContents += "<tr><td colspan='2' style='font-weight:bold;'>" + lblCompanyName.Text.Trim() + "</td></tr>";
-            //strPageContents += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            //strPageContents += "<tr><td colspan='2' style='font-weight:bold;'><img src='" + lblValuersSignature.Text + "'></td></tr>";
-            //strPageContents += "<tr><td colspan='2' style='font-weight:bold;'>" + lblValuerName.Text.Trim() + "</td></tr>";
-            //strPageContents += "<tr><td colspan='2' style='font-weight:bold;'>" + lblValuersTitle.Text.Trim() + "</td></tr>";
-            //strPageContents += "<tr><td colspan='2' style='font-weight:bold;'>" + lblValuersMembershipStatus.Text.Trim() + " " + lblValuersMembershipBody.Text.Trim() + "</td></tr>";
-            //strPageContents += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            //strPageContents += "<tr><td colspan='2' style='font-size:14px;'><b>ADDRESS: </b>" + lblCompanyAddress.Text.Trim() + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>TELEPHONE:</b> Office: " + lblCompanyPhone.Text.Trim() + "</td></tr>";
-            //strPageContents += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            //strPageContents += "<tr><td colspan='2'>&nbsp;</td></tr>";
 
 
             strPageContents += "</table>";
@@ -3787,6 +3917,8 @@ namespace AMSProjectNew.ValuationManager
             page = document.Pages.AddNewPage();
             htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
             page.AddElement(htmlToPdfURL2);
+
+            System.IO.File.WriteAllText(logFilePath, "5th step");
 
             #endregion
 
@@ -3824,6 +3956,8 @@ namespace AMSProjectNew.ValuationManager
             htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
             page.AddElement(htmlToPdfURL2);
 
+            System.IO.File.WriteAllText(logFilePath, "6th step");
+
             #endregion
 
             #region Appendix:- Title Details
@@ -3848,22 +3982,26 @@ namespace AMSProjectNew.ValuationManager
                 for (int i = 0; i < dsTitlePhoto.Tables[0].Rows.Count; i++)
                 {
                     if (dsTitlePhoto.Tables[0].Rows[i]["ImageName"] != DBNull.Value)
-                   {
+                    {
                         string ImageUrl = System.Configuration.ConfigurationManager.AppSettings["ImageURL"].ToString() + "Tab8Files/" +
                             Convert.ToString(dsTitlePhoto.Tables[0].Rows[i]["ImageName"]);
+
+                        System.IO.File.WriteAllText(logFilePath, "7th step");
 
                         System.Drawing.Image imgImage = System.Drawing.Image.FromFile(this.Server.MapPath("~/Tab8Files/" + Convert.ToString(dsTitlePhoto.Tables[0].Rows[i]["ImageName"])));
                         Int32 imgWidth = imgImage.Width;
                         Int32 imgHeight = imgImage.Height;
 
+                        System.IO.File.WriteAllText(logFilePath, "8th step");
+
                         //if (imgWidth >= 700) imgWidth = 775;
                         //if (imgHeight >= 975) imgHeight = 990;
 
-                      //  if (imgWidth > 700) imgWidth = 700;
-                     //   if (imgHeight > 700) imgHeight = 700;
+                        //  if (imgWidth > 700) imgWidth = 700;
+                        //   if (imgHeight > 700) imgHeight = 700;
                         strPageContents = "<table  cellpadding='0' cellspacing='5' border='0' style='width:100%;'>";
                         //strPageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
-                        strPageContents += "<tr><td align='center'><div style='width:100%;height:100%;padding-left:75px;padding-right:75px'><img src='" + ImageUrl + "' /></div></td></tr>";
+                        strPageContents += "<tr><td align='center' style='padding-left:" + padding + "px;padding-right:" + padding + "px'><div align='center' style='width:100%;height:100%;'><img width='100%' height='496px' src='" + ImageUrl + "' /></div></td></tr>";
                         strPageContents += "<tr><td>&nbsp;</td></tr>";
                         strPageContents += "</table>";
 
@@ -3909,13 +4047,14 @@ namespace AMSProjectNew.ValuationManager
                         strPageContents = "<table  cellpadding='0' cellspacing='5' border='0' style='width:100%;'>";
                         //strPageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
                         //strPageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
-                        strPageContents += "<tr><td align='center'><div style='width:100%;height:100%;padding-left:75px;padding-right:75px'><img src='" + ImageUrl + "' /></div></td></tr>";
+                        strPageContents += "<tr><td align='center' style='padding-left:" + padding + "px;padding-right:" + padding + "px'><div align='center' style='width:100%;height:100%;'><img width='100%' height='496px' src='" + ImageUrl + "' /></div></td></tr>";
                         strPageContents += "<tr><td>&nbsp;</td></tr>";
                         strPageContents += "</table>";
 
                         page = document.Pages.AddNewPage();
                         htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
                         page.AddElement(htmlToPdfURL2);
+                        System.IO.File.WriteAllText(logFilePath, "9th step");
                     }
                 }
 
@@ -3941,6 +4080,8 @@ namespace AMSProjectNew.ValuationManager
                 htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
                 page.AddElement(htmlToPdfURL2);
 
+                System.IO.File.WriteAllText(logFilePath, "10th step");
+
                 for (int i = 0; i < dsOverlayPhoto.Tables[0].Rows.Count; i++)
                 {
                     if (dsOverlayPhoto.Tables[0].Rows[i]["ImageName"] != DBNull.Value)
@@ -3957,7 +4098,7 @@ namespace AMSProjectNew.ValuationManager
                         strPageContents = "<table  cellpadding='0' cellspacing='5' border='0' style='width:100%;'>";
                         //strPageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
                         //strPageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
-                        strPageContents += "<tr><td align='center'><div style='width:100%;height:100%;padding-left:75px;padding-right:75px'><img src='" + ImageUrl + "' /></div></td></tr>";
+                        strPageContents += "<tr><td align='center' style='padding-left:" + padding + "px;padding-right:" + padding + "px'><div align='center' style='width:100%;height:100%;'><img width='100%' height='496px' src='" + ImageUrl + "' /></div></td></tr>";
                         strPageContents += "<tr><td>&nbsp;</td></tr>";
                         strPageContents += "</table>";
 
@@ -3968,6 +4109,7 @@ namespace AMSProjectNew.ValuationManager
                 }
             }
 
+            System.IO.File.WriteAllText(logFilePath, "11th step");
             #endregion
 
 
@@ -4008,13 +4150,15 @@ namespace AMSProjectNew.ValuationManager
                         strPageContents = "<table  cellpadding='0' cellspacing='5' border='0' style='width:100%;'>";
                         //strPageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
                         //strPageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
-                        strPageContents += "<tr><td align='center'><div style='width:100%;height:100%;padding-left:75px;padding-right:75px'><img src='" + ImageUrl + "' /></div></td></tr>";
+                        strPageContents += "<tr><td align='center' style='padding-left:" + padding + "px;padding-right:" + padding + "px'><div align='center' style='width:100%;height:100%;'><img width='100%' height='496px' src='" + ImageUrl + "' /></div></td></tr>";
                         strPageContents += "<tr><td>&nbsp;</td></tr>";
                         strPageContents += "</table>";
 
                         page = document.Pages.AddNewPage();
                         htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
                         page.AddElement(htmlToPdfURL2);
+
+                        System.IO.File.WriteAllText(logFilePath, "12th step");
                     }
                 }
             }
@@ -4060,7 +4204,11 @@ namespace AMSProjectNew.ValuationManager
                 page = document.Pages.AddNewPage();
                 htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
                 page.AddElement(htmlToPdfURL2);
+
+                System.IO.File.WriteAllText(logFilePath, "13th step");
             }
+
+            System.IO.File.AppendAllText(logFilePath, "13th step_Counnt" + dtAllPhotos.Rows.Count.ToString() + Environment.NewLine);
 
             int m = 0;
             string ImageContents = "";
@@ -4072,9 +4220,9 @@ namespace AMSProjectNew.ValuationManager
                     string ImageUrl = System.Configuration.ConfigurationManager.AppSettings["ImageURL"].ToString() + "Tab8Files/" +
                             Convert.ToString(dtAllPhotos.Rows[i]["ImageName"]);
 
-                    System.Drawing.Image imgImage = System.Drawing.Image.FromFile(this.Server.MapPath("~/Tab8Files/" + Convert.ToString(dtAllPhotos.Rows[i]["ImageName"])));
-                    Int32 imgWidth = imgImage.Width;
-                    Int32 imgHeight = imgImage.Height;
+                    //System.Drawing.Image imgImage = System.Drawing.Image.FromFile(this.Server.MapPath("~/Tab8Files/" + Convert.ToString(dtAllPhotos.Rows[i]["ImageName"])));
+                    //Int32 imgWidth = imgImage.Width;
+                    //Int32 imgHeight = imgImage.Height;
 
                     //if (imgWidth > 690) imgWidth = 690;
                     //if (imgHeight > 690) imgHeight = 690;
@@ -4082,8 +4230,10 @@ namespace AMSProjectNew.ValuationManager
 
                     ImageContents += "<table  cellpadding='0' cellspacing='0' border='0' style='width:100%;'>";
                     //ImageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
-                    ImageContents += "<tr><td align='center'><div style='width:100%;height:100%;padding-left:75px;padding-right:75px'><img src='" + ImageUrl + "' /></div></td></tr>";
+                    ImageContents += "<tr><td align='center' style='padding-left:" + padding + "px;padding-right:" + padding + "px'><div align='center' style='width:100%;height:100%;'><img width='100%' height='496px' src='" + ImageUrl + "' /></div></td></tr>";
                     ImageContents += "</table>";
+
+                    System.IO.File.AppendAllText(logFilePath, "13th step_" + ImageContents + Environment.NewLine);
 
                     if (m == 2)
                     {
@@ -4103,9 +4253,13 @@ namespace AMSProjectNew.ValuationManager
                             ImageContents = "";
                         }
                     }
+
+                    System.IO.File.AppendAllText(logFilePath, "13th step_" + i.ToString() + Environment.NewLine);
                 }
             }
             #endregion
+
+            System.IO.File.WriteAllText(logFilePath, "14th step");
 
             #region Appendix:-   Defect Photos
 
@@ -4144,7 +4298,7 @@ namespace AMSProjectNew.ValuationManager
 
                         ImageContents += "<table  cellpadding='0' cellspacing='0' border='0' style='width:100%;'>";
                         //ImageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
-                        ImageContents += "<tr><td align='center'><div style='width:100%;height:100%;padding-left:75px;padding-right:75px'><img src='" + ImageUrl + "' /></div></td></tr>";
+                        ImageContents += "<tr><td align='center' style='padding-left:" + padding + "px;padding-right:" + padding + "px'><div align='center' style='width:100%;height:100%;'><img width='100%' height='496px' src='" + ImageUrl + "' /></div></td></tr>";
                         ImageContents += "</table>";
 
                         if (m == 2)
@@ -4165,6 +4319,8 @@ namespace AMSProjectNew.ValuationManager
                                 ImageContents = "";
                             }
                         }
+
+                        System.IO.File.WriteAllText(logFilePath, "15th step");
                     }
                 }
 
@@ -4173,112 +4329,61 @@ namespace AMSProjectNew.ValuationManager
 
             #endregion
 
+            #region Add Documents 
 
 
-            /*Comments Code
-            if (dsPrimaryPhoto != null && dsPrimaryPhoto.Tables.Count > 0 && dsPrimaryPhoto.Tables[0].Rows.Count > 0)
+
+            using (var context = new marketvalDBEntities())
             {
-                strPageContents = "<table  cellpadding='0' cellspacing='5' border='0' style='width:730px;margin-left:120px;font-family:Verdana; font-size:27px;'>";
-                strPageContents += "<tr><td>&nbsp;</td></tr>";
-                strPageContents += "<tr><td>&nbsp;</td></tr>";
-                strPageContents += "<tr><td>&nbsp;</td></tr>";
-                strPageContents += "<tr><td>&nbsp;</td></tr>";
-                strPageContents += "<tr><td align='center' style='height:600px;'>Photos</td></tr>";
-                strPageContents += "</table>";
+                var sectionsData = from p in context.AMS_ReportSections
+                               join q in context.AMS_Tab8_Attachments on p.AMS_ReportSectionsId equals q.SectionId
+                               where p.JobId == ParamJobId && q.JobId == ParamJobId
+                                   select new { Id = q.Id, p.SectionName, ImageUrl = q.ImageName, p.CreatedOn };
 
 
-                page = document.Pages.AddNewPage();
-                htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
-                page.AddElement(htmlToPdfURL2);
 
-                for (int i = 0; i < dsPrimaryPhoto.Tables[0].Rows.Count; i++)
+                //this.GridViewSections.DataSource = sections.ToList();
+                //this.GridViewSections.DataBind();
+
+                List<string> sectionsAdded = new List<string>();
+
+                foreach (var sect in sectionsData)
                 {
-                    string ImageUrl = System.Configuration.ConfigurationManager.AppSettings["URL"].ToString() + "Tab8Files/" +
-                        Convert.ToString(dsPrimaryPhoto.Tables[0].Rows[i]["ImageName"]);
-
-                    System.Drawing.Image imgImage = System.Drawing.Image.FromFile(this.Server.MapPath("~/Tab8Files/" + Convert.ToString(dsPrimaryPhoto.Tables[0].Rows[i]["ImageName"])));
-                    Int32 imgWidth = imgImage.Width;
-                    Int32 imgHeight = imgImage.Height;
-
-                    if (imgWidth > 700) imgWidth = 700;
-                    if (imgHeight > 700) imgHeight = 700;
-                    strPageContents = "<table  cellpadding='0' cellspacing='5' border='0' style='width:100%;'>";
-                    strPageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
-                    strPageContents += "<tr><td>&nbsp;</td></tr>";
-                    strPageContents += "</table>";
-
-                    page = document.Pages.AddNewPage();
-                    htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
-                    page.AddElement(htmlToPdfURL2);
-                }
-                for (int i = 0; i < dsExternalPhoto.Tables[0].Rows.Count; i++)
-                {
-                    string ImageUrl = System.Configuration.ConfigurationManager.AppSettings["URL"].ToString() + "Tab8Files/" +
-                        Convert.ToString(dsExternalPhoto.Tables[0].Rows[i]["ImageName"]);
-
-                    System.Drawing.Image imgImage = System.Drawing.Image.FromFile(this.Server.MapPath("~/Tab8Files/" + Convert.ToString(dsExternalPhoto.Tables[0].Rows[i]["ImageName"])));
-                    Int32 imgWidth = imgImage.Width;
-                    Int32 imgHeight = imgImage.Height;
-
-                    if (imgWidth > 700) imgWidth = 700;
-                    if (imgHeight > 700) imgHeight = 700;
-                    strPageContents = "<table  cellpadding='0' cellspacing='5' border='0' style='width:100%;'>";
-                    strPageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
-                    strPageContents += "<tr><td>&nbsp;</td></tr>";
-                    strPageContents += "</table>";
-
-                    page = document.Pages.AddNewPage();
-                    htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
-                    page.AddElement(htmlToPdfURL2);
-                }
-                for (int i = 0; i < dsInternalPhoto.Tables[0].Rows.Count; i++)
-                {
-                    string ImageUrl = System.Configuration.ConfigurationManager.AppSettings["URL"].ToString() + "Tab8Files/" +
-                        Convert.ToString(dsInternalPhoto.Tables[0].Rows[i]["ImageName"]);
-
-                    System.Drawing.Image imgImage = System.Drawing.Image.FromFile(this.Server.MapPath("~/Tab8Files/" + Convert.ToString(dsInternalPhoto.Tables[0].Rows[i]["ImageName"])));
-                    Int32 imgWidth = imgImage.Width;
-                    Int32 imgHeight = imgImage.Height;
-
-                    if (imgWidth > 700) imgWidth = 700;
-                    if (imgHeight > 700) imgHeight = 700;
-                    strPageContents = "<table  cellpadding='0' cellspacing='5' border='0' style='width:100%;'>";
-                    strPageContents += "<tr><td align='center'><img style='width:" + imgWidth.ToString() + "px;height:" + imgHeight.ToString() + "px;' src='" + ImageUrl + "' /></td></tr>";
-                    strPageContents += "<tr><td>&nbsp;</td></tr>";
-                    strPageContents += "</table>";
-
-                    page = document.Pages.AddNewPage();
-                    htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
-                    page.AddElement(htmlToPdfURL2);
-                }
-            }
-            /*
-            #endregion
-
-            
-            */
-
-            #region old code
-            /*
-                //Add Title Photos
-                int j = 0;
-
-                string strImages = "";
-                for (int i = 0; i < dsTitlePhoto.Tables[0].Rows.Count; i++)
-                {
-                    j++;
-
-                    string ImageUrl = System.Configuration.ConfigurationManager.AppSettings["URL"].ToString() + "Tab8Files/" +
-                        Convert.ToString(dsTitlePhoto.Tables[0].Rows[i]["ImageName"]);
-
-                    strImages += "<tr><td align='center'><img style='width:500px' src='" + ImageUrl + "' /></td></tr>";
-
-
-                    if (j == 2)
+                    if (sectionsData != null && sectionsData.Count() > 0)
                     {
+                        if (!sectionsAdded.Contains(sect.SectionName))
+                        {
+                            strPageContents = "<table cellpadding='0' cellspacing='5' border='0' style='width:980px;margin-left:120px;font-family:Verdana; font-size:27px;'>";
+                            strPageContents += "<tr><td>&nbsp;</td></tr>";
+                            strPageContents += "<tr><td>&nbsp;</td></tr>";
+                            strPageContents += "<tr><td>&nbsp;</td></tr>";
+                            strPageContents += "<tr><td>&nbsp;</td></tr>";
+                            strPageContents += "<tr><td align='center' style='height:600px;'>" + sect.SectionName + "</td></tr>";
+                            strPageContents += "</table>";
+
+                            sectionsAdded.Add(sect.SectionName);
+                        }
+                        
+
+                        page = document.Pages.AddNewPage();
+                        htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
+                        page.AddElement(htmlToPdfURL2);
+
+                        //string ImageUrl = System.Configuration.ConfigurationManager.AppSettings["ImageURL"].ToString()
+                        //             + "Tab8Files/" + sect.ImageUrl;
+
                         strPageContents = "<table width='100%' cellpadding='0' cellspacing='0' border='0' style='width:100%;'>";
                         strPageContents += "<tr><td>&nbsp;</td></tr>";
-                        strPageContents += strImages;
+
+                        //System.Drawing.Image imgImage = System.Drawing.Image.FromFile(sect.ImageUrl);
+                        //Int32 imgWidth = imgImage.Width;
+                        //Int32 imgHeight = imgImage.Height;
+
+                        var siteUrl = System.Configuration.ConfigurationManager.AppSettings["ImageURL"].ToString();
+
+
+                        strPageContents = "<table  cellpadding='0' cellspacing='5' border='0' style='width:100%;'>";                        
+                        strPageContents += "<tr><td align='center' style='padding-left:" + padding + "px;padding-right:" + padding + "px'><div align='center' style='width:100%;height:100%;'><img width='100%' height='496px' src='" + sect.ImageUrl.Replace("~",siteUrl) + "' /></div></td></tr>";
                         strPageContents += "<tr><td>&nbsp;</td></tr>";
                         strPageContents += "</table>";
 
@@ -4286,295 +4391,11 @@ namespace AMSProjectNew.ValuationManager
                         htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
                         page.AddElement(htmlToPdfURL2);
 
-                        strImages = "";
-                        j = 0;
-                    }
-                    if (i == dsTitlePhoto.Tables[0].Rows.Count - 1)
-                    {
-                        if (j == 1)
-                        {
-                            strPageContents = "<table width='100%' cellpadding='0' cellspacing='0' border='0' style='width:100%;'>";
-                            strPageContents += "<tr><td>&nbsp;</td></tr>";
-                            strPageContents += strImages;
-                            strPageContents += "<tr><td>&nbsp;</td></tr>";
-                            strPageContents += "</table>";
-
-                            page = document.Pages.AddNewPage();
-                            htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strPageContents, "");
-                            page.AddElement(htmlToPdfURL2);
-                            j = 0;
-                        }
+                        System.IO.File.WriteAllText(logFilePath, "12th step");
                     }
                 }
-                */
-            /*
-            strHtml = "<table width='800px' cellpadding='0' cellspacing='5' border='0' style='font-family:Verdana; font-size:17px;padding-left:50px;'>";
-            strHtml += "<tr><td style='width:250px;font-weight:bold;'>CLIENT:</td><td>Gary Watt</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>INSTRUCTIONS:</td><td>Instructions were received to determine the current fair market value of the subject property for purchase purposes as at the date of valuation.</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>PROPERTY ADDRESS:</td><td>346-348 Cormack Road, Wingfield SA 5013</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>DATE OF VALUATION:</td><td>25th March 2013</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>TITLE DETAILS:</td><td></td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Lot No:</td><td>401</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Deposited Plan:</td><td>73313</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Volume:</td><td>5987</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Folio:</td><td>797</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Encumbrances:</td><td>Refer to Certificate of Title</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Registered Proprietors:</td><td>Refer to Certificate of Title</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Site Total:</td><td>7,839 sqm</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td colspan='2' style='font-weight:bold;'>ZONING/PLANNING INSTRUMENT:</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Local Government Area:</td><td>Port Adelaide & Enfield</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Zoning:</td><td>Zoned General Industry (1)\\46</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Effect:</td><td>Current land use complies with intentions of zoning.</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>LOCATION:</td><td></td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Shops:</td><td>Within 2 kilometre</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Transport:</td><td>Bus: Within 1 Kilometre</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>CBD:</td><td>Approximately 11 kilometres</td></tr>";
-            strHtml += "</table>";
+            }
 
-            page = document.Pages.AddNewPage();
-            htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strHtml, "");
-            page.AddElement(htmlToPdfURL2);
-
-            strHtml = "<table width='800px' cellpadding='0' cellspacing='5' border='0' style='font-family:Verdana; font-size:17px; padding-left:50px;'>";
-            strHtml += "<tr><td style='font-weight:bold;' colspan='2'>SITE DESCRIPTION AND TOPOGRAPHY:</td></tr>";
-            strHtml += "<tr><td style='width:300px;font-weight:bold;'>Site Layout:</td><td>At road level</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Services:</td><td>All usual services available</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Environmental Hazards:</td><td>None known</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Pest Infestation:</td><td>None known</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>MAIN BUILDING:</td><td></td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Type:</td><td>Dwelling</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Year Built:</td><td>Circa</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>External Walls:</td><td>Brick</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Floor:</td><td>Timber</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Roof:</td><td>Tiled</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Rooms:</td><td>Kitchen/Meals/Family, Laundry, Sep Toilet Bathroom and Ensuite.</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Bedrooms:</td><td>3 Bedrooms</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Wall Linings:</td><td>Plaster</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>OBSERVATIONS:</td><td></td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>PC Fixtures:</td><td>Good Quality</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>External Condition:</td><td>Good Quality</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Internal Condition:</td><td>Good Quality</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Defects:</td><td>None Known</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;' colspan='2'>CAR ACCOMMODATION:</td><td></td></tr>";
-            strHtml += "<tr><td style='font-weight:normal;' colspan='2'>Double Garage (UMR)</td><td></td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;' colspan='2'>ANCILLARY IMPROVEMENTS:</td></tr>";
-            strHtml += "<tr><td style='font-weight:normal;' colspan='2'>Brick driveway, brick paving, basic lawns and gardens.</td></tr>";
-            strHtml += "</table>";
-
-            page = document.Pages.AddNewPage();
-            htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strHtml, "");
-            page.AddElement(htmlToPdfURL2);
-
-            strHtml = "<table cellpadding='0' cellspacing='5' border='0' style='font-family:Verdana; font-size:17px; padding-left:50px;'>";
-            strHtml += "<tr><td style='font-weight:bold;'>AREAS:</td><td></td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='width:300px;font-weight:bold;'>Main Living Area:</td><td>sqm</td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Garage (Under Main Roof):</td><td>sqm</td></tr>";
-            strHtml += "</table>";
-
-            strHtml += "<table width='800px' cellpadding='0' cellspacing='5' border='0' style='font-family:Verdana; font-size:17px; padding-left:50px;'>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>GENERAL COMMENTS:</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:normal;'>The subject property is a construction with tiled roof, quality fixtures and fittings throughout.</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:normal;'>Internally the dwelling provides a good level of accommodation</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:normal;'>Externally the property</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:normal;'>In assessing the market value of the property we have regard to sales of homes in the surrounding area. Based on our analysis we consider the property’s value to be $ ,000.</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>MARKET VALUE: $ </td></tr>";
-            strHtml += "</table>";
-
-            page = document.Pages.AddNewPage();
-            htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strHtml, "");
-            page.AddElement(htmlToPdfURL2);
-
-            strHtml = "<table width='800px' cellpadding='0' cellspacing='5' border='0' style='font-family:Verdana; font-size:17px; padding-left:50px;'>";
-            strHtml += "<tr><td style='font-weight:bold;'>SALES EVIDENCE:</td><td></td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strImage = "http://localhost/amsproject/Tab7Files/img2.png";
-            strHtml += "<tr><td><img src='" + strImage + "' /></td></tr>";
-            strHtml += "</table>";
-
-            page = document.Pages.AddNewPage();
-            htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strHtml, "");
-            page.AddElement(htmlToPdfURL2);
-
-            strHtml = "<table width='800px' cellpadding='0' cellspacing='5' border='0' style='font-family:Verdana; font-size:17px; padding-left:50px;'>";
-            strHtml += "<tr><td style='font-weight:bold;'>SALES EVIDENCE:</td><td></td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strImage = "http://localhost/amsproject/Tab7Files/img3.png";
-            strHtml += "<tr><td><img src='" + strImage + "' /></td></tr>";
-            strHtml += "</table>";
-
-            page = document.Pages.AddNewPage();
-            htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strHtml, "");
-            page.AddElement(htmlToPdfURL2);
-
-            strHtml = "<table width='850px' cellpadding='0' cellspacing='5' border='0' style='font-family:Verdana; font-size:17px; padding-left:50px;'>";
-            strHtml += "<tr><td style='font-weight:bold;'>VALUATION RATIONALE:</td><td></td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>The Direct Comparison Approach is considered the most appropriate method of valuation. In this approach the property to be valued is directly compared to recent sales of similar property to establish a current market value.</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>VALUATION:</td></tr>";
-            strHtml += "<tr><td></td></tr>";
-            strHtml += "<tr><td>Based on the Direct Comparison Approach, we have assessed the market value of the subject property at :</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td align='center' style='font-weight:bold;'>VALUATION “AS IS”:</td></tr>";
-            strHtml += "<tr><td align='center' style='font-weight:bold;'>$ 0,000</td></tr>";
-            strHtml += "<tr><td align='center' style='font-weight:bold;'>(. Hundred and . Thousand Dollars)</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>Our Valuation in on the basis the property is input taxed and free of GST. We are not privy to the financial circumstances of the current owner(s) nor previous transactions upon the property which may impact upon the status of the property in relation to GST. Should the property not qualify as GST free, our assessment is inclusive of GST.</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Adelaide Property Valuers</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Paul De Gilio</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Qualified Practicing Valuer</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Associate Member of the Australian Valuers Institute</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td><b>ADDRESS:</b> PO Box 2354, Kent Town SA 5071 <b>TELEPHONE:</b> Office: 1300 856 910</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "</table>";
-            strHtml += "<table width='800px' cellpadding='0' cellspacing='5' border='0' style='font-family:Verdana; font-size:17px; padding-left:50px;'>";
-            strHtml += "<tr><td style='width:260px;font-weight:bold;'>EXPERT QUALIFICATIONS:</td><td></td></tr>";
-            strHtml += "<tr><td colspan='2'>&nbsp;</td></tr>";
-            strHtml += "<tr><td>Name:</td><td>Paul De Gilio</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>Title:</td><td>Qualified Practicing Valuer</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>Qualifications:</td><td>Associate Member of the Australian Valuers Institute Bachelor of Business (Property) Valuations</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>Experience:</td><td>Practicing Valuer since 2003 conducting in excess of 7000 residential and commercial valuations</td></tr>";
-            strHtml += "</table>";
-
-            page = document.Pages.AddNewPage();
-            htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strHtml, "");
-            page.AddElement(htmlToPdfURL2);
-
-            strHtml = "<table width='850px' cellpadding='0' cellspacing='5' border='0' style='font-family:Verdana; font-size:17px; padding-left:50px;'>";
-            strHtml += "<tr><td style='font-weight:bold;'>TERMS AND CONDITIONS</td><td></td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>I hereby certify that I have inspected the above property on 1 January, 2013 and I assess the Market Value of the property as at that date as above.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>This valuation is for the use only of the party to which it is addressed and is not to be used for any other purpose. No responsibility is accepted or undertaken to any third parties in relation to this valuation and report.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>In our opinion, the subject property is unlikely to be adversely affected by any environmental concerns, or that the land has been filled. We state that we have not conducted a building survey or pest analysis, although our inspection has not revealed any major defects other than those discussed within. The valuer’s inspection and report does not constitute a structural survey and is not intended as such. The property appears to be within the boundaries of the site and there are no obvious signs of encroachments. Should any further checks or audits reveal any detrimental issues, we reserve the right to review this valuation.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>Due to possible changes in market forces and circumstances in relation to the subject property the report can only be regarded as relevant as at the date of valuation.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>I confirm that I have complied with the requirements of the professional codes of practice or protocols that apply to me as a member of the <u>Australian Valuers Institute.</u></td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Adelaide Property Valuers</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Paul De Gilio</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Qualified Practicing Valuer</td></tr>";
-            strHtml += "<tr><td style='font-weight:bold;'>Associate Member of the Australian Valuers Institute</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td><b>ADDRESS:</b> PO Box 2354, Kent Town SA 5071 <b>TELEPHONE:</b> Office: 1300 856 910</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "</table>";
-
-            page = document.Pages.AddNewPage();
-            htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strHtml, "");
-            page.AddElement(htmlToPdfURL2);
-
-            strHtml = "<table width='800px' cellpadding='0' cellspacing='5' border='0' style='font-family:Verdana; font-size:17px; padding-left:50px;'>";
-            strHtml += "<tr><td style='font-weight:bold;'>CERTIFICATIONS & QUALIFICATIONS</td><td></td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>IMPROVEMENTS:</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>Unless stated as otherwise in this report we advise that this valuation assumes that all improvements have been constructed in accordance with the appropriate planning and building regulations in force at the time of construction, and that all appropriate approvals have been obtained from the relevant authorities.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>The valuation inspection and report does not constitute a structural survey and is not intended as such. We have carried out an inspection only of the exposed and readily accessible areas of the improvements. The valuer is not a construction and/or structural engineering expert and is therefore unable to certify the structural soundness of the improvements. Readers of this report should make their own enquiries</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>This valuation has been based on the known and assumed condition of the structural improvements and the property in general as at the inspection date, and if the property has to be sold in circumstances where its condition has deteriorated and/or essential fixtures/fittings removed, there is likely to be a significant write down in the asset value when compared to the current assessment. Under these circumstances the valuer will not be responsible for any reduction in value.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>Floor areas within this report have been calculated from our own measurements and are approximate only.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>Should any adverse improvement concern become apparent, the valuer should be consulted and reserves the right to reassess any affect on the value stated in this report.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>INSURANCE ASSESSMENT:</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>If we have provided an assessment of the reinstatement value of the improvements for insurance purposes, this will include an allowance for building cost increased for 12 months, demolition, and professional and Council fees. The valuer is not a construction and/or structural engineering expert and therefore the value should be taken as indicative only as to what the reinstatement value of the improvements may be. A precise estimate should be provided by a construction/structural or quantity surveying expert and our assessment of the reinstatement value should only be considered at an indication of the likely value.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>LAND DIMENSIONS / AREA:</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>Unless stated as otherwise in this report, we advise that we have not searched or been provided with a copy of the Registered Plans and that any dimensions or land areas quoted in this report have been obtained from third party information sources and whilst endeavours have been made to verify such information we accept no responsibility for inaccuracy of any information provided and relied upon.</td></tr>";
-            strHtml += "<tr><td>&nbsp;</td></tr>";
-            strHtml += "<tr><td>CERTIFICATE OF TITLE:</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>Unless stated as otherwise, in this report we advise that no title search of the property has been undertaken or sighted. Reliance should not be placed on the valuation report unless, or until a full title search is undertaken and Adelaide Property Valuers has had the opportunity of providing advice as to any affectation to value brought about by the contents of such title search. In the event that a full title search is obtained, and that it contains anything which could be considered a title defect or which may affect the value of the property the valuer’s opinion must be obtained before reliance can be placed up the valuation.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>SIGHT SURVEY / ENCROACHMENTS:</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>Unless stated as otherwise in this report, we advise that a survey report has not been sighted and our inspection has revealed that there do not appear to be any encroachments upon or by the property. Survey pegs were not located and this valuation assumes correct boundary alignment. This valuation is made on the assumption that there are no encroachments by or upon the property and that this should be confirmed by a current survey report and/or advice from a registered surveyor. We are not surveyors. If any encroachments or other affectations are noted on the survey report, the valuer should be consulted and reserves the right to reassess any affect on the value stated in this report.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>EASEMENTS and ENCUMBRANCES:</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>Unless stated as otherwise in this report we advise that this valuation is based on the assumption that there are no easements or encumbrances or other title defects which would have any adverse effect on the value or marketability of the property. We recommend that a full title search be carried out and that until such time that search is undertaken and considered by the valuer, no reliance should be placed on  the valuation report. Should any easement or encumbrance or other like affectation on the title become apparent, the valuer should be consulted and reserves the right to reassess any affect on the value stated in this report.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>TOWN PLANNING, BUILDING and OTHER SEARCHES:</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>Unless stated as otherwise in this report, we advise that a search with the appropriate Council or other relevant authorities has not been carried out or has not been obtained and therefore this valuation has been undertaken on the assumption that all necessary and appropriate town planning and/or building, consents, approvals and certifications have been issued for the use and occupation of the improvements as more fully described in this report. It is recommende all appropriate consents, approvals and/or certifications as referred to above be obtained. Should any affectations become apparent, the valuer should be consulted and reserves the right to reassess any effect on the value stated in this report.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "</table>";
-
-            page = document.Pages.AddNewPage();
-            htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strHtml, "");
-            page.AddElement(htmlToPdfURL2);
-
-            strHtml = "<table width='800px' cellpadding='0' cellspacing='5' border='0' style='font-family:Verdana; font-size:17px; padding-left:50px;'>";
-            strHtml += "<tr><td>PEST and TERMITE INFESTATION:</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>The client acknowledges and recognises that the valuer is not a pest inspector/ pest expert. The absence of pests, including termites, can only be confirmed by a suitably qualified expert and a comprehensive inspection and the use of specialist equipment. Unless stated as otherwise in this report we advise that the inspection of the subject property did not reveal any obvious visible pest or termite infestation within reasonably accessible areas to the valuer. Should any pest or termite infestation concerns become apparent, the valuer should be consulted and reserves the right to reassess any effect on the value stated in this report.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>RELIANCE and DISCLOSURE:</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>The report has been provided for the private and confidential use by the party to whom it is addressed. This valuation is for the use of, and may be relied upon only by the party/parties to whom it is addressed. No other parties are entitled to use or rely upon it and Adelaide Property Valuers does not assume any reliability or responsibility to any other party who does so rely upon the valuation without the express written authority of Adelaide Property Valuers. Neither the whole or any part of this valuation or any reference thereto may be included in any published documents, circular or statement, nor published in part or full in any way, withou the written approval from Adelaide Property Valuers including the form and context in which it may appear.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>MARKET MOVEMENT and REPORT EXPIRY:</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>This valuation is current as at the date of valuation only. The value herein may change significantly and unexpectedly over a relatively short period (including as a result of general market movements or factors specific to the particular property). We do not accept liability for losses arising from such subsequent changes in value. Without limiting the generality of the above comment, we do not assume any responsibility or accept any liability where this valuation is relied upon after the expiration of three months from the date of the valuation, or such earlier date if you become aware of any factors which have any effect on the valuation.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>COMPARITIVE SALES EVIDENCE:</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>The comparative sales used in this valuation report are considered the most relevant sales based on our research, both in terms of physical comparability to the subject property and allowing for market changes between comparable sales and valuation data. As in many cases, we have not physically inspected the interior of the sales evidence quoted and have relied on sales evidence as recorded in available property sales databases. We therefore cannot guarantee the accuracy of the information provided.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>FULL DISCLOSURE and REASONABLY AVAILABLE INFORMATION:</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "<tr><td>The instructing party acknowledges its responsibility for full disclosure of relevant information and undertakes to provide all documents in its possession that may have an effect on the service to be provided. This valuation is based upon information reasonably available to the valuer as at the date of issue in accordance with usual valuation practices.</td></tr>";
-            strHtml += "<tr><td></td></tr><tr><td></td></tr>";
-            strHtml += "</table>";
-
-            page = document.Pages.AddNewPage();
-            htmlToPdfURL2 = new HtmlToPdfElement(0, 0, strHtml, "");
-            page.AddElement(htmlToPdfURL2);
-            */
             #endregion
         }
 
@@ -4991,6 +4812,218 @@ namespace AMSProjectNew.ValuationManager
             {
                 return false;
             }
+        }
+
+
+
+
+        protected void lbtnTab8AddDocuments_Click(object sender, EventArgs e)
+        {
+            HideTab8InnerTables();
+            tblTab8AddDocuments.Visible = true;
+            lbtnTab8AddDocuments.Font.Bold = true;
+            FillTab8OthersPhoto();
+        }
+
+
+        protected void btnAddSection_Click(object sender, EventArgs e)
+        {
+            List<AMS_ReportSections> sections = null;
+
+
+            string sectionName = this.txtSectionName.Text;
+
+            if (!string.IsNullOrEmpty(sectionName.Trim()))
+            {
+                using (var context = new marketvalDBEntities())
+                {
+                    AMS_ReportSections section = new AMS_ReportSections();
+
+                    section.JobId = Convert.ToInt32(Request.QueryString["JobId"]);
+                    section.SectionName = sectionName;
+                    section.CreatedBy = Convert.ToInt32(Session["UserId"]);
+                    section.CreatedOn = DateTime.Now;
+
+                    context.AMS_ReportSections.Add(section);
+                    context.SaveChanges();
+
+                    //sections = context.AMS_ReportSections.ToList();
+                }
+            }
+
+            this.txtSectionName.Text = string.Empty;
+            lblMessage.Text = "Section has been added successfully.";
+            this.lblMessage.Visible = true;
+
+            this.dropDownSection.Items.Clear();
+            FillDocumentDetails();
+
+
+
+            updatePanelSectionsGrid.Update();
+            updatePanelDdlSection.Update();
+        }
+
+        protected void AjaxFileUpload1_UploadCompleteAll(object sender, AjaxControlToolkit.AjaxFileUploadCompleteAllEventArgs e)
+        {
+
+        }
+
+        protected void AjaxFileUpload1_UploadComplete(object sender, AjaxControlToolkit.AjaxFileUploadEventArgs e)
+        {
+            var temp = selectedSectionId;
+            ReportController objReportController = new ReportController();
+            Int64 JobId = Convert.ToInt64(Request.QueryString["JobId"]);
+
+            int sectionId = 0;
+            if (Session["SectionId"] != null)
+            {
+                sectionId = Convert.ToInt32(Session["SectionId"]);
+            }
+
+            /////////////////////////////////////////////////////////
+            if (Path.GetExtension(e.FileName).ToLower() == ".pdf")
+            {
+
+                string filePath = string.Empty;
+
+                filePath = Server.MapPath("~/Tab8Files/" + Path.GetFileName(e.FileName));
+                fuTab8AddDocs.SaveAs(filePath);
+
+                PdfToImageConverter pdfToImageConverter = new PdfToImageConverter();
+                pdfToImageConverter.LicenseKey = "+dLI2cjI2cvAydnIydfJ2crI18jL18DAwMA="; // license key
+                pdfToImageConverter.ImagesFormat = ImageFormat.Jpeg; // image format
+                pdfToImageConverter.ColorSpace = PdfToImageColorSpace.RGB; // image color space
+                pdfToImageConverter.StartPageNumber = 1; // start page number
+                pdfToImageConverter.EndPageNumber = pdfToImageConverter.GetPageCount(filePath); // end page number
+                pdfToImageConverter.Resolution = 400; // image resolution    
+                System.Drawing.Image[] objImage = null;
+                objImage = pdfToImageConverter.ConvertToImages(filePath);
+                for (int ii = 0; ii < objImage.Count(); ii++)
+                {
+                    string TimeTicks = DateTime.Now.Ticks.ToString();
+                    string strFileName1 = TimeTicks + "_Attachment_" + e.FileName + "_" + ii + ".jpg";
+
+                    string tempFileName = "~/Tab8Files/" + strFileName1;
+                    string outputPageImage = Server.MapPath(tempFileName);
+                    objImage[ii].Save(outputPageImage);
+                    objReportController.Tab8_AttachmentsEdit(0, JobId, tempFileName, "OthersPhoto", Convert.ToInt64(Session["UserId"]), "ADD", sectionId);
+                    //lblTab8Error.Text = "FIle path ..... " + outputPageImage;
+                }
+            }
+            ///////////////////////////////////////////////////////////
+            else
+            {
+
+                string ticks = DateTime.Now.Ticks.ToString();
+                string extension = Path.GetExtension(e.FileName);
+                string strFileName = ticks + "_Attachment" + extension;
+                string tempFileName = "~/Tab8Files/" + strFileName;
+                strFileName = Server.MapPath("~/Tab8Files/" + strFileName);
+                fuTab8AddDocs.SaveAs(strFileName);
+
+                objReportController.Tab8_AttachmentsEdit(0, JobId, tempFileName, "OthersPhoto", Convert.ToInt64(Session["UserId"]), "ADD", sectionId);
+            }
+
+            if (JobId > 0)
+            {
+                lblTab8Error.Text = "Photo uploaded successfully.";
+                FillTab8OthersPhoto(JobId);
+            }
+            else
+            {
+                lblTab8Error.Text = "Photo doesnt uploaded successfully. Please try again.";
+                return;
+            }
+
+        }
+
+
+        int selectedSectionId = 0;
+        protected void dropDownSection_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedSectionId = Convert.ToInt32(this.dropDownSection.SelectedValue);
+            Session["SectionId"] = selectedSectionId;
+        }
+
+        protected void btnDeleteDocs_Click(object sender, ImageClickEventArgs e)
+        {
+            ImageButton btnDelete = sender as ImageButton;
+            GridViewRow row = (GridViewRow)btnDelete.NamingContainer;
+            ReportController objReportController = new ReportController();
+            try
+            {
+                if (objReportController.Tab8_AttachmentsEdit(Convert.ToInt64(((Label)row.FindControl("lblId")).Text), 0, "", "", 0, "DELETE") > 0)
+                {
+                    ScriptManager.RegisterStartupScript(this, typeof(string), "fun33", "alert('Document details deleted.');", true);
+                    File.Delete(Server.MapPath(((Label)row.FindControl("lblImageName")).Text));
+                    FillDocumentDetails();
+                    updatePanelSectionsGrid.Update();
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, typeof(string), "fun33", "alert('Document does not deleted.');", true);
+                    return;
+                }
+            }
+            catch (Exception Ex)
+            {
+                throw Ex;
+            }
+            finally
+            {
+                objReportController = null;
+            }
+        }
+
+        protected void btnDeleteSection_Click(object sender, ImageClickEventArgs e)
+        {
+            ImageButton btnDelete = sender as ImageButton;
+            GridViewRow row = (GridViewRow)btnDelete.NamingContainer;
+            ReportController objReportController = new ReportController();
+            try
+            {
+                //if (objReportController.Tab8_AttachmentsEdit(Convert.ToInt64(((Label)row.FindControl("lblId")).Text), 0, "", "", 0, "DELETE") > 0)
+                bool isDeleted = false;
+                var sectionId = Convert.ToInt64(((Label)row.FindControl("lblId")).Text);
+                using (var context = new marketvalDBEntities())
+                {
+                    var sectionData = context.AMS_ReportSections.Where(t => t.AMS_ReportSectionsId == sectionId).FirstOrDefault();
+                    if (sectionData != null)
+                    {
+                        context.AMS_ReportSections.Remove(sectionData);
+                        context.SaveChanges();
+                        isDeleted = true;
+                    }
+
+                }
+                if(isDeleted)
+                {
+                    ScriptManager.RegisterStartupScript(this, typeof(string), "fun33", "alert('Document details deleted.');", true);
+                    //File.Delete(Server.MapPath(((Label)row.FindControl("lblImageName")).Text));
+                    FillDocumentDetails();
+                    updatePanelSectionsGrid.Update();
+                    updatePanelDdlSection.Update();
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, typeof(string), "fun33", "alert('Document does not deleted.');", true);
+                    return;
+                }
+            }
+            catch (Exception Ex)
+            {
+                throw Ex;
+            }
+            finally
+            {
+                objReportController = null;
+            }
+        }
+
+        protected void buttonDocumentsGrid_Click(object sender, EventArgs e)
+        {
+            LoadDocumentsListing();
         }
     }
 }

@@ -6,3 +6,4 @@ D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Release\BusinessLayer.csproj.CoreCo
 D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Release\BusinessLayer.csproj.CopyComplete
 D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Release\BusinessLayer.dll
 D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Release\BusinessLayer.pdb
+D:\Kausar\Paul\AMSProperty\BusinessLayer\obj\Release\BusinessLayer.csprojAssemblyReference.cache

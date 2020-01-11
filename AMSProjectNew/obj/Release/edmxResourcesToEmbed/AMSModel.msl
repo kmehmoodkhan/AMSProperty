@@ -1,0 +1,1746 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="marketvalDBModelStoreContainer" CdmEntityContainer="marketvalDBEntities">
+    <EntitySetMapping Name="AMS_AccessArangementsType">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_AccessArangementsType">
+        <MappingFragment StoreEntitySet="AMS_AccessArangementsType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccessArangementsTypeName" ColumnName="AccessArangementsTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Clients">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Clients">
+        <MappingFragment StoreEntitySet="AMS_Clients">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClientType" ColumnName="ClientType" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="ABN" ColumnName="ABN" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_ClientsBranchManager">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_ClientsBranchManager">
+        <MappingFragment StoreEntitySet="AMS_ClientsBranchManager">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Compliance">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Compliance">
+        <MappingFragment StoreEntitySet="AMS_Compliance">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_EmailHistory">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_EmailHistory">
+        <MappingFragment StoreEntitySet="AMS_EmailHistory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmailType" ColumnName="EmailType" />
+          <ScalarProperty Name="ToEmail" ColumnName="ToEmail" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="FromEmail" ColumnName="FromEmail" />
+          <ScalarProperty Name="ReplyTo" ColumnName="ReplyTo" />
+          <ScalarProperty Name="EmailFile" ColumnName="EmailFile" />
+          <ScalarProperty Name="SendOn" ColumnName="SendOn" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_JobDocuments">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_JobDocuments">
+        <MappingFragment StoreEntitySet="AMS_JobDocuments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_JobEditRequests">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_JobEditRequests">
+        <MappingFragment StoreEntitySet="AMS_JobEditRequests">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="RequestTitle" ColumnName="RequestTitle" />
+          <ScalarProperty Name="RequestDetails" ColumnName="RequestDetails" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedByName" ColumnName="CreatedByName" />
+          <ScalarProperty Name="CreatedByType" ColumnName="CreatedByType" />
+          <ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_JobHistory">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_JobHistory">
+        <MappingFragment StoreEntitySet="AMS_JobHistory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="HistoryType" ColumnName="HistoryType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Jobs">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Jobs">
+        <MappingFragment StoreEntitySet="AMS_Jobs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="InstructedBy" ColumnName="InstructedBy" />
+          <ScalarProperty Name="PreparedFor" ColumnName="PreparedFor" />
+          <ScalarProperty Name="BankLender" ColumnName="BankLender" />
+          <ScalarProperty Name="LoanReference" ColumnName="LoanReference" />
+          <ScalarProperty Name="CustomerFullName" ColumnName="CustomerFullName" />
+          <ScalarProperty Name="CustomerPhoneNumber" ColumnName="CustomerPhoneNumber" />
+          <ScalarProperty Name="CustomerMobilePhoneNumber" ColumnName="CustomerMobilePhoneNumber" />
+          <ScalarProperty Name="CustomerAdditionalPhoneNumber" ColumnName="CustomerAdditionalPhoneNumber" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="AccessArangementsVia" ColumnName="AccessArangementsVia" />
+          <ScalarProperty Name="NameOfPersonToContactForAccess" ColumnName="NameOfPersonToContactForAccess" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="MobilePhoneNumber" ColumnName="MobilePhoneNumber" />
+          <ScalarProperty Name="AdditionalPhoneNumber" ColumnName="AdditionalPhoneNumber" />
+          <ScalarProperty Name="AdditionalNotes" ColumnName="AdditionalNotes" />
+          <ScalarProperty Name="UnitLot" ColumnName="UnitLot" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetType" ColumnName="StreetType" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PriorJobreference" ColumnName="PriorJobreference" />
+          <ScalarProperty Name="ContractPrice" ColumnName="ContractPrice" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="EstimatedPrice" ColumnName="EstimatedPrice" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ValuationType" ColumnName="ValuationType" />
+          <ScalarProperty Name="PropertyType" ColumnName="PropertyType" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Urgency" ColumnName="Urgency" />
+          <ScalarProperty Name="QuoteFee" ColumnName="QuoteFee" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AppointmentSet" ColumnName="AppointmentSet" />
+          <ScalarProperty Name="InspectedOn" ColumnName="InspectedOn" />
+          <ScalarProperty Name="ReportUpload" ColumnName="ReportUpload" />
+          <ScalarProperty Name="AccountUpload" ColumnName="AccountUpload" />
+          <ScalarProperty Name="FieldNoteUpload" ColumnName="FieldNoteUpload" />
+          <ScalarProperty Name="ReportUploadedOn" ColumnName="ReportUploadedOn" />
+          <ScalarProperty Name="ValuationCompanyAssignedId" ColumnName="ValuationCompanyAssignedId" />
+          <ScalarProperty Name="ValuerId" ColumnName="ValuerId" />
+          <ScalarProperty Name="ReviewerId" ColumnName="ReviewerId" />
+          <ScalarProperty Name="LastRejectedBy" ColumnName="LastRejectedBy" />
+          <ScalarProperty Name="LastRejectedOn" ColumnName="LastRejectedOn" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="CreatedByType" ColumnName="CreatedByType" />
+          <ScalarProperty Name="FeeByValuationCompany" ColumnName="FeeByValuationCompany" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="InspectedEmailSendToClient" ColumnName="InspectedEmailSendToClient" />
+          <ScalarProperty Name="IsEditRequest" ColumnName="IsEditRequest" />
+          <ScalarProperty Name="AppointmentSetTime" ColumnName="AppointmentSetTime" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="EmailAddress1" ColumnName="EmailAddress1" />
+          <ScalarProperty Name="OtherNote" ColumnName="OtherNote" />
+          <ScalarProperty Name="ValuationInstruction" ColumnName="ValuationInstruction" />
+          <ScalarProperty Name="PropertyReport" ColumnName="PropertyReport" />
+          <ScalarProperty Name="Overlays" ColumnName="Overlays" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="IsClientReportEdit" ColumnName="IsClientReportEdit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_JobStatus">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_JobStatus">
+        <MappingFragment StoreEntitySet="AMS_JobStatus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Logs">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Logs">
+        <MappingFragment StoreEntitySet="AMS_Logs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="LogDetails" ColumnName="LogDetails" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_M_Lookup">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_M_Lookup">
+        <MappingFragment StoreEntitySet="AMS_M_Lookup">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="LookupId" ColumnName="LookupId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_PropertyType">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_PropertyType">
+        <MappingFragment StoreEntitySet="AMS_PropertyType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PropertyTypeName" ColumnName="PropertyTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Purpose">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Purpose">
+        <MappingFragment StoreEntitySet="AMS_Purpose">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PurposeName" ColumnName="PurposeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_ReportSectionDocuments">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_ReportSectionDocuments">
+        <MappingFragment StoreEntitySet="AMS_ReportSectionDocuments">
+          <ScalarProperty Name="AMS_ReportSectionDocumentsId" ColumnName="AMS_ReportSectionDocumentsId" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+          <ScalarProperty Name="DocumentType" ColumnName="DocumentType" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Reviewers">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Reviewers">
+        <MappingFragment StoreEntitySet="AMS_Reviewers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ValuationCompanyId" ColumnName="ValuationCompanyId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_ServiceType">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_ServiceType">
+        <MappingFragment StoreEntitySet="AMS_ServiceType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceTypeName" ColumnName="ServiceTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_SuperAdministrator">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_SuperAdministrator">
+        <MappingFragment StoreEntitySet="AMS_SuperAdministrator">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Tab1_Summary">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Tab1_Summary">
+        <MappingFragment StoreEntitySet="AMS_Tab1_Summary">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="LandValue" ColumnName="LandValue" />
+          <ScalarProperty Name="Improvements" ColumnName="Improvements" />
+          <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
+          <ScalarProperty Name="UnitLot" ColumnName="UnitLot" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetType" ColumnName="StreetType" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="InstructedBy" ColumnName="InstructedBy" />
+          <ScalarProperty Name="InspectionDate" ColumnName="InspectionDate" />
+          <ScalarProperty Name="ValuationsDate" ColumnName="ValuationsDate" />
+          <ScalarProperty Name="ValueComponent" ColumnName="ValueComponent" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Instructions" ColumnName="Instructions" />
+          <ScalarProperty Name="ValuationApproachId" ColumnName="ValuationApproachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Tab2_Land">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Tab2_Land">
+        <MappingFragment StoreEntitySet="AMS_Tab2_Land">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="PropertyType" ColumnName="PropertyType" />
+          <ScalarProperty Name="PropertyIdentification" ColumnName="PropertyIdentification" />
+          <ScalarProperty Name="TitleSearch" ColumnName="TitleSearch" />
+          <ScalarProperty Name="LotNumber" ColumnName="LotNumber" />
+          <ScalarProperty Name="PlanNumber" ColumnName="PlanNumber" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="RegisteredProprietors" ColumnName="RegisteredProprietors" />
+          <ScalarProperty Name="Encumbrances" ColumnName="Encumbrances" />
+          <ScalarProperty Name="SiteArea" ColumnName="SiteArea" />
+          <ScalarProperty Name="SqmHectares" ColumnName="SqmHectares" />
+          <ScalarProperty Name="LocalGovernmentArea" ColumnName="LocalGovernmentArea" />
+          <ScalarProperty Name="Zoning" ColumnName="Zoning" />
+          <ScalarProperty Name="Overlays" ColumnName="Overlays" />
+          <ScalarProperty Name="ZoningEffect" ColumnName="ZoningEffect" />
+          <ScalarProperty Name="Shops" ColumnName="Shops" />
+          <ScalarProperty Name="Transport" ColumnName="Transport" />
+          <ScalarProperty Name="Schools" ColumnName="Schools" />
+          <ScalarProperty Name="CBD" ColumnName="CBD" />
+          <ScalarProperty Name="SiteLayout" ColumnName="SiteLayout" />
+          <ScalarProperty Name="Services" ColumnName="Services" />
+          <ScalarProperty Name="EnvironmentalHazards" ColumnName="EnvironmentalHazards" />
+          <ScalarProperty Name="PestInfestation" ColumnName="PestInfestation" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="PlanTitle" ColumnName="PlanTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Tab3_BuildingImprovements">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Tab3_BuildingImprovements">
+        <MappingFragment StoreEntitySet="AMS_Tab3_BuildingImprovements">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="PropertyType" ColumnName="PropertyType" />
+          <ScalarProperty Name="PropertyStyle" ColumnName="PropertyStyle" />
+          <ScalarProperty Name="YearBuilt" ColumnName="YearBuilt" />
+          <ScalarProperty Name="ExternalWalls" ColumnName="ExternalWalls" />
+          <ScalarProperty Name="Roof" ColumnName="Roof" />
+          <ScalarProperty Name="InteriorLinings" ColumnName="InteriorLinings" />
+          <ScalarProperty Name="MainFlooring" ColumnName="MainFlooring" />
+          <ScalarProperty Name="WindowFrames" ColumnName="WindowFrames" />
+          <ScalarProperty Name="InternalCondition" ColumnName="InternalCondition" />
+          <ScalarProperty Name="ExternalCondition" ColumnName="ExternalCondition" />
+          <ScalarProperty Name="StreetAppeal" ColumnName="StreetAppeal" />
+          <ScalarProperty Name="PergolaVerandah" ColumnName="PergolaVerandah" />
+          <ScalarProperty Name="Shedding" ColumnName="Shedding" />
+          <ScalarProperty Name="Pools" ColumnName="Pools" />
+          <ScalarProperty Name="Gardens" ColumnName="Gardens" />
+          <ScalarProperty Name="Fencing" ColumnName="Fencing" />
+          <ScalarProperty Name="DrivewayPaving" ColumnName="DrivewayPaving" />
+          <ScalarProperty Name="Outbuildings" ColumnName="Outbuildings" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="AncillaryImprovements" ColumnName="AncillaryImprovements" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Tab4_RoomsFixtures">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Tab4_RoomsFixtures">
+        <MappingFragment StoreEntitySet="AMS_Tab4_RoomsFixtures">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Rooms1" ColumnName="Rooms1" />
+          <ScalarProperty Name="Rooms2" ColumnName="Rooms2" />
+          <ScalarProperty Name="Rooms3" ColumnName="Rooms3" />
+          <ScalarProperty Name="Rooms4" ColumnName="Rooms4" />
+          <ScalarProperty Name="Bedroom" ColumnName="Bedroom" />
+          <ScalarProperty Name="Bathroom" ColumnName="Bathroom" />
+          <ScalarProperty Name="Ensuite" ColumnName="Ensuite" />
+          <ScalarProperty Name="Toilet" ColumnName="Toilet" />
+          <ScalarProperty Name="Laundry" ColumnName="Laundry" />
+          <ScalarProperty Name="Text1" ColumnName="Text1" />
+          <ScalarProperty Name="HeatingCooling" ColumnName="HeatingCooling" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Tab5_Areas">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Tab5_Areas">
+        <MappingFragment StoreEntitySet="AMS_Tab5_Areas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="LivingArea" ColumnName="LivingArea" />
+          <ScalarProperty Name="Alfresco" ColumnName="Alfresco" />
+          <ScalarProperty Name="Balcony" ColumnName="Balcony" />
+          <ScalarProperty Name="Pergola" ColumnName="Pergola" />
+          <ScalarProperty Name="Verandah" ColumnName="Verandah" />
+          <ScalarProperty Name="Garage" ColumnName="Garage" />
+          <ScalarProperty Name="Carport" ColumnName="Carport" />
+          <ScalarProperty Name="CarSpaces" ColumnName="CarSpaces" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="SqmEq" ColumnName="SqmEq" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Tab6_Comments">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Tab6_Comments">
+        <MappingFragment StoreEntitySet="AMS_Tab6_Comments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Instructions" ColumnName="Instructions" />
+          <ScalarProperty Name="Standard" ColumnName="Standard" />
+          <ScalarProperty Name="LastSaleofProperty" ColumnName="LastSaleofProperty" />
+          <ScalarProperty Name="Defects" ColumnName="Defects" />
+          <ScalarProperty Name="Methodology" ColumnName="Methodology" />
+          <ScalarProperty Name="Closing" ColumnName="Closing" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Tab7_SalesEvidence">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Tab7_SalesEvidence">
+        <MappingFragment StoreEntitySet="AMS_Tab7_SalesEvidence">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Construction" ColumnName="Construction" />
+          <ScalarProperty Name="RoofType" ColumnName="RoofType" />
+          <ScalarProperty Name="Bedrooms" ColumnName="Bedrooms" />
+          <ScalarProperty Name="Bathrooms" ColumnName="Bathrooms" />
+          <ScalarProperty Name="CarAccommodation" ColumnName="CarAccommodation" />
+          <ScalarProperty Name="LivingArea" ColumnName="LivingArea" />
+          <ScalarProperty Name="LandArea" ColumnName="LandArea" />
+          <ScalarProperty Name="LandAreaOption" ColumnName="LandAreaOption" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ImageOrFull" ColumnName="ImageOrFull" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="SalesCategory" ColumnName="SalesCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Tab8_Attachments">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Tab8_Attachments">
+        <MappingFragment StoreEntitySet="AMS_Tab8_Attachments">
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImageType" ColumnName="ImageType" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_TransactionType">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_TransactionType">
+        <MappingFragment StoreEntitySet="AMS_TransactionType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TransactionTypeName" ColumnName="TransactionTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Urgency">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Urgency">
+        <MappingFragment StoreEntitySet="AMS_Urgency">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UrgencyName" ColumnName="UrgencyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Users">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Users">
+        <MappingFragment StoreEntitySet="AMS_Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_ValuationCompany">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_ValuationCompany">
+        <MappingFragment StoreEntitySet="AMS_ValuationCompany">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProfessionalIndemnityInsurancePolicy" ColumnName="ProfessionalIndemnityInsurancePolicy" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="AllowJobCreate" ColumnName="AllowJobCreate" />
+          <ScalarProperty Name="CompanyLogo" ColumnName="CompanyLogo" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BSB" ColumnName="BSB" />
+          <ScalarProperty Name="ACNumber" ColumnName="ACNumber" />
+          <ScalarProperty Name="ABN" ColumnName="ABN" />
+          <ScalarProperty Name="TermsandCondition" ColumnName="TermsandCondition" />
+          <ScalarProperty Name="CertificationQualification" ColumnName="CertificationQualification" />
+          <ScalarProperty Name="FamilyLawCertification" ColumnName="FamilyLawCertification" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="HeaderImage" ColumnName="HeaderImage" />
+          <ScalarProperty Name="FooterImage" ColumnName="FooterImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_ValuationManager">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_ValuationManager">
+        <MappingFragment StoreEntitySet="AMS_ValuationManager">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_ValuationType">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_ValuationType">
+        <MappingFragment StoreEntitySet="AMS_ValuationType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ValuationTypeName" ColumnName="ValuationTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Valuers">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Valuers">
+        <MappingFragment StoreEntitySet="AMS_Valuers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ValuationCompanyId" ColumnName="ValuationCompanyId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Qualifications" ColumnName="Qualifications" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="MembershipStatus" ColumnName="MembershipStatus" />
+          <ScalarProperty Name="MembershipBody" ColumnName="MembershipBody" />
+          <ScalarProperty Name="ValuerLogo" ColumnName="ValuerLogo" />
+          <ScalarProperty Name="SignatureImage" ColumnName="SignatureImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AMS_Valuers1">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_Valuers1">
+        <MappingFragment StoreEntitySet="AMS_Valuers1">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ValuationCompanyId" ColumnName="ValuationCompanyId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="EINSSN" ColumnName="EINSSN" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CertificationType" ColumnName="CertificationType" />
+          <ScalarProperty Name="FHACertified" ColumnName="FHACertified" />
+          <ScalarProperty Name="VACertified" ColumnName="VACertified" />
+          <ScalarProperty Name="Commercial" ColumnName="Commercial" />
+          <ScalarProperty Name="InsuranceCompany" ColumnName="InsuranceCompany" />
+          <ScalarProperty Name="InsuranceExpDate" ColumnName="InsuranceExpDate" />
+          <ScalarProperty Name="CoverageAmount" ColumnName="CoverageAmount" />
+          <ScalarProperty Name="AppraiserSoftware" ColumnName="AppraiserSoftware" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="marketvalDBModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AMS_AccessArangementsTypeEdit" FunctionName="marketvalDBModel.Store.AMS_AccessArangementsTypeEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_AccessArangementsTypeSelect" FunctionName="marketvalDBModel.Store.AMS_AccessArangementsTypeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_AccessArangementsTypeSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccessArangementsTypeName" ColumnName="AccessArangementsTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_ClientsBranchManagerEdit" FunctionName="marketvalDBModel.Store.AMS_ClientsBranchManagerEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_ClientsBranchManagerSelect" FunctionName="marketvalDBModel.Store.AMS_ClientsBranchManagerSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_ClientsBranchManagerSelect_Result">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusShow" ColumnName="StatusShow" />
+          <ScalarProperty Name="StatusColor" ColumnName="StatusColor" />
+          <ScalarProperty Name="StatusTooltip" ColumnName="StatusTooltip" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_ClientsEdit" FunctionName="marketvalDBModel.Store.AMS_ClientsEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_ClientsSelect" FunctionName="marketvalDBModel.Store.AMS_ClientsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_ClientsSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClientType" ColumnName="ClientType" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="ABN" ColumnName="ABN" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusShow" ColumnName="StatusShow" />
+          <ScalarProperty Name="StatusColor" ColumnName="StatusColor" />
+          <ScalarProperty Name="StatusTooltip" ColumnName="StatusTooltip" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_ComplianceEdit" FunctionName="marketvalDBModel.Store.AMS_ComplianceEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_ComplianceSelect" FunctionName="marketvalDBModel.Store.AMS_ComplianceSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_ComplianceSelect_Result">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusShow" ColumnName="StatusShow" />
+          <ScalarProperty Name="StatusColor" ColumnName="StatusColor" />
+          <ScalarProperty Name="StatusTooltip" ColumnName="StatusTooltip" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_EmailConfirmationofValuersAppointmentDetails" FunctionName="marketvalDBModel.Store.AMS_EmailConfirmationofValuersAppointmentDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_EmailConfirmationofValuersAppointmentDetails_Result">
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyAddress1" ColumnName="CompanyAddress1" />
+          <ScalarProperty Name="CompanyEmail" ColumnName="CompanyEmail" />
+          <ScalarProperty Name="CompanyAddress2" ColumnName="CompanyAddress2" />
+          <ScalarProperty Name="ValuerName" ColumnName="ValuerName" />
+          <ScalarProperty Name="ValuerPhone" ColumnName="ValuerPhone" />
+          <ScalarProperty Name="ValuerEmail" ColumnName="ValuerEmail" />
+          <ScalarProperty Name="QuoteFee" ColumnName="QuoteFee" />
+          <ScalarProperty Name="AppointmentSet" ColumnName="AppointmentSet" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="AppointmentSetTime" ColumnName="AppointmentSetTime" />
+          <ScalarProperty Name="EmailAddress1" ColumnName="EmailAddress1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_EmailHistoryEdit" FunctionName="marketvalDBModel.Store.AMS_EmailHistoryEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_EmailHistorySelect" FunctionName="marketvalDBModel.Store.AMS_EmailHistorySelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_EmailHistorySelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmailType" ColumnName="EmailType" />
+          <ScalarProperty Name="ToEmail" ColumnName="ToEmail" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="FromEmail" ColumnName="FromEmail" />
+          <ScalarProperty Name="ReplyTo" ColumnName="ReplyTo" />
+          <ScalarProperty Name="EmailFile" ColumnName="EmailFile" />
+          <ScalarProperty Name="SendOn" ColumnName="SendOn" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_getCustomlist" FunctionName="marketvalDBModel.Store.AMS_getCustomlist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_getCustomlist_Result">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LookupId" ColumnName="LookupId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_getlist" FunctionName="marketvalDBModel.Store.AMS_getlist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_getlist_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobAppointmentSetEdit" FunctionName="marketvalDBModel.Store.AMS_JobAppointmentSetEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_JobDeleteByJobId" FunctionName="marketvalDBModel.Store.AMS_JobDeleteByJobId" />
+    <FunctionImportMapping FunctionImportName="AMS_JobDocumentsEdit" FunctionName="marketvalDBModel.Store.AMS_JobDocumentsEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_JobDocumentsSelect" FunctionName="marketvalDBModel.Store.AMS_JobDocumentsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_JobDocumentsSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobEditFinalReportGenerate" FunctionName="marketvalDBModel.Store.AMS_JobEditFinalReportGenerate" />
+    <FunctionImportMapping FunctionImportName="AMS_JobEditFinalReportSubmit" FunctionName="marketvalDBModel.Store.AMS_JobEditFinalReportSubmit" />
+    <FunctionImportMapping FunctionImportName="AMS_JobEditReject" FunctionName="marketvalDBModel.Store.AMS_JobEditReject" />
+    <FunctionImportMapping FunctionImportName="AMS_JobEditRequestsEdit" FunctionName="marketvalDBModel.Store.AMS_JobEditRequestsEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_JobEditRequestsSelect" FunctionName="marketvalDBModel.Store.AMS_JobEditRequestsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_JobEditRequestsSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="RequestTitle" ColumnName="RequestTitle" />
+          <ScalarProperty Name="RequestDetails" ColumnName="RequestDetails" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedByName" ColumnName="CreatedByName" />
+          <ScalarProperty Name="CreatedByType" ColumnName="CreatedByType" />
+          <ScalarProperty Name="CreatedById" ColumnName="CreatedById" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobHistoryEdit" FunctionName="marketvalDBModel.Store.AMS_JobHistoryEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_JobsDocumentEdit" FunctionName="marketvalDBModel.Store.AMS_JobsDocumentEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_JobsEdit" FunctionName="marketvalDBModel.Store.AMS_JobsEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_JobsEditAssignToReviewer" FunctionName="marketvalDBModel.Store.AMS_JobsEditAssignToReviewer" />
+    <FunctionImportMapping FunctionImportName="AMS_JobsEditAssignToValuationCompany" FunctionName="marketvalDBModel.Store.AMS_JobsEditAssignToValuationCompany" />
+    <FunctionImportMapping FunctionImportName="AMS_JobsEditAssignToValuer" FunctionName="marketvalDBModel.Store.AMS_JobsEditAssignToValuer" />
+    <FunctionImportMapping FunctionImportName="AMS_JobsEditIsClientReportEdit" FunctionName="marketvalDBModel.Store.AMS_JobsEditIsClientReportEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_JobsEditPaymentStatusCompleted" FunctionName="marketvalDBModel.Store.AMS_JobsEditPaymentStatusCompleted" />
+    <FunctionImportMapping FunctionImportName="AMS_JobsEditReAssignToValuationCompany" FunctionName="marketvalDBModel.Store.AMS_JobsEditReAssignToValuationCompany" />
+    <FunctionImportMapping FunctionImportName="AMS_JobsHistorySelectByJobId" FunctionName="marketvalDBModel.Store.AMS_JobsHistorySelectByJobId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_JobsHistorySelectByJobId_Result">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CreatedByName" ColumnName="CreatedByName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobsOtherNoteEdit" FunctionName="marketvalDBModel.Store.AMS_JobsOtherNoteEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_JobsSelect" FunctionName="marketvalDBModel.Store.AMS_JobsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_JobsSelect_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="UnitLot" ColumnName="UnitLot" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetType" ColumnName="StreetType" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="AppointmentSet" ColumnName="AppointmentSet" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="ValuerName" ColumnName="ValuerName" />
+          <ScalarProperty Name="ValuationCompanyName" ColumnName="ValuationCompanyName" />
+          <ScalarProperty Name="ValuerPhone1" ColumnName="ValuerPhone1" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="PurposeType" ColumnName="PurposeType" />
+          <ScalarProperty Name="PropertyTypeType" ColumnName="PropertyTypeType" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobsSelectByJobId" FunctionName="marketvalDBModel.Store.AMS_JobsSelectByJobId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_JobsSelectByJobId_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="InstructedBy" ColumnName="InstructedBy" />
+          <ScalarProperty Name="PreparedFor" ColumnName="PreparedFor" />
+          <ScalarProperty Name="LoanReference" ColumnName="LoanReference" />
+          <ScalarProperty Name="ClientNameDisplay" ColumnName="ClientNameDisplay" />
+          <ScalarProperty Name="CustomerFullName" ColumnName="CustomerFullName" />
+          <ScalarProperty Name="CustomerPhoneNumber" ColumnName="CustomerPhoneNumber" />
+          <ScalarProperty Name="CustomerMobilePhoneNumber" ColumnName="CustomerMobilePhoneNumber" />
+          <ScalarProperty Name="CustomerAdditionalPhoneNumber" ColumnName="CustomerAdditionalPhoneNumber" />
+          <ScalarProperty Name="AccessArangementsVia" ColumnName="AccessArangementsVia" />
+          <ScalarProperty Name="AccessArangementsViaName" ColumnName="AccessArangementsViaName" />
+          <ScalarProperty Name="NameOfPersonToContactForAccess" ColumnName="NameOfPersonToContactForAccess" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="EmailAddress1" ColumnName="EmailAddress1" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="MobilePhoneNumber" ColumnName="MobilePhoneNumber" />
+          <ScalarProperty Name="AdditionalPhoneNumber" ColumnName="AdditionalPhoneNumber" />
+          <ScalarProperty Name="AdditionalNotes" ColumnName="AdditionalNotes" />
+          <ScalarProperty Name="UnitLot" ColumnName="UnitLot" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetType" ColumnName="StreetType" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PriorJobreference" ColumnName="PriorJobreference" />
+          <ScalarProperty Name="ContractPrice" ColumnName="ContractPrice" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="EstimatedPrice" ColumnName="EstimatedPrice" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ServiceTypeName" ColumnName="ServiceTypeName" />
+          <ScalarProperty Name="ValuationType" ColumnName="ValuationType" />
+          <ScalarProperty Name="ValuationTypeName" ColumnName="ValuationTypeName" />
+          <ScalarProperty Name="PropertyType" ColumnName="PropertyType" />
+          <ScalarProperty Name="PropertyTypeName" ColumnName="PropertyTypeName" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="PurposeName" ColumnName="PurposeName" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="TransactionTypeName" ColumnName="TransactionTypeName" />
+          <ScalarProperty Name="Urgency" ColumnName="Urgency" />
+          <ScalarProperty Name="UrgencyName" ColumnName="UrgencyName" />
+          <ScalarProperty Name="QuoteFee" ColumnName="QuoteFee" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="CreatedByName" ColumnName="CreatedByName" />
+          <ScalarProperty Name="CreatedOn1" ColumnName="CreatedOn1" />
+          <ScalarProperty Name="CreatedByType" ColumnName="CreatedByType" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ValuationCompanyAssignedId" ColumnName="ValuationCompanyAssignedId" />
+          <ScalarProperty Name="ValuationCompanyAssignedName" ColumnName="ValuationCompanyAssignedName" />
+          <ScalarProperty Name="ValuationCompanyAssignedAddress" ColumnName="ValuationCompanyAssignedAddress" />
+          <ScalarProperty Name="ValuationCompanyAssignedSuburb" ColumnName="ValuationCompanyAssignedSuburb" />
+          <ScalarProperty Name="ValuationCompanyAssignedState" ColumnName="ValuationCompanyAssignedState" />
+          <ScalarProperty Name="ValuationCompanyAssignedPostcode" ColumnName="ValuationCompanyAssignedPostcode" />
+          <ScalarProperty Name="ValuationCompanyAssignedPhone1" ColumnName="ValuationCompanyAssignedPhone1" />
+          <ScalarProperty Name="ValuationCompanyAssignedLogo" ColumnName="ValuationCompanyAssignedLogo" />
+          <ScalarProperty Name="ValuationCompanyAssignedURL" ColumnName="ValuationCompanyAssignedURL" />
+          <ScalarProperty Name="ValuationCompanyAssignedTermsandCondition" ColumnName="ValuationCompanyAssignedTermsandCondition" />
+          <ScalarProperty Name="ValuationCompanyAssignedCertificationQualification" ColumnName="ValuationCompanyAssignedCertificationQualification" />
+          <ScalarProperty Name="FamilyLawCertification" ColumnName="FamilyLawCertification" />
+          <ScalarProperty Name="ValuersName" ColumnName="ValuersName" />
+          <ScalarProperty Name="ValuersEmail" ColumnName="ValuersEmail" />
+          <ScalarProperty Name="ValuersAddress" ColumnName="ValuersAddress" />
+          <ScalarProperty Name="ValuersSuburb" ColumnName="ValuersSuburb" />
+          <ScalarProperty Name="ValuersState" ColumnName="ValuersState" />
+          <ScalarProperty Name="ValuersPostcode" ColumnName="ValuersPostcode" />
+          <ScalarProperty Name="ValuersPhone1" ColumnName="ValuersPhone1" />
+          <ScalarProperty Name="ValuersTitle" ColumnName="ValuersTitle" />
+          <ScalarProperty Name="ValuersExperience" ColumnName="ValuersExperience" />
+          <ScalarProperty Name="ValuersMembershipStatus" ColumnName="ValuersMembershipStatus" />
+          <ScalarProperty Name="ValuersMembershipBody" ColumnName="ValuersMembershipBody" />
+          <ScalarProperty Name="ValuersQualifications" ColumnName="ValuersQualifications" />
+          <ScalarProperty Name="ValuersSignatureImage" ColumnName="ValuersSignatureImage" />
+          <ScalarProperty Name="ValuersUsername" ColumnName="ValuersUsername" />
+          <ScalarProperty Name="ReviewerName" ColumnName="ReviewerName" />
+          <ScalarProperty Name="InspectedOn" ColumnName="InspectedOn" />
+          <ScalarProperty Name="AppointmentSet" ColumnName="AppointmentSet" />
+          <ScalarProperty Name="ReportUpload" ColumnName="ReportUpload" />
+          <ScalarProperty Name="AccountUpload" ColumnName="AccountUpload" />
+          <ScalarProperty Name="FieldNoteUpload" ColumnName="FieldNoteUpload" />
+          <ScalarProperty Name="ReportUploadedOn" ColumnName="ReportUploadedOn" />
+          <ScalarProperty Name="FeeByValuationCompany" ColumnName="FeeByValuationCompany" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="InspectedEmailSendToClient" ColumnName="InspectedEmailSendToClient" />
+          <ScalarProperty Name="AppointmentSetTime" ColumnName="AppointmentSetTime" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="EmailAddress11" ColumnName="EmailAddress11" />
+          <ScalarProperty Name="OtherNote" ColumnName="OtherNote" />
+          <ScalarProperty Name="ValuationInstruction" ColumnName="ValuationInstruction" />
+          <ScalarProperty Name="PropertyReport" ColumnName="PropertyReport" />
+          <ScalarProperty Name="Overlays" ColumnName="Overlays" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="IsClientReportEdit" ColumnName="IsClientReportEdit" />
+          <ScalarProperty Name="ValuationCompanyHeaderImage" ColumnName="ValuationCompanyHeaderImage" />
+          <ScalarProperty Name="ValuationCompanyFooterImage" ColumnName="ValuationCompanyFooterImage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobsSelectByJobIdForEdit" FunctionName="marketvalDBModel.Store.AMS_JobsSelectByJobIdForEdit">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_JobsSelectByJobIdForEdit_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="InstructedBy" ColumnName="InstructedBy" />
+          <ScalarProperty Name="PreparedFor" ColumnName="PreparedFor" />
+          <ScalarProperty Name="BankLender" ColumnName="BankLender" />
+          <ScalarProperty Name="LoanReference" ColumnName="LoanReference" />
+          <ScalarProperty Name="CustomerFullName" ColumnName="CustomerFullName" />
+          <ScalarProperty Name="CustomerPhoneNumber" ColumnName="CustomerPhoneNumber" />
+          <ScalarProperty Name="CustomerMobilePhoneNumber" ColumnName="CustomerMobilePhoneNumber" />
+          <ScalarProperty Name="CustomerAdditionalPhoneNumber" ColumnName="CustomerAdditionalPhoneNumber" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="AccessArangementsVia" ColumnName="AccessArangementsVia" />
+          <ScalarProperty Name="NameOfPersonToContactForAccess" ColumnName="NameOfPersonToContactForAccess" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="MobilePhoneNumber" ColumnName="MobilePhoneNumber" />
+          <ScalarProperty Name="AdditionalPhoneNumber" ColumnName="AdditionalPhoneNumber" />
+          <ScalarProperty Name="AdditionalNotes" ColumnName="AdditionalNotes" />
+          <ScalarProperty Name="UnitLot" ColumnName="UnitLot" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetType" ColumnName="StreetType" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PriorJobreference" ColumnName="PriorJobreference" />
+          <ScalarProperty Name="ContractPrice" ColumnName="ContractPrice" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="EstimatedPrice" ColumnName="EstimatedPrice" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ValuationType" ColumnName="ValuationType" />
+          <ScalarProperty Name="PropertyType" ColumnName="PropertyType" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Urgency" ColumnName="Urgency" />
+          <ScalarProperty Name="QuoteFee" ColumnName="QuoteFee" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AppointmentSet" ColumnName="AppointmentSet" />
+          <ScalarProperty Name="InspectedOn" ColumnName="InspectedOn" />
+          <ScalarProperty Name="ReportUpload" ColumnName="ReportUpload" />
+          <ScalarProperty Name="AccountUpload" ColumnName="AccountUpload" />
+          <ScalarProperty Name="FieldNoteUpload" ColumnName="FieldNoteUpload" />
+          <ScalarProperty Name="ReportUploadedOn" ColumnName="ReportUploadedOn" />
+          <ScalarProperty Name="ValuationCompanyAssignedId" ColumnName="ValuationCompanyAssignedId" />
+          <ScalarProperty Name="ValuerId" ColumnName="ValuerId" />
+          <ScalarProperty Name="ReviewerId" ColumnName="ReviewerId" />
+          <ScalarProperty Name="LastRejectedBy" ColumnName="LastRejectedBy" />
+          <ScalarProperty Name="LastRejectedOn" ColumnName="LastRejectedOn" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="CreatedByType" ColumnName="CreatedByType" />
+          <ScalarProperty Name="FeeByValuationCompany" ColumnName="FeeByValuationCompany" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="InspectedEmailSendToClient" ColumnName="InspectedEmailSendToClient" />
+          <ScalarProperty Name="IsEditRequest" ColumnName="IsEditRequest" />
+          <ScalarProperty Name="AppointmentSetTime" ColumnName="AppointmentSetTime" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="EmailAddress1" ColumnName="EmailAddress1" />
+          <ScalarProperty Name="OtherNote" ColumnName="OtherNote" />
+          <ScalarProperty Name="ValuationInstruction" ColumnName="ValuationInstruction" />
+          <ScalarProperty Name="PropertyReport" ColumnName="PropertyReport" />
+          <ScalarProperty Name="Overlays" ColumnName="Overlays" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="IsClientReportEdit" ColumnName="IsClientReportEdit" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobsSelectForClient" FunctionName="marketvalDBModel.Store.AMS_JobsSelectForClient">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_JobsSelectForClient_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="UnitLot" ColumnName="UnitLot" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetType" ColumnName="StreetType" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="AppointmentSet" ColumnName="AppointmentSet" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="ValuerName" ColumnName="ValuerName" />
+          <ScalarProperty Name="ValuationCompanyName" ColumnName="ValuationCompanyName" />
+          <ScalarProperty Name="ValuerPhone1" ColumnName="ValuerPhone1" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="PurposeType" ColumnName="PurposeType" />
+          <ScalarProperty Name="PropertyTypeType" ColumnName="PropertyTypeType" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobsSelectForReviewers" FunctionName="marketvalDBModel.Store.AMS_JobsSelectForReviewers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_JobsSelectForReviewers_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="UnitLot" ColumnName="UnitLot" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetType" ColumnName="StreetType" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="AppointmentSet" ColumnName="AppointmentSet" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="ValuerName" ColumnName="ValuerName" />
+          <ScalarProperty Name="ValuationCompanyName" ColumnName="ValuationCompanyName" />
+          <ScalarProperty Name="ValuerPhone1" ColumnName="ValuerPhone1" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="PurposeType" ColumnName="PurposeType" />
+          <ScalarProperty Name="PropertyTypeType" ColumnName="PropertyTypeType" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobsSelectForValuationCompany" FunctionName="marketvalDBModel.Store.AMS_JobsSelectForValuationCompany">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_JobsSelectForValuationCompany_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="UnitLot" ColumnName="UnitLot" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetType" ColumnName="StreetType" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="AppointmentSet" ColumnName="AppointmentSet" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="ValuerName" ColumnName="ValuerName" />
+          <ScalarProperty Name="ValuationCompanyName" ColumnName="ValuationCompanyName" />
+          <ScalarProperty Name="ValuerPhone1" ColumnName="ValuerPhone1" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="PurposeType" ColumnName="PurposeType" />
+          <ScalarProperty Name="PropertyTypeType" ColumnName="PropertyTypeType" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobsSelectForValuationManager" FunctionName="marketvalDBModel.Store.AMS_JobsSelectForValuationManager" />
+    <FunctionImportMapping FunctionImportName="AMS_JobsSelectForValuationManagerDownloadClients" FunctionName="marketvalDBModel.Store.AMS_JobsSelectForValuationManagerDownloadClients">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_JobsSelectForValuationManagerDownloadClients_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="InstructedBy" ColumnName="InstructedBy" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ValuationCompanyName" ColumnName="ValuationCompanyName" />
+          <ScalarProperty Name="MobilePhoneNumber" ColumnName="MobilePhoneNumber" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobsSelectForValuationManagerDownloadReports" FunctionName="marketvalDBModel.Store.AMS_JobsSelectForValuationManagerDownloadReports">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_JobsSelectForValuationManagerDownloadReports_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="UnitLot" ColumnName="UnitLot" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetType" ColumnName="StreetType" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="AppointmentSet" ColumnName="AppointmentSet" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="ValuerName" ColumnName="ValuerName" />
+          <ScalarProperty Name="ValuationCompanyName" ColumnName="ValuationCompanyName" />
+          <ScalarProperty Name="ValuerPhone1" ColumnName="ValuerPhone1" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="PurposeType" ColumnName="PurposeType" />
+          <ScalarProperty Name="PropertyTypeType" ColumnName="PropertyTypeType" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ReportUploadedOn" ColumnName="ReportUploadedOn" />
+          <ScalarProperty Name="ReportUpload" ColumnName="ReportUpload" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobsSelectForValuers" FunctionName="marketvalDBModel.Store.AMS_JobsSelectForValuers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_JobsSelectForValuers_Result">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="UnitLot" ColumnName="UnitLot" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetType" ColumnName="StreetType" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="AppointmentSet" ColumnName="AppointmentSet" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ClientAddress" ColumnName="ClientAddress" />
+          <ScalarProperty Name="ValuerName" ColumnName="ValuerName" />
+          <ScalarProperty Name="ValuerUserName" ColumnName="ValuerUserName" />
+          <ScalarProperty Name="ValuationCompanyName" ColumnName="ValuationCompanyName" />
+          <ScalarProperty Name="ValuerPhone1" ColumnName="ValuerPhone1" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="PurposeType" ColumnName="PurposeType" />
+          <ScalarProperty Name="PropertyTypeType" ColumnName="PropertyTypeType" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobsStatusSelect" FunctionName="marketvalDBModel.Store.AMS_JobsStatusSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_JobsStatusSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_JobStatusEdit" FunctionName="marketvalDBModel.Store.AMS_JobStatusEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_LogsUpdate" FunctionName="marketvalDBModel.Store.AMS_LogsUpdate" />
+    <FunctionImportMapping FunctionImportName="AMS_lookup" FunctionName="marketvalDBModel.Store.AMS_lookup" />
+    <FunctionImportMapping FunctionImportName="AMS_Lookupselect" FunctionName="marketvalDBModel.Store.AMS_Lookupselect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_Lookupselect_Result">
+          <ScalarProperty Name="LookupId" ColumnName="LookupId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_PropertyTypeEdit" FunctionName="marketvalDBModel.Store.AMS_PropertyTypeEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_PropertyTypeSelect" FunctionName="marketvalDBModel.Store.AMS_PropertyTypeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_PropertyTypeSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PropertyTypeName" ColumnName="PropertyTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_PurposeEdit" FunctionName="marketvalDBModel.Store.AMS_PurposeEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_PurposeSelect" FunctionName="marketvalDBModel.Store.AMS_PurposeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_PurposeSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PurposeName" ColumnName="PurposeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_ReviewersEdit" FunctionName="marketvalDBModel.Store.AMS_ReviewersEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_ReviewersSelect" FunctionName="marketvalDBModel.Store.AMS_ReviewersSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_ReviewersSelect_Result">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ValuationCompanyId" ColumnName="ValuationCompanyId" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusShow" ColumnName="StatusShow" />
+          <ScalarProperty Name="StatusColor" ColumnName="StatusColor" />
+          <ScalarProperty Name="StatusTooltip" ColumnName="StatusTooltip" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_ServiceTypeEdit" FunctionName="marketvalDBModel.Store.AMS_ServiceTypeEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_ServiceTypeSelect" FunctionName="marketvalDBModel.Store.AMS_ServiceTypeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_ServiceTypeSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceTypeName" ColumnName="ServiceTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_SuperAdministratorEdit" FunctionName="marketvalDBModel.Store.AMS_SuperAdministratorEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_SuperAdministratorSelect" FunctionName="marketvalDBModel.Store.AMS_SuperAdministratorSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_SuperAdministratorSelect_Result">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_Tab1_SummaryEdit" FunctionName="marketvalDBModel.Store.AMS_Tab1_SummaryEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_Tab1_SummarySelect" FunctionName="marketvalDBModel.Store.AMS_Tab1_SummarySelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_Tab1_SummarySelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="LandValue" ColumnName="LandValue" />
+          <ScalarProperty Name="Improvements" ColumnName="Improvements" />
+          <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
+          <ScalarProperty Name="UnitLot" ColumnName="UnitLot" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetType" ColumnName="StreetType" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="InstructedBy" ColumnName="InstructedBy" />
+          <ScalarProperty Name="InspectionDate" ColumnName="InspectionDate" />
+          <ScalarProperty Name="ValuationsDate" ColumnName="ValuationsDate" />
+          <ScalarProperty Name="ValueComponent" ColumnName="ValueComponent" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Instructions" ColumnName="Instructions" />
+          <ScalarProperty Name="ValuationApproachId" ColumnName="ValuationApproachId" />
+          <ScalarProperty Name="ValuationApproach" ColumnName="ValuationApproach" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_Tab2_LandEdit" FunctionName="marketvalDBModel.Store.AMS_Tab2_LandEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_Tab2_LandSelect" FunctionName="marketvalDBModel.Store.AMS_Tab2_LandSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_Tab2_LandSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="PropertyType" ColumnName="PropertyType" />
+          <ScalarProperty Name="PropertyIdentification" ColumnName="PropertyIdentification" />
+          <ScalarProperty Name="TitleSearch" ColumnName="TitleSearch" />
+          <ScalarProperty Name="LotNumber" ColumnName="LotNumber" />
+          <ScalarProperty Name="PlanNumber" ColumnName="PlanNumber" />
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="RegisteredProprietors" ColumnName="RegisteredProprietors" />
+          <ScalarProperty Name="Encumbrances" ColumnName="Encumbrances" />
+          <ScalarProperty Name="SiteArea" ColumnName="SiteArea" />
+          <ScalarProperty Name="SqmHectares" ColumnName="SqmHectares" />
+          <ScalarProperty Name="LocalGovernmentArea" ColumnName="LocalGovernmentArea" />
+          <ScalarProperty Name="Zoning" ColumnName="Zoning" />
+          <ScalarProperty Name="Overlays" ColumnName="Overlays" />
+          <ScalarProperty Name="ZoningEffect" ColumnName="ZoningEffect" />
+          <ScalarProperty Name="Shops" ColumnName="Shops" />
+          <ScalarProperty Name="Transport" ColumnName="Transport" />
+          <ScalarProperty Name="Schools" ColumnName="Schools" />
+          <ScalarProperty Name="CBD" ColumnName="CBD" />
+          <ScalarProperty Name="SiteLayout" ColumnName="SiteLayout" />
+          <ScalarProperty Name="Services" ColumnName="Services" />
+          <ScalarProperty Name="EnvironmentalHazards" ColumnName="EnvironmentalHazards" />
+          <ScalarProperty Name="PestInfestation" ColumnName="PestInfestation" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="PlanTitle" ColumnName="PlanTitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_Tab3_BuildingImprovementsEdit" FunctionName="marketvalDBModel.Store.AMS_Tab3_BuildingImprovementsEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_Tab3_BuildingImprovementsSelect" FunctionName="marketvalDBModel.Store.AMS_Tab3_BuildingImprovementsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_Tab3_BuildingImprovementsSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="PropertyType" ColumnName="PropertyType" />
+          <ScalarProperty Name="PropertyStyle" ColumnName="PropertyStyle" />
+          <ScalarProperty Name="YearBuilt" ColumnName="YearBuilt" />
+          <ScalarProperty Name="ExternalWalls" ColumnName="ExternalWalls" />
+          <ScalarProperty Name="Roof" ColumnName="Roof" />
+          <ScalarProperty Name="InteriorLinings" ColumnName="InteriorLinings" />
+          <ScalarProperty Name="MainFlooring" ColumnName="MainFlooring" />
+          <ScalarProperty Name="WindowFrames" ColumnName="WindowFrames" />
+          <ScalarProperty Name="InternalCondition" ColumnName="InternalCondition" />
+          <ScalarProperty Name="ExternalCondition" ColumnName="ExternalCondition" />
+          <ScalarProperty Name="StreetAppeal" ColumnName="StreetAppeal" />
+          <ScalarProperty Name="PergolaVerandah" ColumnName="PergolaVerandah" />
+          <ScalarProperty Name="Shedding" ColumnName="Shedding" />
+          <ScalarProperty Name="Pools" ColumnName="Pools" />
+          <ScalarProperty Name="Gardens" ColumnName="Gardens" />
+          <ScalarProperty Name="Fencing" ColumnName="Fencing" />
+          <ScalarProperty Name="DrivewayPaving" ColumnName="DrivewayPaving" />
+          <ScalarProperty Name="Outbuildings" ColumnName="Outbuildings" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="AncillaryImprovements" ColumnName="AncillaryImprovements" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_Tab4_RoomsFixturesEdit" FunctionName="marketvalDBModel.Store.AMS_Tab4_RoomsFixturesEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_Tab4_RoomsFixturesSelect" FunctionName="marketvalDBModel.Store.AMS_Tab4_RoomsFixturesSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_Tab4_RoomsFixturesSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Rooms1" ColumnName="Rooms1" />
+          <ScalarProperty Name="Rooms2" ColumnName="Rooms2" />
+          <ScalarProperty Name="Rooms3" ColumnName="Rooms3" />
+          <ScalarProperty Name="Rooms4" ColumnName="Rooms4" />
+          <ScalarProperty Name="Bedroom" ColumnName="Bedroom" />
+          <ScalarProperty Name="Bathroom" ColumnName="Bathroom" />
+          <ScalarProperty Name="Ensuite" ColumnName="Ensuite" />
+          <ScalarProperty Name="Toilet" ColumnName="Toilet" />
+          <ScalarProperty Name="Laundry" ColumnName="Laundry" />
+          <ScalarProperty Name="Text1" ColumnName="Text1" />
+          <ScalarProperty Name="HeatingCooling" ColumnName="HeatingCooling" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_Tab5_AreasEdit" FunctionName="marketvalDBModel.Store.AMS_Tab5_AreasEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_Tab5_AreasSelect" FunctionName="marketvalDBModel.Store.AMS_Tab5_AreasSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_Tab5_AreasSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="LivingArea" ColumnName="LivingArea" />
+          <ScalarProperty Name="Alfresco" ColumnName="Alfresco" />
+          <ScalarProperty Name="Balcony" ColumnName="Balcony" />
+          <ScalarProperty Name="Pergola" ColumnName="Pergola" />
+          <ScalarProperty Name="Verandah" ColumnName="Verandah" />
+          <ScalarProperty Name="Garage" ColumnName="Garage" />
+          <ScalarProperty Name="Carport" ColumnName="Carport" />
+          <ScalarProperty Name="CarSpaces" ColumnName="CarSpaces" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="SqmEq" ColumnName="SqmEq" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_Tab6_CommentsEdit" FunctionName="marketvalDBModel.Store.AMS_Tab6_CommentsEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_Tab6_CommentsSelect" FunctionName="marketvalDBModel.Store.AMS_Tab6_CommentsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_Tab6_CommentsSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Instructions" ColumnName="Instructions" />
+          <ScalarProperty Name="Standard" ColumnName="Standard" />
+          <ScalarProperty Name="LastSaleofProperty" ColumnName="LastSaleofProperty" />
+          <ScalarProperty Name="Defects" ColumnName="Defects" />
+          <ScalarProperty Name="Methodology" ColumnName="Methodology" />
+          <ScalarProperty Name="Closing" ColumnName="Closing" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_Tab7_SalesEvidenceEdit" FunctionName="marketvalDBModel.Store.AMS_Tab7_SalesEvidenceEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_Tab7_SalesEvidenceSelect" FunctionName="marketvalDBModel.Store.AMS_Tab7_SalesEvidenceSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_Tab7_SalesEvidenceSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Construction" ColumnName="Construction" />
+          <ScalarProperty Name="RoofType" ColumnName="RoofType" />
+          <ScalarProperty Name="Bedrooms" ColumnName="Bedrooms" />
+          <ScalarProperty Name="Bathrooms" ColumnName="Bathrooms" />
+          <ScalarProperty Name="CarAccommodation" ColumnName="CarAccommodation" />
+          <ScalarProperty Name="LivingArea" ColumnName="LivingArea" />
+          <ScalarProperty Name="LandArea" ColumnName="LandArea" />
+          <ScalarProperty Name="LandAreaOption" ColumnName="LandAreaOption" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ImageOrFull" ColumnName="ImageOrFull" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="SalesCategory" ColumnName="SalesCategory" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_Tab7_SalesEvidenceSelectUnique" FunctionName="marketvalDBModel.Store.AMS_Tab7_SalesEvidenceSelectUnique" />
+    <FunctionImportMapping FunctionImportName="AMS_Tab8_AttachmentsEdit" FunctionName="marketvalDBModel.Store.AMS_Tab8_AttachmentsEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_Tab8_AttachmentsSelect" FunctionName="marketvalDBModel.Store.AMS_Tab8_AttachmentsSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_Tab8_AttachmentsSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImageType" ColumnName="ImageType" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_TransactionTypeEdit" FunctionName="marketvalDBModel.Store.AMS_TransactionTypeEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_TransactionTypeSelect" FunctionName="marketvalDBModel.Store.AMS_TransactionTypeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_TransactionTypeSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TransactionTypeName" ColumnName="TransactionTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_UrgencyEdit" FunctionName="marketvalDBModel.Store.AMS_UrgencyEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_UrgencySelect" FunctionName="marketvalDBModel.Store.AMS_UrgencySelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_UrgencySelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UrgencyName" ColumnName="UrgencyName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_UsersLogin" FunctionName="marketvalDBModel.Store.AMS_UsersLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_UsersLogin_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_UsersLoginCreate" FunctionName="marketvalDBModel.Store.AMS_UsersLoginCreate" />
+    <FunctionImportMapping FunctionImportName="AMS_UsersPasswordEdit" FunctionName="marketvalDBModel.Store.AMS_UsersPasswordEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_UsersSelect" FunctionName="marketvalDBModel.Store.AMS_UsersSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_UsersSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_ValuationCompanyBankAndLogoEdit" FunctionName="marketvalDBModel.Store.AMS_ValuationCompanyBankAndLogoEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_ValuationCompanyEdit" FunctionName="marketvalDBModel.Store.AMS_ValuationCompanyEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_ValuationCompanyHFImageEdit" FunctionName="marketvalDBModel.Store.AMS_ValuationCompanyHFImageEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_ValuationCompanyOtherEdit" FunctionName="marketvalDBModel.Store.AMS_ValuationCompanyOtherEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_ValuationCompanySelect" FunctionName="marketvalDBModel.Store.AMS_ValuationCompanySelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_ValuationCompanySelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ProfessionalIndemnityInsurancePolicy" ColumnName="ProfessionalIndemnityInsurancePolicy" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StatusShow" ColumnName="StatusShow" />
+          <ScalarProperty Name="StatusColor" ColumnName="StatusColor" />
+          <ScalarProperty Name="StatusTooltip" ColumnName="StatusTooltip" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+          <ScalarProperty Name="AllowJobCreate" ColumnName="AllowJobCreate" />
+          <ScalarProperty Name="CompanyLogo" ColumnName="CompanyLogo" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BSB" ColumnName="BSB" />
+          <ScalarProperty Name="ACNumber" ColumnName="ACNumber" />
+          <ScalarProperty Name="ABN" ColumnName="ABN" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="TermsandCondition" ColumnName="TermsandCondition" />
+          <ScalarProperty Name="CertificationQualification" ColumnName="CertificationQualification" />
+          <ScalarProperty Name="FamilyLawCertification" ColumnName="FamilyLawCertification" />
+          <ScalarProperty Name="HeaderImage" ColumnName="HeaderImage" />
+          <ScalarProperty Name="FooterImage" ColumnName="FooterImage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_ValuationManagerEdit" FunctionName="marketvalDBModel.Store.AMS_ValuationManagerEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_ValuationManagerSelect" FunctionName="marketvalDBModel.Store.AMS_ValuationManagerSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_ValuationManagerSelect_Result">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusShow" ColumnName="StatusShow" />
+          <ScalarProperty Name="StatusColor" ColumnName="StatusColor" />
+          <ScalarProperty Name="StatusTooltip" ColumnName="StatusTooltip" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_ValuationTypeEdit" FunctionName="marketvalDBModel.Store.AMS_ValuationTypeEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_ValuationTypeSelect" FunctionName="marketvalDBModel.Store.AMS_ValuationTypeSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_ValuationTypeSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ValuationTypeName" ColumnName="ValuationTypeName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AMS_ValuersEdit" FunctionName="marketvalDBModel.Store.AMS_ValuersEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_ValuersLogoEdit" FunctionName="marketvalDBModel.Store.AMS_ValuersLogoEdit" />
+    <FunctionImportMapping FunctionImportName="AMS_ValuersSelect" FunctionName="marketvalDBModel.Store.AMS_ValuersSelect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="marketvalDBModel.AMS_ValuersSelect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="OtherDetails" ColumnName="OtherDetails" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusShow" ColumnName="StatusShow" />
+          <ScalarProperty Name="StatusColor" ColumnName="StatusColor" />
+          <ScalarProperty Name="StatusTooltip" ColumnName="StatusTooltip" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastLoggedOn" ColumnName="LastLoggedOn" />
+          <ScalarProperty Name="ValuationCompanyId" ColumnName="ValuationCompanyId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Qualifications" ColumnName="Qualifications" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="MembershipStatus" ColumnName="MembershipStatus" />
+          <ScalarProperty Name="MembershipBody" ColumnName="MembershipBody" />
+          <ScalarProperty Name="ValuerLogo" ColumnName="ValuerLogo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AMS_ReportSections">
+      <EntityTypeMapping TypeName="marketvalDBModel.AMS_ReportSections">
+        <MappingFragment StoreEntitySet="AMS_ReportSections">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="AMS_ReportSectionsId" ColumnName="AMS_ReportSectionsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

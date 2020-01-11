@@ -717,9 +717,9 @@ namespace BusinessLayer
 
         #region Tab 8 Attachments
         public Int64 Tab8_AttachmentsEdit(Int64 Id, Int64 JobId, string ImageName, string ImageType,
-        Int64 CreatedBy, string Option)
+        Int64 CreatedBy, string Option,int sectionId=0)
         {
-            SqlParameter[] sqlParameter = new SqlParameter[7];
+            SqlParameter[] sqlParameter = new SqlParameter[8];
             try
             {
                 sqlParameter[0] = new SqlParameter("@Id", SqlDbType.BigInt);
@@ -740,12 +740,15 @@ namespace BusinessLayer
                 sqlParameter[5] = new SqlParameter("@Option", SqlDbType.NVarChar);
                 sqlParameter[5].Value = Option;
 
-                sqlParameter[6] = new SqlParameter("@RetVal", SqlDbType.BigInt);
-                sqlParameter[6].Direction = ParameterDirection.Output;
+                sqlParameter[6] = new SqlParameter("@SectionId", SqlDbType.Int);
+                sqlParameter[6].Value = sectionId;
+
+                sqlParameter[7] = new SqlParameter("@RetVal", SqlDbType.BigInt);
+                sqlParameter[7].Direction = ParameterDirection.Output;
 
 
                 Database.ExecuteNonQuery(CommandType.StoredProcedure, "AMS_Tab8_AttachmentsEdit", sqlParameter);
-                return Convert.ToInt64(sqlParameter[6].Value);
+                return Convert.ToInt64(sqlParameter[7].Value);
             }
             catch (Exception Exc)
             {

@@ -1,0 +1,1486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="marketvalDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AMS_AccessArangementsType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccessArangementsTypeName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AMS_Clients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="ClientType" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="25" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="25" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="15" />
+    <Property Name="Phone2" Type="nvarchar" MaxLength="15" />
+    <Property Name="OtherDetails" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="ABN" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Status" Type="bigint" />
+  </EntityType>
+  <EntityType Name="AMS_ClientsBranchManager">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="ClientId" Type="bigint" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="25" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="25" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="15" />
+    <Property Name="Phone2" Type="nvarchar" MaxLength="15" />
+    <Property Name="OtherDetails" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Status" Type="bigint" />
+  </EntityType>
+  <EntityType Name="AMS_Compliance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="25" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="25" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="15" />
+    <Property Name="Phone2" Type="nvarchar" MaxLength="15" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="OtherDetails" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Status" Type="bigint" />
+  </EntityType>
+  <EntityType Name="AMS_EmailHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="EmailType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ToEmail" Type="nvarchar" MaxLength="200" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="300" />
+    <Property Name="FromEmail" Type="nvarchar" MaxLength="200" />
+    <Property Name="ReplyTo" Type="nvarchar" MaxLength="200" />
+    <Property Name="EmailFile" Type="nvarchar" MaxLength="100" />
+    <Property Name="SendOn" Type="datetime" />
+    <Property Name="IPAddress" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="AMS_JobDocuments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="DocumentName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AMS_JobEditRequests">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="RequestTitle" Type="nvarchar" MaxLength="200" />
+    <Property Name="RequestDetails" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedByName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedByType" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedById" Type="bigint" />
+  </EntityType>
+  <EntityType Name="AMS_JobHistory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="2000" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="HistoryType" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AMS_Jobs">
+    <Key>
+      <PropertyRef Name="JobId" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" Nullable="false" />
+    <Property Name="ClientId" Type="bigint" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="InstructedBy" Type="bigint" />
+    <Property Name="PreparedFor" Type="bigint" />
+    <Property Name="BankLender" Type="nvarchar" MaxLength="200" />
+    <Property Name="LoanReference" Type="nvarchar" MaxLength="200" />
+    <Property Name="CustomerFullName" Type="nvarchar" MaxLength="200" />
+    <Property Name="CustomerPhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="CustomerMobilePhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="CustomerAdditionalPhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="AccessArangementsVia" Type="bigint" />
+    <Property Name="NameOfPersonToContactForAccess" Type="nvarchar" MaxLength="100" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="MobilePhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="AdditionalPhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="AdditionalNotes" Type="nvarchar" MaxLength="2000" />
+    <Property Name="UnitLot" Type="nvarchar" MaxLength="100" />
+    <Property Name="StreetNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="StreetName" Type="nvarchar" MaxLength="100" />
+    <Property Name="StreetType" Type="nvarchar" MaxLength="100" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="6" />
+    <Property Name="State" Type="nvarchar" MaxLength="10" />
+    <Property Name="PriorJobreference" Type="nvarchar" MaxLength="200" />
+    <Property Name="ContractPrice" Type="nvarchar" MaxLength="20" />
+    <Property Name="ContractDate" Type="datetime" />
+    <Property Name="EstimatedPrice" Type="nvarchar" MaxLength="20" />
+    <Property Name="ServiceType" Type="bigint" />
+    <Property Name="ValuationType" Type="bigint" />
+    <Property Name="PropertyType" Type="bigint" />
+    <Property Name="Purpose" Type="bigint" />
+    <Property Name="TransactionType" Type="bigint" />
+    <Property Name="Urgency" Type="bigint" />
+    <Property Name="QuoteFee" Type="nvarchar" MaxLength="20" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="Status" Type="bigint" />
+    <Property Name="AppointmentSet" Type="datetime" />
+    <Property Name="InspectedOn" Type="datetime" />
+    <Property Name="ReportUpload" Type="nvarchar" MaxLength="100" />
+    <Property Name="AccountUpload" Type="nvarchar" MaxLength="100" />
+    <Property Name="FieldNoteUpload" Type="nvarchar" MaxLength="100" />
+    <Property Name="ReportUploadedOn" Type="datetime" />
+    <Property Name="ValuationCompanyAssignedId" Type="bigint" />
+    <Property Name="ValuerId" Type="bigint" />
+    <Property Name="ReviewerId" Type="bigint" />
+    <Property Name="LastRejectedBy" Type="bigint" />
+    <Property Name="LastRejectedOn" Type="datetime" />
+    <Property Name="ClientName" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreatedByType" Type="nvarchar" MaxLength="100" />
+    <Property Name="FeeByValuationCompany" Type="nvarchar" MaxLength="20" />
+    <Property Name="PaymentStatus" Type="nvarchar" MaxLength="20" />
+    <Property Name="InspectedEmailSendToClient" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsEditRequest" Type="nvarchar" MaxLength="10" />
+    <Property Name="AppointmentSetTime" Type="nvarchar" MaxLength="20" />
+    <Property Name="ClientAddress" Type="nvarchar" MaxLength="200" />
+    <Property Name="EmailAddress1" Type="nvarchar" MaxLength="200" />
+    <Property Name="OtherNote" Type="nvarchar(max)" />
+    <Property Name="ValuationInstruction" Type="nvarchar" MaxLength="50" />
+    <Property Name="PropertyReport" Type="nvarchar" MaxLength="50" />
+    <Property Name="Overlays" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsClientReportEdit" Type="int" />
+  </EntityType>
+  <EntityType Name="AMS_JobStatus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="StatusCode" Type="bigint" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AMS_Logs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="LogDetails" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="AMS_M_Lookup">
+    <Key>
+      <PropertyRef Name="LookupId" />
+    </Key>
+    <Property Name="Type" Type="nchar" MaxLength="2" Nullable="false" />
+    <Property Name="LookupId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="200" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="bigint" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AMS_PropertyType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PropertyTypeName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AMS_Purpose">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PurposeName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AMS_ReportSectionDocuments">
+    <Key>
+      <PropertyRef Name="AMS_ReportSectionDocumentsId" />
+    </Key>
+    <Property Name="AMS_ReportSectionDocumentsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="int" />
+    <Property Name="SectionId" Type="int" />
+    <Property Name="DocumentName" Type="varchar" MaxLength="500" />
+    <Property Name="DocumentType" Type="varchar" MaxLength="200" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AMS_ReportSections">
+    <Key>
+      <PropertyRef Name="AMS_ReportSectionsId" />
+    </Key>
+    <Property Name="AMS_ReportSectionsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="int" />
+    <Property Name="SectionName" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AMS_Reviewers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="ValuationCompanyId" Type="bigint" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="25" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="25" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="15" />
+    <Property Name="Phone2" Type="nvarchar" MaxLength="15" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="OtherDetails" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="LastLoggedOn" Type="datetime" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Status" Type="bigint" />
+  </EntityType>
+  <EntityType Name="AMS_ServiceType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceTypeName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AMS_SuperAdministrator">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="25" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="25" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="15" />
+    <Property Name="Phone2" Type="nvarchar" MaxLength="15" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="OtherDetails" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="LastLoggedOn" Type="datetime" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Status" Type="bigint" />
+  </EntityType>
+  <EntityType Name="AMS_Tab1_Summary">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="LandValue" Type="nvarchar" MaxLength="15" />
+    <Property Name="Improvements" Type="nvarchar" MaxLength="15" />
+    <Property Name="MarketValue" Type="nvarchar" MaxLength="15" />
+    <Property Name="UnitLot" Type="nvarchar" MaxLength="25" />
+    <Property Name="StreetNumber" Type="nvarchar" MaxLength="25" />
+    <Property Name="StreetName" Type="nvarchar" MaxLength="25" />
+    <Property Name="StreetType" Type="nvarchar" MaxLength="25" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="30" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="6" />
+    <Property Name="State" Type="nvarchar" MaxLength="10" />
+    <Property Name="Purpose" Type="nvarchar" MaxLength="100" />
+    <Property Name="InstructedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="InspectionDate" Type="datetime" />
+    <Property Name="ValuationsDate" Type="datetime" />
+    <Property Name="ValueComponent" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="Client" Type="nvarchar" MaxLength="200" />
+    <Property Name="Instructions" Type="nvarchar" MaxLength="4000" />
+    <Property Name="ValuationApproachId" Type="int" />
+  </EntityType>
+  <EntityType Name="AMS_Tab2_Land">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="PropertyType" Type="nvarchar" MaxLength="100" />
+    <Property Name="PropertyIdentification" Type="nvarchar" MaxLength="100" />
+    <Property Name="TitleSearch" Type="nvarchar" MaxLength="100" />
+    <Property Name="LotNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="PlanNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Volume" Type="nvarchar" MaxLength="50" />
+    <Property Name="Folio" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegisteredProprietors" Type="nvarchar" MaxLength="100" />
+    <Property Name="Encumbrances" Type="nvarchar" MaxLength="100" />
+    <Property Name="SiteArea" Type="nvarchar" MaxLength="100" />
+    <Property Name="SqmHectares" Type="nvarchar" MaxLength="100" />
+    <Property Name="LocalGovernmentArea" Type="nvarchar" MaxLength="100" />
+    <Property Name="Zoning" Type="nvarchar" MaxLength="100" />
+    <Property Name="Overlays" Type="nvarchar" MaxLength="100" />
+    <Property Name="ZoningEffect" Type="nvarchar" MaxLength="500" />
+    <Property Name="Shops" Type="nvarchar" MaxLength="100" />
+    <Property Name="Transport" Type="nvarchar" MaxLength="100" />
+    <Property Name="Schools" Type="nvarchar" MaxLength="100" />
+    <Property Name="CBD" Type="nvarchar" MaxLength="100" />
+    <Property Name="SiteLayout" Type="nvarchar" MaxLength="100" />
+    <Property Name="Services" Type="nvarchar" MaxLength="100" />
+    <Property Name="EnvironmentalHazards" Type="nvarchar" MaxLength="100" />
+    <Property Name="PestInfestation" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="PlanTitle" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AMS_Tab3_BuildingImprovements">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="PropertyType" Type="nvarchar" MaxLength="100" />
+    <Property Name="PropertyStyle" Type="nvarchar" MaxLength="100" />
+    <Property Name="YearBuilt" Type="nvarchar" MaxLength="10" />
+    <Property Name="ExternalWalls" Type="nvarchar" MaxLength="100" />
+    <Property Name="Roof" Type="nvarchar" MaxLength="100" />
+    <Property Name="InteriorLinings" Type="nvarchar" MaxLength="100" />
+    <Property Name="MainFlooring" Type="nvarchar" MaxLength="100" />
+    <Property Name="WindowFrames" Type="nvarchar" MaxLength="100" />
+    <Property Name="InternalCondition" Type="nvarchar" MaxLength="100" />
+    <Property Name="ExternalCondition" Type="nvarchar" MaxLength="100" />
+    <Property Name="StreetAppeal" Type="nvarchar" MaxLength="100" />
+    <Property Name="PergolaVerandah" Type="nvarchar" MaxLength="200" />
+    <Property Name="Shedding" Type="nvarchar" MaxLength="200" />
+    <Property Name="Pools" Type="nvarchar" MaxLength="200" />
+    <Property Name="Gardens" Type="nvarchar" MaxLength="200" />
+    <Property Name="Fencing" Type="nvarchar" MaxLength="200" />
+    <Property Name="DrivewayPaving" Type="nvarchar" MaxLength="200" />
+    <Property Name="Outbuildings" Type="nvarchar" MaxLength="200" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="AncillaryImprovements" Type="nvarchar" MaxLength="4000" />
+  </EntityType>
+  <EntityType Name="AMS_Tab4_RoomsFixtures">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="Rooms1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Rooms2" Type="nvarchar" MaxLength="200" />
+    <Property Name="Rooms3" Type="nvarchar" MaxLength="200" />
+    <Property Name="Rooms4" Type="nvarchar" MaxLength="200" />
+    <Property Name="Bedroom" Type="nvarchar" MaxLength="2" />
+    <Property Name="Bathroom" Type="nvarchar" MaxLength="2" />
+    <Property Name="Ensuite" Type="nvarchar" MaxLength="2" />
+    <Property Name="Toilet" Type="nvarchar" MaxLength="2" />
+    <Property Name="Laundry" Type="nvarchar" MaxLength="50" />
+    <Property Name="Text1" Type="nvarchar" MaxLength="1000" />
+    <Property Name="HeatingCooling" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AMS_Tab5_Areas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="LivingArea" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Alfresco" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Balcony" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Pergola" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Verandah" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Garage" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Carport" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CarSpaces" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="SqmEq" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AMS_Tab6_Comments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="Instructions" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Standard" Type="nvarchar" MaxLength="4000" />
+    <Property Name="LastSaleofProperty" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Defects" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Methodology" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Closing" Type="nvarchar" MaxLength="4000" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AMS_Tab7_SalesEvidence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="SaleDate" Type="datetime" />
+    <Property Name="SalePrice" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Year" Type="nvarchar" MaxLength="50" />
+    <Property Name="Construction" Type="nvarchar" MaxLength="100" />
+    <Property Name="RoofType" Type="nvarchar" MaxLength="100" />
+    <Property Name="Bedrooms" Type="nvarchar" MaxLength="10" />
+    <Property Name="Bathrooms" Type="nvarchar" MaxLength="10" />
+    <Property Name="CarAccommodation" Type="nvarchar" MaxLength="10" />
+    <Property Name="LivingArea" Type="nvarchar" MaxLength="100" />
+    <Property Name="LandArea" Type="nvarchar" MaxLength="100" />
+    <Property Name="LandAreaOption" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ImageOrFull" Type="nvarchar" MaxLength="10" />
+    <Property Name="ImageName" Type="nvarchar" MaxLength="100" />
+    <Property Name="SalesCategory" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AMS_Tab8_Attachments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobId" Type="bigint" />
+    <Property Name="ImageName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ImageType" Type="nvarchar" MaxLength="20" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="SectionId" Type="int" />
+  </EntityType>
+  <EntityType Name="AMS_TransactionType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionTypeName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AMS_Urgency">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrgencyName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AMS_Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserType" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastLoggedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="AMS_ValuationCompany">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="25" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="25" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="15" />
+    <Property Name="Phone2" Type="nvarchar" MaxLength="15" />
+    <Property Name="OtherDetails" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Status" Type="bigint" />
+    <Property Name="ProfessionalIndemnityInsurancePolicy" Type="nvarchar" MaxLength="100" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="AllowJobCreate" Type="bit" />
+    <Property Name="CompanyLogo" Type="nvarchar" MaxLength="100" />
+    <Property Name="BankName" Type="nvarchar" MaxLength="100" />
+    <Property Name="BSB" Type="nvarchar" MaxLength="20" />
+    <Property Name="ACNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="ABN" Type="nvarchar" MaxLength="20" />
+    <Property Name="TermsandCondition" Type="ntext" />
+    <Property Name="CertificationQualification" Type="ntext" />
+    <Property Name="FamilyLawCertification" Type="ntext" />
+    <Property Name="URL" Type="nvarchar" MaxLength="200" />
+    <Property Name="HeaderImage" Type="nvarchar" MaxLength="100" />
+    <Property Name="FooterImage" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AMS_ValuationManager">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="25" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="25" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="15" />
+    <Property Name="Phone2" Type="nvarchar" MaxLength="15" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="OtherDetails" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Status" Type="bigint" />
+  </EntityType>
+  <EntityType Name="AMS_ValuationType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ValuationTypeName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="AMS_Valuers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="25" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="25" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="15" />
+    <Property Name="Phone2" Type="nvarchar" MaxLength="15" />
+    <Property Name="OtherDetails" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Status" Type="bigint" />
+    <Property Name="ValuationCompanyId" Type="bigint" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Qualifications" Type="nvarchar" MaxLength="300" />
+    <Property Name="Experience" Type="nvarchar" MaxLength="300" />
+    <Property Name="MembershipStatus" Type="nvarchar" MaxLength="200" />
+    <Property Name="MembershipBody" Type="nvarchar" MaxLength="200" />
+    <Property Name="ValuerLogo" Type="nvarchar" MaxLength="200" />
+    <Property Name="SignatureImage" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="AMS_Valuers1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="bigint" />
+    <Property Name="ValuationCompanyId" Type="bigint" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="25" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="25" />
+    <Property Name="EINSSN" Type="nvarchar" MaxLength="50" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="6" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="15" />
+    <Property Name="Phone2" Type="nvarchar" MaxLength="15" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="15" />
+    <Property Name="CertificationType" Type="nvarchar" MaxLength="100" />
+    <Property Name="FHACertified" Type="bit" />
+    <Property Name="VACertified" Type="bit" />
+    <Property Name="Commercial" Type="bit" />
+    <Property Name="InsuranceCompany" Type="nvarchar" MaxLength="100" />
+    <Property Name="InsuranceExpDate" Type="datetime" />
+    <Property Name="CoverageAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AppraiserSoftware" Type="nvarchar" MaxLength="100" />
+    <Property Name="OtherDetails" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CreatedBy" Type="bigint" />
+    <Property Name="ModifiedBy" Type="bigint" />
+    <Property Name="LastLoggedOn" Type="datetime" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="Status" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'marketvalDB.dbo.Customer' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <Function Name="AMS_AccessArangementsTypeEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="AccessArangementsTypeName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_AccessArangementsTypeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_ClientsBranchManagerEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="ClientId" Type="bigint" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+    <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompanyName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="Suburb" Type="nvarchar" Mode="In" />
+    <Parameter Name="State" Type="nvarchar" Mode="In" />
+    <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone2" Type="nvarchar" Mode="In" />
+    <Parameter Name="OtherDetails" Type="nvarchar" Mode="In" />
+    <Parameter Name="Fax" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_ClientsBranchManagerSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="ClientId" Type="bigint" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_ClientsEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="ClientType" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+    <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompanyName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="Suburb" Type="nvarchar" Mode="In" />
+    <Parameter Name="State" Type="nvarchar" Mode="In" />
+    <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone2" Type="nvarchar" Mode="In" />
+    <Parameter Name="OtherDetails" Type="nvarchar" Mode="In" />
+    <Parameter Name="Fax" Type="nvarchar" Mode="In" />
+    <Parameter Name="ABN" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_ClientsSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="ClientType" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_ComplianceEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+    <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="Suburb" Type="nvarchar" Mode="In" />
+    <Parameter Name="State" Type="nvarchar" Mode="In" />
+    <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone2" Type="nvarchar" Mode="In" />
+    <Parameter Name="OtherDetails" Type="nvarchar" Mode="In" />
+    <Parameter Name="Fax" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_ComplianceSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_EmailConfirmationofValuersAppointmentDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_EmailHistoryEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="EmailType" Type="nvarchar" Mode="In" />
+    <Parameter Name="ToEmail" Type="nvarchar" Mode="In" />
+    <Parameter Name="Subject" Type="nvarchar" Mode="In" />
+    <Parameter Name="FromEmail" Type="nvarchar" Mode="In" />
+    <Parameter Name="ReplyTo" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailFile" Type="nvarchar" Mode="In" />
+    <Parameter Name="IPAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_EmailHistorySelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_getCustomlist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="AMS_getlist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ListCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobAppointmentSetEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="AppointmentDate" Type="datetime" Mode="In" />
+    <Parameter Name="InspectedOn" Type="datetime" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="InspectedEmailSendToClient" Type="nvarchar" Mode="In" />
+    <Parameter Name="AppointmentSetTime" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobDeleteByJobId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobDocumentsEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="DocumentName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobDocumentsSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobEditFinalReportGenerate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ReportUpload" Type="nvarchar" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobEditFinalReportSubmit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ReportUpload" Type="nvarchar" Mode="In" />
+    <Parameter Name="AccountUpload" Type="nvarchar" Mode="In" />
+    <Parameter Name="FieldNoteUpload" Type="nvarchar" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobEditReject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+    <Parameter Name="NewFee" Type="decimal" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_JobEditRequestsEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="RequestTitle" Type="nvarchar" Mode="In" />
+    <Parameter Name="RequestDetails" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedByName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedByType" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedById" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_JobEditRequestsSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobHistoryEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="Title" Type="nvarchar" Mode="In" />
+    <Parameter Name="Comment" Type="nvarchar" Mode="In" />
+    <Parameter Name="HistoryType" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_JobsDocumentEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="DocumentName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ClientId" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="InstructedBy" Type="bigint" Mode="In" />
+    <Parameter Name="PreparedFor" Type="bigint" Mode="In" />
+    <Parameter Name="LoanReference" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomerFullName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomerPhoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomerMobilePhoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="CustomerAdditionalPhoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="AccessArangementsVia" Type="bigint" Mode="In" />
+    <Parameter Name="NameOfPersonToContactForAccess" Type="nvarchar" Mode="In" />
+    <Parameter Name="PhoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="MobilePhoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="AdditionalPhoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="AdditionalNotes" Type="nvarchar" Mode="In" />
+    <Parameter Name="UnitLot" Type="nvarchar" Mode="In" />
+    <Parameter Name="StreetNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="StreetName" Type="nvarchar" Mode="In" />
+    <Parameter Name="StreetType" Type="nvarchar" Mode="In" />
+    <Parameter Name="Suburb" Type="nvarchar" Mode="In" />
+    <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="PriorJobreference" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContractPrice" Type="nvarchar" Mode="In" />
+    <Parameter Name="ContractDate" Type="datetime" Mode="In" />
+    <Parameter Name="EstimatedPrice" Type="nvarchar" Mode="In" />
+    <Parameter Name="ServiceType" Type="bigint" Mode="In" />
+    <Parameter Name="ValuationType" Type="bigint" Mode="In" />
+    <Parameter Name="PropertyType" Type="bigint" Mode="In" />
+    <Parameter Name="Purpose" Type="bigint" Mode="In" />
+    <Parameter Name="TransactionType" Type="bigint" Mode="In" />
+    <Parameter Name="Urgency" Type="bigint" Mode="In" />
+    <Parameter Name="QuoteFee" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+    <Parameter Name="EmailAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="ClientName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedByType" Type="nvarchar" Mode="In" />
+    <Parameter Name="State" Type="nvarchar" Mode="In" />
+    <Parameter Name="ClientAddress" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailAddress1" Type="nvarchar" Mode="In" />
+    <Parameter Name="ValuationInstruction" Type="nvarchar" Mode="In" />
+    <Parameter Name="PropertyReport" Type="nvarchar" Mode="In" />
+    <Parameter Name="Overlays" Type="nvarchar" Mode="In" />
+    <Parameter Name="Title" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsEditAssignToReviewer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ReviewerId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsEditAssignToValuationCompany" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ValuationCompanyAssignedId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsEditAssignToValuer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ValuerId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsEditIsClientReportEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="IsClientReportEdit" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsEditPaymentStatusCompleted" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="PaymentStatus" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsEditReAssignToValuationCompany" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ValuationCompanyAssignedId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsHistorySelectByJobId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsOtherNoteEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="OtherNote" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsSelectByJobId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsSelectByJobIdForEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsSelectForClient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsSelectForReviewers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReviewerId" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsSelectForValuationCompany" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ValuationCompanyAssignedId" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsSelectForValuationManager" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Status" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsEditRequest" Type="nvarchar" Mode="In" />
+    <Parameter Name="JobId" Type="nvarchar" Mode="In" />
+    <Parameter Name="Street" Type="nvarchar" Mode="In" />
+    <Parameter Name="Client" Type="nvarchar" Mode="In" />
+    <Parameter Name="Suburb" Type="nvarchar" Mode="In" />
+    <Parameter Name="ValuerId" Type="nvarchar" Mode="In" />
+    <Parameter Name="PurposeId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsSelectForValuationManagerDownloadClients" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Status" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsSelectForValuationManagerDownloadReports" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Start" Type="nvarchar" Mode="In" />
+    <Parameter Name="End" Type="nvarchar" Mode="In" />
+    <Parameter Name="Status" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsSelectForValuers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ValuerId" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_JobsStatusSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="AMS_JobStatusEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_LogsUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Title" Type="nvarchar" Mode="In" />
+    <Parameter Name="LogDetails" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_lookup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LookupId" Type="bigint" Mode="In" />
+    <Parameter Name="Type" Type="nchar" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_Lookupselect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LookupId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_PropertyTypeEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="PropertyTypeName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_PropertyTypeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_PurposeEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="PurposeName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_PurposeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_ReviewersEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="ValuationCompanyId" Type="bigint" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+    <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="Suburb" Type="nvarchar" Mode="In" />
+    <Parameter Name="State" Type="nvarchar" Mode="In" />
+    <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone2" Type="nvarchar" Mode="In" />
+    <Parameter Name="OtherDetails" Type="nvarchar" Mode="In" />
+    <Parameter Name="Fax" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_ReviewersSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="ValuationCompanyId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_ServiceTypeEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="ServiceTypeName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_ServiceTypeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_SuperAdministratorEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+    <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="Suburb" Type="nvarchar" Mode="In" />
+    <Parameter Name="State" Type="nvarchar" Mode="In" />
+    <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone2" Type="nvarchar" Mode="In" />
+    <Parameter Name="OtherDetails" Type="nvarchar" Mode="In" />
+    <Parameter Name="Fax" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_SuperAdministratorSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab1_SummaryEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="MarketValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="UnitLot" Type="nvarchar" Mode="In" />
+    <Parameter Name="StreetNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="StreetName" Type="nvarchar" Mode="In" />
+    <Parameter Name="StreetType" Type="nvarchar" Mode="In" />
+    <Parameter Name="Suburb" Type="nvarchar" Mode="In" />
+    <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="State" Type="nvarchar" Mode="In" />
+    <Parameter Name="Purpose" Type="nvarchar" Mode="In" />
+    <Parameter Name="InstructedBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="InspectionDate" Type="datetime" Mode="In" />
+    <Parameter Name="ValuationsDate" Type="datetime" Mode="In" />
+    <Parameter Name="ValueComponent" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+    <Parameter Name="LandValue" Type="nvarchar" Mode="In" />
+    <Parameter Name="Improvements" Type="nvarchar" Mode="In" />
+    <Parameter Name="Client" Type="nvarchar" Mode="In" />
+    <Parameter Name="Instructions" Type="nvarchar" Mode="In" />
+    <Parameter Name="ValuationApproach" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab1_SummarySelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab2_LandEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="PropertyType" Type="nvarchar" Mode="In" />
+    <Parameter Name="PropertyIdentification" Type="nvarchar" Mode="In" />
+    <Parameter Name="TitleSearch" Type="nvarchar" Mode="In" />
+    <Parameter Name="LotNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="PlanNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="Volume" Type="nvarchar" Mode="In" />
+    <Parameter Name="Folio" Type="nvarchar" Mode="In" />
+    <Parameter Name="RegisteredProprietors" Type="nvarchar" Mode="In" />
+    <Parameter Name="Encumbrances" Type="nvarchar" Mode="In" />
+    <Parameter Name="SiteArea" Type="nvarchar" Mode="In" />
+    <Parameter Name="LocalGovernmentArea" Type="nvarchar" Mode="In" />
+    <Parameter Name="Zoning" Type="nvarchar" Mode="In" />
+    <Parameter Name="Overlays" Type="nvarchar" Mode="In" />
+    <Parameter Name="ZoningEffect" Type="nvarchar" Mode="In" />
+    <Parameter Name="Shops" Type="nvarchar" Mode="In" />
+    <Parameter Name="Transport" Type="nvarchar" Mode="In" />
+    <Parameter Name="Schools" Type="nvarchar" Mode="In" />
+    <Parameter Name="CBD" Type="nvarchar" Mode="In" />
+    <Parameter Name="SiteLayout" Type="nvarchar" Mode="In" />
+    <Parameter Name="Services" Type="nvarchar" Mode="In" />
+    <Parameter Name="EnvironmentalHazards" Type="nvarchar" Mode="In" />
+    <Parameter Name="PestInfestation" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+    <Parameter Name="SqmHectares" Type="nvarchar" Mode="In" />
+    <Parameter Name="PlanTitle" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab2_LandSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab3_BuildingImprovementsEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="PropertyType" Type="nvarchar" Mode="In" />
+    <Parameter Name="PropertyStyle" Type="nvarchar" Mode="In" />
+    <Parameter Name="YearBuilt" Type="nvarchar" Mode="In" />
+    <Parameter Name="ExternalWalls" Type="nvarchar" Mode="In" />
+    <Parameter Name="Roof" Type="nvarchar" Mode="In" />
+    <Parameter Name="InteriorLinings" Type="nvarchar" Mode="In" />
+    <Parameter Name="MainFlooring" Type="nvarchar" Mode="In" />
+    <Parameter Name="WindowFrames" Type="nvarchar" Mode="In" />
+    <Parameter Name="InternalCondition" Type="nvarchar" Mode="In" />
+    <Parameter Name="ExternalCondition" Type="nvarchar" Mode="In" />
+    <Parameter Name="StreetAppeal" Type="nvarchar" Mode="In" />
+    <Parameter Name="PergolaVerandah" Type="nvarchar" Mode="In" />
+    <Parameter Name="Shedding" Type="nvarchar" Mode="In" />
+    <Parameter Name="Pools" Type="nvarchar" Mode="In" />
+    <Parameter Name="Gardens" Type="nvarchar" Mode="In" />
+    <Parameter Name="Fencing" Type="nvarchar" Mode="In" />
+    <Parameter Name="DrivewayPaving" Type="nvarchar" Mode="In" />
+    <Parameter Name="Outbuildings" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+    <Parameter Name="AncillaryImprovements" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab3_BuildingImprovementsSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab4_RoomsFixturesEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="Rooms1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Rooms2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Rooms3" Type="nvarchar" Mode="In" />
+    <Parameter Name="Rooms4" Type="nvarchar" Mode="In" />
+    <Parameter Name="Bedroom" Type="nvarchar" Mode="In" />
+    <Parameter Name="Bathroom" Type="nvarchar" Mode="In" />
+    <Parameter Name="Ensuite" Type="nvarchar" Mode="In" />
+    <Parameter Name="Toilet" Type="nvarchar" Mode="In" />
+    <Parameter Name="Laundry" Type="nvarchar" Mode="In" />
+    <Parameter Name="Text1" Type="nvarchar" Mode="In" />
+    <Parameter Name="HeatingCooling" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_Tab4_RoomsFixturesSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab5_AreasEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="LivingArea" Type="nvarchar" Mode="In" />
+    <Parameter Name="Alfresco" Type="nvarchar" Mode="In" />
+    <Parameter Name="Balcony" Type="nvarchar" Mode="In" />
+    <Parameter Name="Pergola" Type="nvarchar" Mode="In" />
+    <Parameter Name="Verandah" Type="nvarchar" Mode="In" />
+    <Parameter Name="Garage" Type="nvarchar" Mode="In" />
+    <Parameter Name="Carport" Type="nvarchar" Mode="In" />
+    <Parameter Name="CarSpaces" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+    <Parameter Name="SqmEq" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab5_AreasSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab6_CommentsEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="Instructions" Type="nvarchar" Mode="In" />
+    <Parameter Name="Standard" Type="nvarchar" Mode="In" />
+    <Parameter Name="Defects" Type="nvarchar" Mode="In" />
+    <Parameter Name="Methodology" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+    <Parameter Name="Closing" Type="nvarchar" Mode="In" />
+    <Parameter Name="LastSaleofProperty" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab6_CommentsSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab7_SalesEvidenceEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="SaleDate" Type="datetime" Mode="In" />
+    <Parameter Name="SalePrice" Type="nvarchar" Mode="In" />
+    <Parameter Name="Type" Type="nvarchar" Mode="In" />
+    <Parameter Name="Year" Type="nvarchar" Mode="In" />
+    <Parameter Name="Construction" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoofType" Type="nvarchar" Mode="In" />
+    <Parameter Name="Bedrooms" Type="nvarchar" Mode="In" />
+    <Parameter Name="Bathrooms" Type="nvarchar" Mode="In" />
+    <Parameter Name="CarAccommodation" Type="nvarchar" Mode="In" />
+    <Parameter Name="LivingArea" Type="nvarchar" Mode="In" />
+    <Parameter Name="LandArea" Type="nvarchar" Mode="In" />
+    <Parameter Name="LandAreaOption" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+    <Parameter Name="ImageOrFull" Type="nvarchar" Mode="In" />
+    <Parameter Name="ImageName" Type="nvarchar" Mode="In" />
+    <Parameter Name="SalesCategory" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab7_SalesEvidenceSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab7_SalesEvidenceSelectUnique" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_Tab8_AttachmentsEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ImageName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ImageType" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="SectionId" Type="int" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_Tab8_AttachmentsSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="JobId" Type="bigint" Mode="In" />
+    <Parameter Name="ImageType" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_TransactionTypeEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="TransactionTypeName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_TransactionTypeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_UrgencyEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="UrgencyName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_UrgencySelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_UsersLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_UsersLoginCreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserType" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_UsersPasswordEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_UsersSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_ValuationCompanyBankAndLogoEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+    <Parameter Name="CompanyLogo" Type="nvarchar" Mode="In" />
+    <Parameter Name="BankName" Type="nvarchar" Mode="In" />
+    <Parameter Name="BSB" Type="nvarchar" Mode="In" />
+    <Parameter Name="ACNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="ABN" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_ValuationCompanyEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+    <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompanyName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="Suburb" Type="nvarchar" Mode="In" />
+    <Parameter Name="State" Type="nvarchar" Mode="In" />
+    <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone2" Type="nvarchar" Mode="In" />
+    <Parameter Name="OtherDetails" Type="nvarchar" Mode="In" />
+    <Parameter Name="Fax" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+    <Parameter Name="ProfessionalIndemnityInsurancePolicy" Type="nvarchar" Mode="In" />
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="EndDate" Type="datetime" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+    <Parameter Name="AllowJobCreate" Type="bit" Mode="In" />
+    <Parameter Name="CompanyLogo" Type="nvarchar" Mode="In" />
+    <Parameter Name="BankName" Type="nvarchar" Mode="In" />
+    <Parameter Name="BSB" Type="nvarchar" Mode="In" />
+    <Parameter Name="ACNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="ABN" Type="nvarchar" Mode="In" />
+    <Parameter Name="URL" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_ValuationCompanyHFImageEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="HeaderImage" Type="nvarchar" Mode="In" />
+    <Parameter Name="FooterImage" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_ValuationCompanyOtherEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="TermsandCondition" Type="ntext" Mode="In" />
+    <Parameter Name="CertificationQualification" Type="ntext" Mode="In" />
+    <Parameter Name="FamilyLawCertification" Type="ntext" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_ValuationCompanySelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_ValuationManagerEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+    <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="Suburb" Type="nvarchar" Mode="In" />
+    <Parameter Name="State" Type="nvarchar" Mode="In" />
+    <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone2" Type="nvarchar" Mode="In" />
+    <Parameter Name="OtherDetails" Type="nvarchar" Mode="In" />
+    <Parameter Name="Fax" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_ValuationManagerSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_ValuationTypeEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="ValuationTypeName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_ValuationTypeSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+  </Function>
+  <Function Name="AMS_ValuersEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="FirstName" Type="nvarchar" Mode="In" />
+    <Parameter Name="LastName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompanyName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="Suburb" Type="nvarchar" Mode="In" />
+    <Parameter Name="State" Type="nvarchar" Mode="In" />
+    <Parameter Name="Postcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone2" Type="nvarchar" Mode="In" />
+    <Parameter Name="OtherDetails" Type="nvarchar" Mode="In" />
+    <Parameter Name="Fax" Type="nvarchar" Mode="In" />
+    <Parameter Name="CreatedBy" Type="bigint" Mode="In" />
+    <Parameter Name="ModifiedBy" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+    <Parameter Name="Option" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+    <Parameter Name="ValuationCompanyId" Type="bigint" Mode="In" />
+    <Parameter Name="Title" Type="nvarchar" Mode="In" />
+    <Parameter Name="Qualifications" Type="nvarchar" Mode="In" />
+    <Parameter Name="Experience" Type="nvarchar" Mode="In" />
+    <Parameter Name="MembershipStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="MembershipBody" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AMS_ValuersLogoEdit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="bigint" Mode="In" />
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="ValuerLogo" Type="nvarchar" Mode="In" />
+    <Parameter Name="RetVal" Type="bigint" Mode="InOut" />
+  </Function>
+  <Function Name="AMS_ValuersSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="bigint" Mode="In" />
+    <Parameter Name="ValuationCompanyId" Type="bigint" Mode="In" />
+    <Parameter Name="Status" Type="bigint" Mode="In" />
+  </Function>
+  <EntityContainer Name="marketvalDBModelStoreContainer">
+    <EntitySet Name="AMS_AccessArangementsType" EntityType="Self.AMS_AccessArangementsType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Clients" EntityType="Self.AMS_Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_ClientsBranchManager" EntityType="Self.AMS_ClientsBranchManager" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Compliance" EntityType="Self.AMS_Compliance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_EmailHistory" EntityType="Self.AMS_EmailHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_JobDocuments" EntityType="Self.AMS_JobDocuments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_JobEditRequests" EntityType="Self.AMS_JobEditRequests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_JobHistory" EntityType="Self.AMS_JobHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Jobs" EntityType="Self.AMS_Jobs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_JobStatus" EntityType="Self.AMS_JobStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Logs" EntityType="Self.AMS_Logs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_M_Lookup" EntityType="Self.AMS_M_Lookup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_PropertyType" EntityType="Self.AMS_PropertyType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Purpose" EntityType="Self.AMS_Purpose" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_ReportSectionDocuments" EntityType="Self.AMS_ReportSectionDocuments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_ReportSections" EntityType="Self.AMS_ReportSections" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Reviewers" EntityType="Self.AMS_Reviewers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_ServiceType" EntityType="Self.AMS_ServiceType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_SuperAdministrator" EntityType="Self.AMS_SuperAdministrator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Tab1_Summary" EntityType="Self.AMS_Tab1_Summary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Tab2_Land" EntityType="Self.AMS_Tab2_Land" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Tab3_BuildingImprovements" EntityType="Self.AMS_Tab3_BuildingImprovements" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Tab4_RoomsFixtures" EntityType="Self.AMS_Tab4_RoomsFixtures" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Tab5_Areas" EntityType="Self.AMS_Tab5_Areas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Tab6_Comments" EntityType="Self.AMS_Tab6_Comments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Tab7_SalesEvidence" EntityType="Self.AMS_Tab7_SalesEvidence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Tab8_Attachments" EntityType="Self.AMS_Tab8_Attachments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_TransactionType" EntityType="Self.AMS_TransactionType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Urgency" EntityType="Self.AMS_Urgency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Users" EntityType="Self.AMS_Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_ValuationCompany" EntityType="Self.AMS_ValuationCompany" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_ValuationManager" EntityType="Self.AMS_ValuationManager" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_ValuationType" EntityType="Self.AMS_ValuationType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Valuers" EntityType="Self.AMS_Valuers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AMS_Valuers1" EntityType="Self.AMS_Valuers1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Customer].[CustomerId] AS [CustomerId], 
+    [Customer].[Name] AS [Name], 
+    [Customer].[Amount] AS [Amount]
+    FROM [dbo].[Customer] AS [Customer]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

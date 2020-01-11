@@ -15,3 +15,7 @@ D:\Kausar\Paul\AMSProperty\AMSProjectNew\obj\Release\AMSProjectNew.csproj.CoreCo
 D:\Kausar\Paul\AMSProperty\AMSProjectNew\obj\Release\AMSProjectNew.csproj.CopyComplete
 D:\Kausar\Paul\AMSProperty\AMSProjectNew\obj\Release\AMSProjectNew.dll
 D:\Kausar\Paul\AMSProperty\AMSProjectNew\obj\Release\AMSProjectNew.pdb
+D:\Kausar\Paul\AMSProperty\AMSProjectNew\bin\EntityFramework.dll
+D:\Kausar\Paul\AMSProperty\AMSProjectNew\bin\EntityFramework.SqlServer.dll
+D:\Kausar\Paul\AMSProperty\AMSProjectNew\bin\EntityFramework.xml
+D:\Kausar\Paul\AMSProperty\AMSProjectNew\bin\EntityFramework.SqlServer.xml

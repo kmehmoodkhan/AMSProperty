@@ -2,84 +2,109 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Valuation Central :: Valuation Manager Section</title>
     <link href="../CSS/Default.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+            .active, .accordion:hover {
+                background-color: #ccc;
+            }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
 </head>
-<body style="background-color:#28578F; margin:0px;">
+<body style="background-color: #28578F; margin: 0px;">
     <form id="form1" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <div align="center">
-        <table cellpadding="0" cellspacing="0" width="100%">            
-            <tr>
-                <td width="250px" style="padding-left:25px; background-color:White;">
-                    <img src="../Images/Logo.png" width="120px" />
-                </td>
-                <td align="right" valign="top" style=" background-color:White;">
-                    <table cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td style="background-color: #8CB12C;" align="left">
-                                <asp:Menu ID="NavigationMenu" runat="Server" StaticDisplayLevels="1" 
-                                    StaticMenuItemStyle-Font-Bold="true" StaticMenuItemStyle-VerticalPadding="5" 
-                                 StaticMenuItemStyle-HorizontalPadding="5" 
-                                StaticMenuItemStyle-Font-Name="Verdana" StaticMenuItemStyle-Font-Size="9pt" StaticMenuItemStyle-ForeColor="#FFFFFF"
-                                StaticHoverStyle-BackColor="#8CB12C" StaticHoverStyle-ForeColor="#FFFFFF" DynamicMenuStyle-HorizontalPadding="5"
-                                DynamicMenuStyle-VerticalPadding="2" DynamicMenuStyle-BackColor="#8CB12C" DynamicMenuStyle-ForeColor="#990000"
-                                DynamicMenuStyle-BorderWidth="1" DynamicMenuStyle-BorderColor="#8CB12C" DynamicMenuItemStyle-VerticalPadding="5"
-                                DynamicMenuItemStyle-Font-Name="Verdana" DynamicMenuItemStyle-Font-Size="9pt"
-                                DynamicMenuItemStyle-ForeColor="#FFFFFF" DynamicHoverStyle-BackColor="Silver"
-                                DynamicHoverStyle-ForeColor="#FFFFFF" Orientation="Horizontal" 
-                                    BackColor="Transparent" StaticEnableDefaultPopOutImage="False">
-<StaticMenuItemStyle VerticalPadding="5px" HorizontalPadding="5px" Font-Bold="True" Font-Names="Verdana" Font-Size="9pt" ForeColor="White"></StaticMenuItemStyle>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div align="center">
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td width="250px" style="padding-left: 25px; background-color: White;">
+                        <img src="../Images/Logo.png" width="120px" />
+                    </td>
+                    <td align="right" valign="top" style="background-color: White;">
+                        <table cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td style="background-color: #8CB12C;" align="left">
+                                    <asp:Menu ID="NavigationMenu" runat="Server" StaticDisplayLevels="1"
+                                        StaticMenuItemStyle-Font-Bold="true" StaticMenuItemStyle-VerticalPadding="5"
+                                        StaticMenuItemStyle-HorizontalPadding="5"
+                                        StaticMenuItemStyle-Font-Name="Verdana" StaticMenuItemStyle-Font-Size="9pt" StaticMenuItemStyle-ForeColor="#FFFFFF"
+                                        StaticHoverStyle-BackColor="#8CB12C" StaticHoverStyle-ForeColor="#FFFFFF" DynamicMenuStyle-HorizontalPadding="5"
+                                        DynamicMenuStyle-VerticalPadding="2" DynamicMenuStyle-BackColor="#8CB12C" DynamicMenuStyle-ForeColor="#990000"
+                                        DynamicMenuStyle-BorderWidth="1" DynamicMenuStyle-BorderColor="#8CB12C" DynamicMenuItemStyle-VerticalPadding="5"
+                                        DynamicMenuItemStyle-Font-Name="Verdana" DynamicMenuItemStyle-Font-Size="9pt"
+                                        DynamicMenuItemStyle-ForeColor="#FFFFFF" DynamicHoverStyle-BackColor="Silver"
+                                        DynamicHoverStyle-ForeColor="#FFFFFF" Orientation="Horizontal"
+                                        BackColor="Transparent" StaticEnableDefaultPopOutImage="False">
+                                        <StaticMenuItemStyle VerticalPadding="5px" HorizontalPadding="5px" Font-Bold="True" Font-Names="Verdana" Font-Size="9pt" ForeColor="White"></StaticMenuItemStyle>
 
-<DynamicHoverStyle BackColor="Silver" ForeColor="White"></DynamicHoverStyle>
+                                        <DynamicHoverStyle BackColor="Silver" ForeColor="White"></DynamicHoverStyle>
 
-<DynamicMenuStyle HorizontalPadding="5px" VerticalPadding="2px" BackColor="#8CB12C" BorderColor="#8CB12C" BorderWidth="1px" ForeColor="#990000"></DynamicMenuStyle>
+                                        <DynamicMenuStyle HorizontalPadding="5px" VerticalPadding="2px" BackColor="#8CB12C" BorderColor="#8CB12C" BorderWidth="1px" ForeColor="#990000"></DynamicMenuStyle>
 
-<DynamicMenuItemStyle VerticalPadding="5px" Font-Names="Verdana" Font-Size="9pt" ForeColor="White"></DynamicMenuItemStyle>
+                                        <DynamicMenuItemStyle VerticalPadding="5px" Font-Names="Verdana" Font-Size="9pt" ForeColor="White"></DynamicMenuItemStyle>
 
-<StaticHoverStyle BackColor="#8CB12C" ForeColor="White"></StaticHoverStyle>
-                                <Items>
-                                    <asp:MenuItem Text="Home" NavigateUrl="~/ValuationManager/Default.aspx"></asp:MenuItem>
-                                    <asp:MenuItem Text="Order A Valuation" NavigateUrl="~/ValuationManager/JobOrderCreate.aspx"></asp:MenuItem>
-                                    <asp:MenuItem Text="Valuations" NavigateUrl="~/ValuationManager/JobOrderList.aspx">
-                                        <asp:MenuItem Text="Download Reports" NavigateUrl="~/ValuationManager/DownloadReports.aspx"></asp:MenuItem>
-                                        <asp:MenuItem Text="Download Clients" NavigateUrl="~/ValuationManager/DownloadClients.aspx"></asp:MenuItem>
-                                    </asp:MenuItem>
-                                </Items>
-                            </asp:Menu>
-                            </td>
-                            <td style="background-color: #8CB12C;" align="right" height="20px"> &nbsp;&nbsp;&nbsp;&nbsp;                               
+                                        <StaticHoverStyle BackColor="#8CB12C" ForeColor="White"></StaticHoverStyle>
+                                        <Items>
+                                            <asp:MenuItem Text="Home" NavigateUrl="~/ValuationManager/Default.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="Order A Valuation" NavigateUrl="~/ValuationManager/JobOrderCreate.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="Valuations" NavigateUrl="~/ValuationManager/JobOrderList.aspx">
+                                                <asp:MenuItem Text="Download Reports" NavigateUrl="~/ValuationManager/DownloadReports.aspx"></asp:MenuItem>
+                                                <asp:MenuItem Text="Download Clients" NavigateUrl="~/ValuationManager/DownloadClients.aspx"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                        </Items>
+                                    </asp:Menu>
+                                </td>
+                                <td style="background-color: #8CB12C;" align="right" height="20px">&nbsp;&nbsp;&nbsp;&nbsp;                               
                                 <asp:HyperLink ID="HyperLink2" runat="server" CssClass="WhiteLinkButton" NavigateUrl="~/Logout.aspx?From=Logout">Log out</asp:HyperLink>
-                                &nbsp;&nbsp;
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="right" height="20px">
-                                Welcome, <asp:Label ID="lblUsername" runat="server"></asp:Label>&nbsp;&nbsp;
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="right" height="20px">
-                                Last logged on <asp:Label ID="lblLastloggedOn" runat="server"></asp:Label>&nbsp;&nbsp;
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="right" height="20px">
-                                <asp:HyperLink ID="HyperLink3" runat="server" CssClass="LinkButton" NavigateUrl="~/ValuationManager/MyProfile.aspx">My Profile</asp:HyperLink>&nbsp;
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" valign="top" style="padding:5px 5px 5px 5px;">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
-                </td>
-            </tr>
-        </table>
-    </div>
+                                    &nbsp;&nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="right" height="20px">Welcome,
+                                    <asp:Label ID="lblUsername" runat="server"></asp:Label>&nbsp;&nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="right" height="20px">Last logged on
+                                    <asp:Label ID="lblLastloggedOn" runat="server"></asp:Label>&nbsp;&nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="right" height="20px">
+                                    <asp:HyperLink ID="HyperLink3" runat="server" CssClass="LinkButton" NavigateUrl="~/ValuationManager/MyProfile.aspx">My Profile</asp:HyperLink>&nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" valign="top" style="padding: 5px 5px 5px 5px;">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </form>
 </body>
 </html>

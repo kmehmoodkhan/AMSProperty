@@ -41,3 +41,7 @@ D:\Kausar\Paul\AMSProperty\AMSProjectNew\bin\epengine.dll
 D:\Kausar\Paul\AMSProperty\AMSProjectNew\obj\Debug\AMSProjectNew.csproj.CopyComplete
 D:\Kausar\Paul\AMSProperty\AMSProjectNew\obj\Debug\AMSProjectNew.dll
 D:\Kausar\Paul\AMSProperty\AMSProjectNew\obj\Debug\AMSProjectNew.pdb
+D:\Kausar\Paul\AMSProperty\AMSProjectNew\bin\EntityFramework.dll
+D:\Kausar\Paul\AMSProperty\AMSProjectNew\bin\EntityFramework.SqlServer.dll
+D:\Kausar\Paul\AMSProperty\AMSProjectNew\bin\EntityFramework.xml
+D:\Kausar\Paul\AMSProperty\AMSProjectNew\bin\EntityFramework.SqlServer.xml
